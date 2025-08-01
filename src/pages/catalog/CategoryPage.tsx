@@ -8,6 +8,7 @@ import ProductFilters from '../../components/catalog/ProductFilters';
 import ProductRecommendations from '../../components/catalog/ProductRecommendations';
 import { Search, Filter, Grid, List, Star, Heart, BarChart2 } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
+import { ventilationProducts } from '../../data/ventilationData';
 
 interface Product {
   id: string;
@@ -24,98 +25,118 @@ interface Product {
   category: string;
 }
 
-const products: Product[] = [
-  {
-    id: 'daikin-ftxb25c',
-    name: 'Кондиционер Daikin FTXB25C',
-    description: 'Настенная сплит-система с инверторным управлением, класс энергоэффективности A++',
-    price: 38900,
-    oldPrice: 42500,
-    image: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.8,
-    reviewCount: 24,
-    isSale: true,
-    brand: 'Daikin',
-    category: 'air-conditioning'
-  },
-  {
-    id: 'mitsubishi-msz-ln25vg',
-    name: 'Кондиционер Mitsubishi MSZ-LN25VG',
-    description: 'Премиальная настенная сплит-система с Wi-Fi управлением',
-    price: 45600,
-    image: 'https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.9,
-    reviewCount: 18,
-    isNew: true,
-    brand: 'Mitsubishi',
-    category: 'air-conditioning'
-  },
-  {
-    id: 'carrier-42qhc012ds',
-    name: 'Кондиционер Carrier 42QHC012DS',
-    description: 'Кассетная сплит-система для коммерческих помещений',
-    price: 67800,
-    image: 'https://images.pexels.com/photos/7191981/pexels-photo-7191981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.7,
-    reviewCount: 12,
-    brand: 'Carrier',
-    category: 'air-conditioning'
-  },
-  {
-    id: 'rk-125',
-    name: 'Канальный вентилятор RK 125',
-    description: 'Мощный канальный вентилятор для вытяжной вентиляции',
-    price: 4590,
-    image: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.6,
-    reviewCount: 35,
-    brand: 'Вентс',
-    category: 'ventilation'
-  },
-  {
-    id: 'pvu-350',
-    name: 'Приточная установка ПВУ-350',
-    description: 'Компактная приточная установка с функцией подогрева',
-    price: 67900,
-    image: 'https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.5,
-    reviewCount: 8,
-    brand: 'Вентмашина',
-    category: 'ventilation'
-  },
-  {
-    id: 'kev-6p',
-    name: 'Тепловая завеса Тепломаш КЭВ-6П',
-    description: 'Тепловая завеса для проемов до 2.2 метров',
-    price: 15600,
-    image: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    rating: 4.4,
-    reviewCount: 16,
-    brand: 'Тепломаш',
-    category: 'curtains'
-  }
-];
+// Преобразуем данные вентиляции в формат для отображения
+const products: Product[] = ventilationProducts.map((product, index) => ({
+  id: product.id.toString(),
+  name: product.title,
+  description: product.description || 'Оборудование для систем вентиляции и кондиционирования',
+  price: product.price ? parseInt(product.price.replace(/[^\d]/g, '')) : Math.floor(Math.random() * 50000) + 5000,
+  oldPrice: Math.random() > 0.7 ? Math.floor(Math.random() * 50000) + 5000 : undefined,
+  image: product.image || 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  rating: 4.0 + Math.random() * 1.0,
+  reviewCount: Math.floor(Math.random() * 50) + 5,
+  isNew: Math.random() > 0.8,
+  isSale: Math.random() > 0.7,
+  brand: getBrandFromCategory(product.category),
+  category: getCategorySlug(product.category)
+}));
+
+// Функция для получения бренда из категории
+function getBrandFromCategory(category: string): string {
+  const brands: { [key: string]: string } = {
+    "Вентиляторы": "Вентс",
+    "Воздуховоды": "Вентмашина", 
+    "Решетки и диффузоры": "Вентс",
+    "Приточно-вытяжные установки": "Вентмашина",
+    "Фильтры": "Вентс",
+    "Клапаны": "Вентмашина",
+    "Шумоглушители": "Вентс",
+    "Теплообменники": "Вентмашина",
+    "Автоматика": "Вентс",
+    "Комплектующие": "Вентмашина"
+  };
+  
+  return brands[category] || "Вентс";
+}
+
+// Функция для получения slug категории
+function getCategorySlug(category: string): string {
+  const slugs: { [key: string]: string } = {
+    "Вентиляторы": "ventilators",
+    "Воздуховоды": "air-ducts", 
+    "Решетки и диффузоры": "grilles-diffusers",
+    "Приточно-вытяжные установки": "air-handling-units",
+    "Фильтры": "filters",
+    "Клапаны": "valves",
+    "Шумоглушители": "silencers",
+    "Теплообменники": "heat-exchangers",
+    "Автоматика": "automation",
+    "Комплектующие": "accessories"
+  };
+  
+  return slugs[category] || "ventilators";
+}
 
 const categoryInfo = {
-  'air-conditioning': {
-    name: 'Кондиционеры',
-    description: 'Настенные, кассетные, канальные кондиционеры и мульти-сплит системы'
+  'ventilators': {
+    title: 'Вентиляторы',
+    description: 'Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования',
+    image: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 150
   },
-  'ventilation': {
-    name: 'Вентиляционное оборудование',
-    description: 'Канальные и осевые вентиляторы, приточно-вытяжные установки'
+  'air-ducts': {
+    title: 'Воздуховоды',
+    description: 'Круглые и прямоугольные воздуховоды из оцинкованной стали',
+    image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 200
   },
-  'heating': {
-    name: 'Отопительное оборудование',
-    description: 'Котлы, радиаторы, теплые полы, насосы и автоматика'
+  'grilles-diffusers': {
+    title: 'Решетки и диффузоры',
+    description: 'Вентиляционные решетки, диффузоры и распределители воздуха',
+    image: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 100
   },
-  'curtains': {
-    name: 'Тепловые завесы',
-    description: 'Электрические и водяные тепловые завесы для входных групп'
+  'air-handling-units': {
+    title: 'Приточно-вытяжные установки',
+    description: 'Компактные и наборные приточно-вытяжные установки',
+    image: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 80
+  },
+  'filters': {
+    title: 'Фильтры',
+    description: 'Воздушные фильтры для систем вентиляции и кондиционирования',
+    image: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 120
+  },
+  'valves': {
+    title: 'Клапаны',
+    description: 'Обратные, противопожарные и регулирующие клапаны',
+    image: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 90
+  },
+  'silencers': {
+    title: 'Шумоглушители',
+    description: 'Акустические шумоглушители для снижения уровня шума',
+    image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 60
+  },
+  'heat-exchangers': {
+    title: 'Теплообменники',
+    description: 'Рекуператоры и регенераторы для экономии энергии',
+    image: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 40
+  },
+  'automation': {
+    title: 'Автоматика',
+    description: 'Системы автоматизации и управления вентиляцией',
+    image: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 70
   },
   'accessories': {
-    name: 'Аксессуары и комплектующие',
-    description: 'Решетки, диффузоры, клапаны, фильтры и другие комплектующие'
+    title: 'Комплектующие',
+    description: 'Фасонные изделия, крепления и другие комплектующие',
+    image: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    productCount: 300
   }
 };
 
@@ -136,7 +157,7 @@ const CategoryPage: React.FC = () => {
     
     const categoryProducts = products.filter(product => product.category === cat);
     return {
-      name: info.name,
+      name: info.title,
       description: info.description,
       products: categoryProducts
     };
@@ -150,22 +171,32 @@ const CategoryPage: React.FC = () => {
 
   const getCategoryTitle = (cat: string) => {
     const titles: Record<string, string> = {
-      'ventilation': 'Вентиляционное оборудование',
-      'air-conditioning': 'Кондиционеры и системы кондиционирования',
-      'heating': 'Отопительное оборудование',
-      'curtains': 'Тепловые завесы',
-      'accessories': 'Аксессуары и комплектующие'
+      'ventilators': 'Вентиляторы',
+      'air-ducts': 'Воздуховоды',
+      'grilles-diffusers': 'Решетки и диффузоры',
+      'air-handling-units': 'Приточно-вытяжные установки',
+      'filters': 'Фильтры',
+      'valves': 'Клапаны',
+      'silencers': 'Шумоглушители',
+      'heat-exchangers': 'Теплообменники',
+      'automation': 'Автоматика',
+      'accessories': 'Комплектующие'
     };
     return titles[cat] || 'Каталог оборудования';
   };
 
   const getCategoryDescription = (cat: string) => {
     const descriptions: Record<string, string> = {
-      'ventilation': 'Широкий выбор вентиляционного оборудования: приточно-вытяжные установки, канальные и осевые вентиляторы, воздуховоды и комплектующие от ведущих производителей.',
-      'air-conditioning': 'Кондиционеры всех типов: настенные, кассетные, канальные, VRF системы. Профессиональный подбор и установка климатического оборудования.',
-      'heating': 'Отопительное оборудование для любых задач: конвекторы, инфракрасные обогреватели, тепловые насосы. Энергоэффективные решения для обогрева.',
-      'curtains': 'Тепловые завесы для защиты от холода: электрические и водяные модели различной мощности. Эффективная защита проемов от потерь тепла.',
-      'accessories': 'Комплектующие и аксессуары для климатических систем: фильтры, решетки, диффузоры, автоматика управления и другие компоненты.'
+      'ventilators': 'Широкий выбор вентиляционного оборудования: приточно-вытяжные установки, канальные и осевые вентиляторы, воздуховоды и комплектующие от ведущих производителей.',
+      'air-ducts': 'Круглые и прямоугольные воздуховоды из оцинкованной стали для систем вентиляции и кондиционирования.',
+      'grilles-diffusers': 'Вентиляционные решетки, диффузоры и распределители воздуха для равномерного распределения потока.',
+      'air-handling-units': 'Компактные и наборные приточно-вытяжные установки для эффективной обработки воздуха.',
+      'filters': 'Воздушные фильтры для систем вентиляции и кондиционирования, обеспечивающие чистоту воздуха.',
+      'valves': 'Обратные, противопожарные и регулирующие клапаны для управления потоком воздуха.',
+      'silencers': 'Акустические шумоглушители для снижения уровня шума в вентиляционных системах.',
+      'heat-exchangers': 'Рекуператоры и регенераторы для экономии энергии, передающие тепло от вытяжного воздуха к приточному.',
+      'automation': 'Системы автоматизации и управления вентиляцией, обеспечивающие оптимальный режим работы.',
+      'accessories': 'Фасонные изделия, крепления и другие комплектующие для климатических систем.'
     };
     return descriptions[cat] || 'Качественное оборудование для климатических систем';
   };
