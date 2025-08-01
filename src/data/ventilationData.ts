@@ -447,7 +447,7 @@ export const ventilationProducts: VentilationProduct[] = [
     "price": "850 ₽",
     "sku": "VD-200",
     "category": "Воздуховоды",
-    "categoryId": 2,
+    "categoryId": 8,
     "description": "Круглый воздуховод из оцинкованной стали",
     "specifications": {
       "Диаметр": "200 мм",
@@ -460,18 +460,108 @@ export const ventilationProducts: VentilationProduct[] = [
   {
     "id": 3,
     "title": "Решетка приточная РП 150х150",
-    "url": "https://mircli.ru/ventilyatsiya/reshetki-diffuzory/reshetka-pritochnaya-rp-150x150",
+    "url": "https://mircli.ru/ventilyatsiya/ventilyatsionnye-reshetki/reshetka-pritochnaya-rp-150x150",
     "image": undefined,
     "price": "320 ₽",
     "sku": "RP-150",
-    "category": "Решетки и диффузоры",
-    "categoryId": 3,
+    "category": "Вентиляционные решетки",
+    "categoryId": 5,
     "description": "Приточная решетка для систем вентиляции",
     "specifications": {
       "Размер": "150х150 мм",
       "Материал": "Пластик",
       "Цвет": "Белый",
       "Тип": "Приточная"
+    },
+    "images": []
+  },
+  {
+    "id": 4,
+    "title": "Вентиляционная установка ВУТ-1000",
+    "url": "https://mircli.ru/ventilyatsiya/ventilyatsionnye-ustanovki/ventilyatsionnaya-ustanovka-vut-1000",
+    "image": undefined,
+    "price": "45,000 ₽",
+    "sku": "VUT-1000",
+    "category": "Вентиляционные установки",
+    "categoryId": 2,
+    "description": "Компактная вентиляционная установка для обработки воздуха",
+    "specifications": {
+      "Производительность": "1000 м³/ч",
+      "Мощность": "2.2 кВт",
+      "Напряжение": "380 В",
+      "Размеры": "1200х800х600 мм"
+    },
+    "images": []
+  },
+  {
+    "id": 5,
+    "title": "Отвод 90° круглый 200мм",
+    "url": "https://mircli.ru/ventilyatsiya/setevye-elementy/otvod-90-kruglyy-200mm",
+    "image": undefined,
+    "price": "450 ₽",
+    "sku": "OT-200-90",
+    "category": "Сетевые элементы",
+    "categoryId": 3,
+    "description": "Отвод для изменения направления воздуховода",
+    "specifications": {
+      "Диаметр": "200 мм",
+      "Угол": "90°",
+      "Материал": "Оцинкованная сталь",
+      "Толщина": "0.5 мм"
+    },
+    "images": []
+  },
+  {
+    "id": 6,
+    "title": "Датчик температуры ДТ-1",
+    "url": "https://mircli.ru/ventilyatsiya/avtomatika/datchik-temperatury-dt-1",
+    "image": undefined,
+    "price": "1,200 ₽",
+    "sku": "DT-1",
+    "category": "Автоматика",
+    "categoryId": 4,
+    "description": "Датчик температуры для систем автоматизации",
+    "specifications": {
+      "Диапазон": "-40...+80°C",
+      "Точность": "±0.5°C",
+      "Напряжение": "24 В",
+      "Выход": "4-20 мА"
+    },
+    "images": []
+  },
+  {
+    "id": 7,
+    "title": "Диффузор круглый ДК-200",
+    "url": "https://mircli.ru/ventilyatsiya/diffuzory/diffuzor-kruglyy-dk-200",
+    "image": undefined,
+    "price": "680 ₽",
+    "sku": "DK-200",
+    "category": "Диффузоры",
+    "categoryId": 6,
+    "description": "Круглый диффузор для равномерного распределения воздуха",
+    "specifications": {
+      "Диаметр": "200 мм",
+      "Материал": "Пластик",
+      "Цвет": "Белый",
+      "Тип": "Приточный"
+    },
+    "images": []
+  },
+  {
+    "id": 8,
+    "title": "Анемостат приточный АП-150",
+    "url": "https://mircli.ru/ventilyatsiya/anemostaty/anemostat-pritochnyy-ap-150",
+    "image": undefined,
+    "price": "420 ₽",
+    "sku": "AP-150",
+    "category": "Анемостаты",
+    "categoryId": 7,
+    "description": "Приточный анемостат для регулировки воздушного потока",
+    "specifications": {
+      "Диаметр": "150 мм",
+      "Материал": "Пластик",
+      "Цвет": "Белый",
+      "Тип": "Приточный"
     },
     "images": []
   }
@@ -481,6 +571,6 @@ export const ventilationData = {
   categories: ventilationCategories,
   products: ventilationProducts,
   parsedAt: '2025-08-01T19:14:39.100Z',
-  totalCategories: 0,
-  totalProducts: 3
+  totalCategories: 8,
+  totalProducts: 8
 };
