@@ -104,8 +104,8 @@ function App() {
             
             {/* Каталог */}
             <Route path="/catalog" element={<Catalog />} />
-            <Route path="/catalog/:category" element={<EnhancedCategoryPage />} />
-            <Route path="/catalog/:category/:productId" element={<EnhancedProductPage />} />
+            <Route path="/catalog/:category" element={<CategoryPage />} />
+            <Route path="/catalog/:category/:productId" element={<ProductPage />} />
             
             {/* Вентиляция */}
 
