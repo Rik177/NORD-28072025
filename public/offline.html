@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Офлайн - НОРДИНЖИНИРИНГ</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1A3C6E">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1A3C6E 0%, #4D9DE0 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .logo-primary {
+            color: white;
+        }
+        .logo-secondary {
+            color: #FF7D00;
+        }
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .retry-btn {
+            background: #FF7D00;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        .retry-btn:hover {
+            background: #e66a00;
+        }
+        .retry-btn svg {
+            margin-right: 0.5rem;
+        }
+        .cached-content {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .cached-content h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .cached-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .cached-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+        .cached-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-primary">НОРД</span>
+            <span class="logo-secondary">ИНЖИНИРИНГ</span>
+        </div>
+        <div class="icon">📡</div>
+        <h1>Нет подключения к интернету</h1>
+        <p>
+            Проверьте подключение к интернету и попробуйте снова. 
+            Некоторые страницы могут быть доступны в автономном режиме.
+        </p>
+        <button class="retry-btn" onclick="window.location.reload()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 2v6h-6"></path>
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path>
+                <path d="M3 22v-6h6"></path>
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path>
+            </svg>
+            Попробовать снова
+        </button>
+        
+        <div class="cached-content">
+            <h2>Доступные страницы</h2>
+            <div class="cached-links" id="cached-links">
+                <!-- Динамически заполняется доступными страницами -->
+                <a href="/">Главная страница</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Проверка доступных кэшированных страниц
+        if ('caches' in window) {
+            caches.open('runtime-cache-v3').then(cache => {
+                cache.keys().then(requests => {
+                    const cachedPages = requests
+                        .filter(request => request.url.endsWith('/') || request.url.endsWith('.html'))
+                        .map(request => {
+                            const url = new URL(request.url);
+                            return {
+                                url: url.pathname,
+                                name: url.pathname === '/' ? 'Главная страница' : url.pathname.split('/').filter(Boolean).pop()
+                            };
+                        });
+                    
+                    const linksContainer = document.getElementById('cached-links');
+                    if (cachedPages.length > 0) {
+                        linksContainer.innerHTML = '';
+                        cachedPages.forEach(page => {
+                            const link = document.createElement('a');
+                            link.href = page.url;
+                            link.textContent = page.name || page.url;
+                            linksContainer.appendChild(link);
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Проверка состояния сети
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

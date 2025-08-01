@@ -1,0 +1,9 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="150" fill="#E5E7EB"/>
+  <path d="M86.6 75C86.6 81.6274 81.2274 87 74.6 87C67.9726 87 62.6 81.6274 62.6 75C62.6 68.3726 67.9726 63 74.6 63C81.2274 63 86.6 68.3726 86.6 75Z" fill="#9CA3AF"/>
+  <path d="M149 117.5L119 87.5L89 117.5H149Z" fill="#9CA3AF"/>
+  <path d="M160 117.5L130 57.5L55 117.5H160Z" fill="#9CA3AF"/>
+  <path d="M85 117.5L55 87.5L25 117.5H85Z" fill="#9CA3AF"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M100 67C102.761 67 105 64.7614 105 62C105 59.2386 102.761 57 100 57C97.2386 57 95 59.2386 95 62C95 64.7614 97.2386 67 100 67ZM100 77C108.284 77 115 70.2843 115 62C115 53.7157 108.284 47 100 47C91.7157 47 85 53.7157 85 62C85 70.2843 91.7157 77 100 77Z" fill="#9CA3AF"/>
+  <rect x="40" y="40" width="120" height="70" rx="5" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="4 4"/>
+</svg>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Icons and manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta
+      name="description"
+      content="НОРДИНЖИНИРИНГ - Профессиональные решения в области вентиляции и климатического оборудования. Проектирование, монтаж и обслуживание систем любой сложности."
+    />
+    <meta
+      name="keywords"
+      content="вентиляция, кондиционирование, климатическое оборудование, монтаж, проектирование, обслуживание"
+    />
+    <meta
+      property="og:title"
+      content="НОРДИНЖИНИРИНГ - Вентиляционное и климатическое оборудование"
+    />
+    <meta
+      property="og:description"
+      content="Профессиональные решения в области вентиляции и климатического оборудования. Проектирование, монтаж и обслуживание систем любой сложности."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1A3C6E" />
+    <title>НОРДИНЖИНИРИНГ - Вентиляционное и климатическое оборудование</title>
+    
+    <!-- PWA icons -->
+    <link rel="icon" href="/icons/favicon.ico" sizes="any">
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.pexels.com" />
+    
+    <!-- Load fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="canonical" href="https://nordengineering.ru/" />
+    
+    <!-- PWA meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="НОРДИНЖИНИРИНГ">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Critical CSS -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      :root {
+        --primary-color: #1A3C6E;
+        --secondary-color: #4D9DE0;
+        --accent-color: #FF7D00;
+        --text-primary: #0F2A52; /* Контраст 8.2:1 на белом */
+      }
+      
+      [data-theme="dark"] {
+        --primary-color: #4D9DE0;
+        --secondary-color: #87C7FF;
+        --accent-color: #FFA733;
+        --text-primary: #E5E7EB; /* Контраст 15.8:1 на темном */
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: var(--text-primary);
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-primary);
+      }
+      
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      .logo {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+      }
+      
+      .logo-primary {
+        color: white;
+      }
+      
+      .logo-secondary {
+        color: var(--accent-color);
+      }
+      
+      /* Скрываем outline при клике мышкой, но оставляем для клавиатуры */
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+      
+      :focus-visible {
+        outline: 2px solid var(--secondary-color);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+      <div class="logo">
+        <span class="logo-primary">НОРД</span>
+        <span class="logo-secondary">ИНЖИНИРИНГ</span>
+      </div>
+      <div class="loading-spinner"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <!-- Performance monitoring script -->
+    <script>
+      // Hide loading screen when React app is ready
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        if (loadingScreen) {
+          loadingScreen.style.opacity = "0";
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 300);
+        }
+      });
+      
+      // Performance monitoring
+      if ('PerformanceObserver' in window) {
+        try {
+          // LCP (Largest Contentful Paint)
+          const lcpObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            console.log('LCP:', lastEntry.startTime);
+            // Send to analytics
+          });
+          lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+          
+          // FID (First Input Delay)
+          const fidObserver = new PerformanceObserver((entryList) => {
+            const entries = entryList.getEntries();
+            entries.forEach(entry => {
+              console.log('FID:', entry.processingStart - entry.startTime);
+              // Send to analytics
+            });
+          });
+          fidObserver.observe({ type: 'first-input', buffered: true });
+          
+          // CLS (Cumulative Layout Shift)
+          const clsObserver = new PerformanceObserver((entryList) => {
+            let clsValue = 0;
+            const entries = entryList.getEntries();
+            entries.forEach(entry => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+              }
+            });
+            console.log('CLS:', clsValue);
+            // Send to analytics
+          });
+          clsObserver.observe({ type: 'layout-shift', buffered: true });
+        } catch (e) {
+          console.error('Performance Observer error:', e);
+        }
+      }
+      
+      // Скрипт для определения фокуса с клавиатуры
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-user');
+        }
+      });
+      
+      document.addEventListener('mousedown', function() {
+        document.body.classList.remove('keyboard-user');
+      });
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/sw.js").then(
+            function (registration) {
+              console.log("SW registered: ", registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content is available, show notification
+                    if (confirm('Доступна новая версия сайта. Обновить сейчас?')) {
+                      window.location.reload();
+                    }
+                  }
+                });
+              });
+            },
+            function (registrationError) {
+              console.log("SW registration failed: ", registrationError);
+            },
+          );
+        });
+        
+        // Handle offline/online events
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          document.body.classList.add('online');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.remove('online');
+          document.body.classList.add('offline');
+        });
+      }
+      
+      // PWA installation prompt
+      let deferredPrompt;
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later
+        deferredPrompt = e;
+        
+        // Show install button or banner
+        const installButton = document.getElementById('install-pwa');
+        if (installButton) {
+          installButton.style.display = 'block';
+          
+          installButton.addEventListener('click', () => {
+            // Show the install prompt
+            deferredPrompt.prompt();
+            
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+              } else {
+                console.log('User dismissed the install prompt');
+              }
+              deferredPrompt = null;
+              installButton.style.display = 'none';
+            });
+          });
+        }
+      });
+      
+      // Track PWA installation
+      window.addEventListener('appinstalled', (evt) => {
+        console.log('PWA installed');
+        // Hide install button
+        const installButton = document.getElementById('install-pwa');
+        if (installButton) {
+          installButton.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

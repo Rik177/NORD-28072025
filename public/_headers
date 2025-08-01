@@ -1,0 +1,31 @@
+# Кэширование для статических ресурсов
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Кэширование для изображений
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# Кэширование для шрифтов
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Кэширование для CSS и JS
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Сжатие
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Предварительная загрузка критических ресурсов
+/
+  Link: </assets/fonts/inter-var.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
+  Link: <https://fonts.googleapis.com>; rel=preconnect
+  Link: <https://fonts.gstatic.com>; rel=preconnect; crossorigin
+  Link: <https://images.pexels.com>; rel=preconnect

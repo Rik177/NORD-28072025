@@ -1,0 +1,39 @@
+src/pages/FAQ.tsx
+src/schemas/*
+src/utils/*
+src/pages/about/*
+src/pages/services/*
+src/pages/Contacts.tsx
+src/pages/CookiePolicy.tsx
+src/pages/Delivery.tsx
+src/pages/PrivacyPolicy.tsx
+src/pages/Projects.tsx
+src/pages/Sales.tsx
+src/pages/Services.tsx
+src/pages/TermsOfService.tsx
+src/pages/WarrantyTerms.tsx
+src/pages/Reviews.tsx
+src/components/services/ServicesSidebar.tsx
+
+src/pages/Tools.tsx
+src/pages/Brands.tsx
+src/pages/Blog.tsx
+src/pages/BlogPost.tsx
+# src/components/home/Footer.tsx
+# src/pages/catalog/*
+# src/pages/Home.tsx
+# src/main.tsx
+# src/components/home/AboutCompany.tsx
+# src/components/home/AdvancedFeatures.tsx
+# src/components/home/Categories.tsx
+# src/components/home/ContactForm.tsx
+# src/components/home/Features.tsx
+# src/components/home/FrequentlyOrdered.tsx
+# src/components/home/HeroSlider.tsx
+# src/components/home/LatestProjects.tsx
+# src/components/home/Partners.tsx
+# src/components/home/PopularProducts.tsx
+# src/components/home/Partners.tsx
+# src/components/home/RecommendationLetters.tsx
+# src/components/home/Services.tsx
+# src/components/home/Testimonials.tsx

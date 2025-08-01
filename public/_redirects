@@ -1,0 +1,9 @@
+# Редиректы для SPA
+/*    /index.html   200
+
+# Редиректы для SEO
+/catalog/ventilation/*  /catalog/ventilation  301
+/catalog/air-conditioning/*  /catalog/air-conditioning  301
+/catalog/heating/*  /catalog/heating  301
+/catalog/curtains/*  /catalog/curtains  301
+/catalog/accessories/*  /catalog/accessories  301
