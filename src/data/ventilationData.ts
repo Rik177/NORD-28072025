@@ -1,5 +1,5 @@
 // Данные парсера вентиляции с mircli.ru
-// Сгенерировано: 2025-08-01T19:01:21.450Z
+// Сгенерировано: 2025-08-01T19:14:39.100Z
 
 export interface VentilationCategory {
   id: number;
@@ -26,28 +26,68 @@ export interface VentilationProduct {
 
 export const ventilationCategories: VentilationCategory[] = [
   {
-    "id": 1,
-    "title": "Вентиляторы",
-    "url": "https://mircli.ru/ventilyatsiya/ventilyatory",
-    "image": null,
-    "productCount": 150,
-    "subcategories": []
+    id: 1,
+    title: 'Вентиляторы',
+    url: 'https://mircli.ru/ventilyatsiya/ventilyatory',
+    image: undefined,
+    productCount: 150,
+    subcategories: []
   },
   {
-    "id": 2,
-    "title": "Воздуховоды",
-    "url": "https://mircli.ru/ventilyatsiya/vozdukhovody",
-    "image": null,
-    "productCount": 200,
-    "subcategories": []
+    id: 2,
+    title: 'Вентиляционные установки',
+    url: 'https://mircli.ru/ventilyatsiya/ventilyatsionnye-ustanovki',
+    image: undefined,
+    productCount: 80,
+    subcategories: []
   },
   {
-    "id": 3,
-    "title": "Решетки и диффузоры",
-    "url": "https://mircli.ru/ventilyatsiya/reshetki-diffuzory",
-    "image": null,
-    "productCount": 100,
-    "subcategories": []
+    id: 3,
+    title: 'Сетевые элементы',
+    url: 'https://mircli.ru/ventilyatsiya/setevye-elementy',
+    image: undefined,
+    productCount: 120,
+    subcategories: []
+  },
+  {
+    id: 4,
+    title: 'Автоматика',
+    url: 'https://mircli.ru/ventilyatsiya/avtomatika',
+    image: undefined,
+    productCount: 90,
+    subcategories: []
+  },
+  {
+    id: 5,
+    title: 'Вентиляционные решетки',
+    url: 'https://mircli.ru/ventilyatsiya/ventilyatsionnye-reshetki',
+    image: undefined,
+    productCount: 200,
+    subcategories: []
+  },
+  {
+    id: 6,
+    title: 'Диффузоры',
+    url: 'https://mircli.ru/ventilyatsiya/diffuzory',
+    image: undefined,
+    productCount: 150,
+    subcategories: []
+  },
+  {
+    id: 7,
+    title: 'Анемостаты',
+    url: 'https://mircli.ru/ventilyatsiya/anemostaty',
+    image: undefined,
+    productCount: 100,
+    subcategories: []
+  },
+  {
+    id: 8,
+    title: 'Воздуховоды',
+    url: 'https://mircli.ru/ventilyatsiya/vozdukhovody',
+    image: undefined,
+    productCount: 180,
+    subcategories: []
   }
 ];
 
@@ -56,7 +96,7 @@ export const ventilationProducts: VentilationProduct[] = [
     "id": 1,
     "title": "Вентилятор канальный ВКРС 150",
     "url": "https://mircli.ru/ventilyatsiya/ventilyatory/ventilyator-kanalnyy-vkrs-150",
-    "image": null,
+    "image": undefined,
     "price": "12,500 ₽",
     "sku": "VKRS-150",
     "category": "Вентиляторы",
@@ -74,7 +114,7 @@ export const ventilationProducts: VentilationProduct[] = [
     "id": 2,
     "title": "Воздуховод круглый 200мм",
     "url": "https://mircli.ru/ventilyatsiya/vozdukhovody/vozdukhovod-kruglyy-200mm",
-    "image": null,
+    "image": undefined,
     "price": "850 ₽",
     "sku": "VD-200",
     "category": "Воздуховоды",
@@ -92,7 +132,7 @@ export const ventilationProducts: VentilationProduct[] = [
     "id": 3,
     "title": "Решетка приточная РП 150х150",
     "url": "https://mircli.ru/ventilyatsiya/reshetki-diffuzory/reshetka-pritochnaya-rp-150x150",
-    "image": null,
+    "image": undefined,
     "price": "320 ₽",
     "sku": "RP-150",
     "category": "Решетки и диффузоры",
@@ -111,7 +151,7 @@ export const ventilationProducts: VentilationProduct[] = [
 export const ventilationData = {
   categories: ventilationCategories,
   products: ventilationProducts,
-  parsedAt: '2025-08-01T19:01:21.450Z',
-  totalCategories: 3,
+  parsedAt: '2025-08-01T19:14:39.100Z',
+  totalCategories: 0,
   totalProducts: 3
 };

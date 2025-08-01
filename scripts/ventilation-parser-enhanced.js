@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 export class EnhancedMircliVentilationParser {
   constructor(options = {}) {
-    this.delay = options.delay || 2000;
+    this.delayMs = options.delay || 2000;
     this.captchaTimeout = options.captchaTimeout || 60000;
     this.testMode = options.testMode || false;
     this.categories = [];
@@ -77,7 +77,7 @@ export class EnhancedMircliVentilationParser {
   }
 
   async delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms || this.delay));
+    return new Promise(resolve => setTimeout(resolve, ms || this.delayMs));
   }
 
   async handleCaptcha() {
@@ -293,18 +293,58 @@ export class EnhancedMircliVentilationParser {
         },
         {
           id: 2,
-          title: 'Воздуховоды',
-          url: 'https://mircli.ru/ventilyatsiya/vozdukhovody',
+          title: 'Вентиляционные установки',
+          url: 'https://mircli.ru/ventilyatsiya/ventilyatsionnye-ustanovki',
+          image: null,
+          productCount: 80,
+          subcategories: []
+        },
+        {
+          id: 3,
+          title: 'Сетевые элементы',
+          url: 'https://mircli.ru/ventilyatsiya/setevye-elementy',
+          image: null,
+          productCount: 120,
+          subcategories: []
+        },
+        {
+          id: 4,
+          title: 'Автоматика',
+          url: 'https://mircli.ru/ventilyatsiya/avtomatika',
+          image: null,
+          productCount: 90,
+          subcategories: []
+        },
+        {
+          id: 5,
+          title: 'Вентиляционные решетки',
+          url: 'https://mircli.ru/ventilyatsiya/ventilyatsionnye-reshetki',
           image: null,
           productCount: 200,
           subcategories: []
         },
         {
-          id: 3,
-          title: 'Решетки и диффузоры',
-          url: 'https://mircli.ru/ventilyatsiya/reshetki-diffuzory',
+          id: 6,
+          title: 'Диффузоры',
+          url: 'https://mircli.ru/ventilyatsiya/diffuzory',
+          image: null,
+          productCount: 150,
+          subcategories: []
+        },
+        {
+          id: 7,
+          title: 'Анемостаты',
+          url: 'https://mircli.ru/ventilyatsiya/anemostaty',
           image: null,
           productCount: 100,
+          subcategories: []
+        },
+        {
+          id: 8,
+          title: 'Воздуховоды',
+          url: 'https://mircli.ru/ventilyatsiya/vozdukhovody',
+          image: null,
+          productCount: 180,
           subcategories: []
         }
       ];

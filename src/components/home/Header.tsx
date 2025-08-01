@@ -31,16 +31,14 @@ const menuItems: MenuItem[] = [
     path: '/catalog',
     icon: <Box className="h-5 w-5" />,
     submenu: [
-      { label: 'Вентиляторы', path: '/catalog/ventilators' },
-      { label: 'Воздуховоды', path: '/catalog/air-ducts' },
-      { label: 'Решетки и диффузоры', path: '/catalog/grilles-diffusers' },
-      { label: 'Приточно-вытяжные установки', path: '/catalog/air-handling-units' },
-      { label: 'Фильтры', path: '/catalog/filters' },
-      { label: 'Клапаны', path: '/catalog/valves' },
-      { label: 'Шумоглушители', path: '/catalog/sound-attenuators' },
-      { label: 'Теплообменники', path: '/catalog/heat-exchangers' },
-      { label: 'Автоматика', path: '/catalog/automation' },
-      { label: 'Комплектующие', path: '/catalog/accessories' }
+      { label: 'Вентиляторы', path: '/catalog/ventilyatory' },
+      { label: 'Вентиляционные установки', path: '/catalog/ventilyatsionnye-ustanovki' },
+      { label: 'Сетевые элементы', path: '/catalog/setevye-elementy' },
+      { label: 'Автоматика', path: '/catalog/avtomatika' },
+      { label: 'Вентиляционные решетки', path: '/catalog/ventilyatsionnye-reshetki' },
+      { label: 'Диффузоры', path: '/catalog/diffuzory' },
+      { label: 'Анемостаты', path: '/catalog/anemostaty' },
+      { label: 'Воздуховоды', path: '/catalog/vozdukhovody' }
     ]
   },
   {
