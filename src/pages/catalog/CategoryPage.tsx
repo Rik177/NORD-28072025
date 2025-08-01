@@ -218,8 +218,11 @@ const CategoryPage: React.FC = () => {
 
   // Get category data based on the category parameter
   const getCategoryData = (cat: string, subcat?: string, subsubcat?: string) => {
-    // Find the main category
-    const mainCategory = ventilationCategories.find(c => getCategorySlug(c.title) === cat);
+    console.log('getCategoryData Debug:', { cat, subcat, subsubcat });
+    
+    // Find the main category by slug
+    const mainCategory = ventilationCategories.find(c => c.slug === cat);
+    console.log('mainCategory found:', mainCategory);
     if (!mainCategory) return null;
 
     let targetCategory = mainCategory;
@@ -228,7 +231,7 @@ const CategoryPage: React.FC = () => {
 
     // Find subcategory if specified
     if (subcat && mainCategory.subcategories) {
-      targetSubcategory = mainCategory.subcategories.find(sc => getCategorySlug(sc.title) === subcat);
+      targetSubcategory = mainCategory.subcategories.find(sc => sc.slug === subcat);
       if (targetSubcategory) {
         targetCategory = targetSubcategory;
       }
@@ -236,7 +239,7 @@ const CategoryPage: React.FC = () => {
 
     // Find sub-subcategory if specified
     if (subsubcat && targetSubcategory && targetSubcategory.subcategories) {
-      targetSubsubcategory = targetSubcategory.subcategories.find(ssc => getCategorySlug(ssc.title) === subsubcat);
+      targetSubsubcategory = targetSubcategory.subcategories.find(ssc => ssc.slug === subsubcat);
       if (targetSubsubcategory) {
         targetCategory = targetSubsubcategory;
       }
@@ -244,19 +247,25 @@ const CategoryPage: React.FC = () => {
 
     // Filter products based on the target category
     const categoryProducts = products.filter(product => {
-      const productCategorySlug = getCategorySlug(product.category);
+      // Находим категорию товара в ventilationCategories
+      const productCategory = ventilationCategories.find(c => c.title === product.category);
+      if (!productCategory) return false;
+      
+      // Проверяем соответствие иерархии
       if (subsubcat) {
-        return productCategorySlug === subsubcat;
+        return productCategory.slug === subsubcat;
       } else if (subcat) {
-        return productCategorySlug === subcat;
+        return productCategory.slug === subcat;
       } else {
-        return productCategorySlug === cat;
+        return productCategory.slug === cat;
       }
     });
+    
+    console.log('Filtered products count:', categoryProducts.length);
 
     return {
       name: targetCategory.title,
-      description: getCategoryDescription(targetCategory.title),
+      description: targetCategory.description,
       products: categoryProducts,
       subcategories: targetCategory.subcategories || []
     };
@@ -526,7 +535,7 @@ const CategoryPage: React.FC = () => {
                 {categoryData.subcategories.map((subcat) => (
                   <Link
                     key={subcat.id}
-                    to={`/catalog/${category}/${getCategorySlug(subcat.title)}`}
+                    to={`/catalog/${category}/${subcat.slug}`}
                     className="group bg-white dark:bg-gray-900 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
                   >
                     <div className="p-6">
@@ -534,7 +543,7 @@ const CategoryPage: React.FC = () => {
                         {subcat.title}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                        {getCategoryDescription(subcat.title)}
+                        {subcat.description}
                       </p>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500 dark:text-gray-400">
