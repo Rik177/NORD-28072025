@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Menu, Search, Phone, Heart, ChevronDown, Sun, Moon, MapPin, Building2, Box, Wrench, FolderOpen, Award, PanelTop, X, User, MessageCircle } from 'lucide-react';
 import GlobalSearch from '../shared/GlobalSearch';
 import ConsultationForm, { ConsultationFormData } from '../catalog/ConsultationForm';
-import SkipLink from '../shared/SkipLink';
 
 interface MenuItem {
   label: string;
@@ -32,11 +31,16 @@ const menuItems: MenuItem[] = [
     path: '/catalog',
     icon: <Box className="h-5 w-5" />,
     submenu: [
-      { label: 'Вентиляционное оборудование', path: '/catalog/ventilation' },
-      { label: 'Кондиционеры', path: '/catalog/air-conditioning' },
-      { label: 'Отопительное оборудование', path: '/catalog/heating' },
-      { label: 'Тепловые завесы', path: '/catalog/curtains' },
-      { label: 'Аксессуары и комплектующие', path: '/catalog/accessories' }
+      { label: 'Вентиляторы', path: '/catalog/ventilators' },
+      { label: 'Воздуховоды', path: '/catalog/air-ducts' },
+      { label: 'Решетки и диффузоры', path: '/catalog/grilles-diffusers' },
+      { label: 'Приточно-вытяжные установки', path: '/catalog/air-handling-units' },
+      { label: 'Фильтры', path: '/catalog/filters' },
+      { label: 'Клапаны', path: '/catalog/valves' },
+      { label: 'Шумоглушители', path: '/catalog/sound-attenuators' },
+      { label: 'Теплообменники', path: '/catalog/heat-exchangers' },
+      { label: 'Автоматика', path: '/catalog/automation' },
+      { label: 'Комплектующие', path: '/catalog/accessories' }
     ]
   },
   {

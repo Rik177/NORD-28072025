@@ -17,7 +17,7 @@ import CategoryPage from './pages/catalog/CategoryPage';
 import ProductPage from './pages/catalog/ProductPage';
 import EnhancedCategoryPage from './pages/catalog/EnhancedCategoryPage';
 import EnhancedProductPage from './pages/catalog/EnhancedProductPage';
-import VentilationPage from './pages/VentilationPage';
+
 
 // Страницы услуг
 import Services from './pages/Services';
@@ -108,7 +108,7 @@ function App() {
             <Route path="/catalog/:category/:productId" element={<EnhancedProductPage />} />
             
             {/* Вентиляция */}
-            <Route path="/ventilation" element={<VentilationPage />} />
+
             
             {/* Услуги */}
             <Route path="/services" element={<Services />} />

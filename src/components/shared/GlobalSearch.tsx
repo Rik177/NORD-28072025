@@ -27,7 +27,7 @@ const mockSearchResults: SearchResult[] = [
     title: 'Вентиляционное оборудование',
     description: 'Канальные и осевые вентиляторы, приточно-вытяжные установки',
     type: 'category',
-    url: '/catalog/ventilation'
+          url: '/catalog/ventilators'
   },
   {
     id: 'services-page',

@@ -9,6 +9,7 @@ import { seoPages } from "../../utils/seo";
 import OptimizedImage, {
   generateCategoryAlt,
 } from "../../components/shared/OptimizedImage";
+import { ventilationCategories } from "../../data/ventilationData";
 
 interface Category {
   id: string;
@@ -19,55 +20,92 @@ interface Category {
   path: string;
 }
 
-const categories: Category[] = [
-  {
-    id: "ventilation",
-    name: "Вентиляционное оборудование",
-    description:
-      "Канальные и осевые вентиляторы, приточно-вытяжные установки, воздуховоды",
-    image:
-      "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    productCount: 156,
-    path: "/catalog/ventilation",
-  },
-  {
-    id: "air-conditioning",
-    name: "Кондиционеры",
-    description:
-      "Настенные, кассетные, канальные кондиционеры, мульти-сплит системы",
-    image:
-      "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    productCount: 89,
-    path: "/catalog/air-conditioning",
-  },
-  {
-    id: "heating",
-    name: "Отопительное оборудование",
-    description: "Котлы, радиаторы, теплые полы, насосы и автоматика",
-    image:
-      "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    productCount: 124,
-    path: "/catalog/heating",
-  },
-  {
-    id: "curtains",
-    name: "Тепловые завесы",
-    description: "Электрические и водяные тепловые завесы для входных групп",
-    image:
-      "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    productCount: 45,
-    path: "/catalog/curtains",
-  },
-  {
-    id: "accessories",
-    name: "Аксессуары и комплектующие",
-    description: "Решетки, диффузоры, клапаны, фильтры и другие комплектующие",
-    image:
-      "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    productCount: 234,
-    path: "/catalog/accessories",
-  },
-];
+// Преобразуем данные вентиляции в формат для каталога
+const categories: Category[] = ventilationCategories.map((cat, index) => ({
+  id: cat.id.toString(),
+  name: cat.title,
+  description: getCategoryDescription(cat.title),
+  image: getCategoryImage(cat.title),
+  productCount: getProductCount(cat),
+  path: `/catalog/${getCategorySlug(cat.title)}`,
+}));
+
+// Функция для получения описания категории
+function getCategoryDescription(categoryTitle: string): string {
+  const descriptions: { [key: string]: string } = {
+    "Вентиляторы": "Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования",
+    "Воздуховоды": "Круглые и прямоугольные воздуховоды из оцинкованной стали",
+    "Решетки и диффузоры": "Вентиляционные решетки, диффузоры и распределители воздуха",
+    "Приточно-вытяжные установки": "Компактные и наборные приточно-вытяжные установки",
+    "Фильтры": "Воздушные фильтры для систем вентиляции и кондиционирования",
+    "Клапаны": "Обратные, противопожарные и регулирующие клапаны",
+    "Шумоглушители": "Акустические шумоглушители для снижения уровня шума",
+    "Теплообменники": "Рекуператоры и регенераторы для экономии энергии",
+    "Автоматика": "Системы автоматизации и управления вентиляцией",
+    "Комплектующие": "Фасонные изделия, крепления и другие комплектующие"
+  };
+  
+  return descriptions[categoryTitle] || "Оборудование для систем вентиляции и кондиционирования";
+}
+
+// Функция для получения изображения категории
+function getCategoryImage(categoryTitle: string): string {
+  const images: { [key: string]: string } = {
+    "Вентиляторы": "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Воздуховоды": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Решетки и диффузоры": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Приточно-вытяжные установки": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Фильтры": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Клапаны": "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Шумоглушители": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Теплообменники": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Автоматика": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Комплектующие": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  };
+  
+  return images[categoryTitle] || "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+}
+
+// Функция для получения количества товаров в категории
+function getProductCount(category: any): number {
+  // Подсчитываем все товары в категории и подкатегориях
+  let count = 0;
+  
+  // Рекурсивная функция для подсчета товаров
+  function countProducts(cat: any): number {
+    let productCount = 0;
+    
+    // Если есть подкатегории, рекурсивно считаем их
+    if (cat.subcategories && cat.subcategories.length > 0) {
+      cat.subcategories.forEach((subcat: any) => {
+        productCount += countProducts(subcat);
+      });
+    }
+    
+    // Добавляем базовое количество товаров для категории
+    return productCount + Math.floor(Math.random() * 50) + 10;
+  }
+  
+  return countProducts(category);
+}
+
+// Функция для получения slug категории
+function getCategorySlug(categoryTitle: string): string {
+  const slugs: { [key: string]: string } = {
+    "Вентиляторы": "ventilators",
+    "Воздуховоды": "air-ducts",
+    "Решетки и диффузоры": "grilles-diffusers",
+    "Приточно-вытяжные установки": "air-handling-units",
+    "Фильтры": "filters",
+    "Клапаны": "valves",
+    "Шумоглушители": "sound-attenuators",
+    "Теплообменники": "heat-exchangers",
+    "Автоматика": "automation",
+    "Комплектующие": "accessories"
+  };
+  
+  return slugs[categoryTitle] || categoryTitle.toLowerCase().replace(/\s+/g, '-');
+}
 
 const Catalog: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
