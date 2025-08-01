@@ -4,12 +4,13 @@ import SEOHelmet from "../../components/shared/SEOHelmet";
 import Header from "../../components/home/Header";
 import Footer from "../../components/home/Footer";
 import Breadcrumbs from "../../components/shared/Breadcrumbs";
-import { Search, Filter, Grid, List, ArrowRight } from "lucide-react";
+import { Search, Filter, Grid, List, ArrowRight, Menu } from "lucide-react";
 import { seoPages } from "../../utils/seo";
 import OptimizedImage, {
   generateCategoryAlt,
 } from "../../components/shared/OptimizedImage";
 import { ventilationCategories } from "../../data/ventilationData";
+import CategoryTree from "../../components/catalog/CategoryTree";
 
 interface Category {
   id: string;
@@ -34,15 +35,13 @@ const categories: Category[] = ventilationCategories.map((cat, index) => ({
 function getCategoryDescription(categoryTitle: string): string {
   const descriptions: { [key: string]: string } = {
     "Вентиляторы": "Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования",
-    "Воздуховоды": "Круглые и прямоугольные воздуховоды из оцинкованной стали",
-    "Решетки и диффузоры": "Вентиляционные решетки, диффузоры и распределители воздуха",
-    "Приточно-вытяжные установки": "Компактные и наборные приточно-вытяжные установки",
-    "Фильтры": "Воздушные фильтры для систем вентиляции и кондиционирования",
-    "Клапаны": "Обратные, противопожарные и регулирующие клапаны",
-    "Шумоглушители": "Акустические шумоглушители для снижения уровня шума",
-    "Теплообменники": "Рекуператоры и регенераторы для экономии энергии",
+    "Вентиляционные установки": "Компактные и наборные вентиляционные установки",
+    "Сетевые элементы": "Фасонные изделия, отводы, тройники для воздуховодов",
     "Автоматика": "Системы автоматизации и управления вентиляцией",
-    "Комплектующие": "Фасонные изделия, крепления и другие комплектующие"
+    "Вентиляционные решетки": "Приточные и вытяжные решетки для систем вентиляции",
+    "Диффузоры": "Диффузоры и распределители воздуха для равномерного распределения",
+    "Анемостаты": "Анемостаты для регулировки воздушного потока",
+    "Воздуховоды": "Круглые и прямоугольные воздуховоды из оцинкованной стали"
   };
   
   return descriptions[categoryTitle] || "Оборудование для систем вентиляции и кондиционирования";
@@ -52,15 +51,13 @@ function getCategoryDescription(categoryTitle: string): string {
 function getCategoryImage(categoryTitle: string): string {
   const images: { [key: string]: string } = {
     "Вентиляторы": "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Воздуховоды": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Решетки и диффузоры": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Приточно-вытяжные установки": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Фильтры": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Клапаны": "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Шумоглушители": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Теплообменники": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Вентиляционные установки": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Сетевые элементы": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "Автоматика": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Комплектующие": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "Вентиляционные решетки": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Диффузоры": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Анемостаты": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "Воздуховоды": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   };
   
   return images[categoryTitle] || "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
@@ -92,16 +89,14 @@ function getProductCount(category: any): number {
 // Функция для получения slug категории
 function getCategorySlug(categoryTitle: string): string {
   const slugs: { [key: string]: string } = {
-    "Вентиляторы": "ventilators",
-    "Воздуховоды": "air-ducts",
-    "Решетки и диффузоры": "grilles-diffusers",
-    "Приточно-вытяжные установки": "air-handling-units",
-    "Фильтры": "filters",
-    "Клапаны": "valves",
-    "Шумоглушители": "sound-attenuators",
-    "Теплообменники": "heat-exchangers",
-    "Автоматика": "automation",
-    "Комплектующие": "accessories"
+    "Вентиляторы": "ventilyatory",
+    "Вентиляционные установки": "ventilyatsionnye-ustanovki",
+    "Сетевые элементы": "setevye-elementy",
+    "Автоматика": "avtomatika",
+    "Вентиляционные решетки": "ventilyatsionnye-reshetki",
+    "Диффузоры": "diffuzory",
+    "Анемостаты": "anemostaty",
+    "Воздуховоды": "vozdukhovody"
   };
   
   return slugs[categoryTitle] || categoryTitle.toLowerCase().replace(/\s+/g, '-');
@@ -112,6 +107,7 @@ const Catalog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("name");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [showCategoryTree, setShowCategoryTree] = useState(false);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -175,24 +171,61 @@ const Catalog: React.FC = () => {
                 />
               </div>
 
-              {/* View Mode Toggle */}
+              {/* Controls */}
               <div className="flex items-center gap-2">
+                {/* Category Tree Toggle */}
                 <button
-                  onClick={() => setViewMode("grid")}
-                  className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                  onClick={() => setShowCategoryTree(!showCategoryTree)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                    showCategoryTree 
+                      ? 'bg-primary text-white' 
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
                 >
-                  <Grid className="h-5 w-5" />
+                  <Menu className="h-5 w-5" />
+                  <span className="hidden sm:inline">Дерево категорий</span>
                 </button>
-                <button
-                  onClick={() => setViewMode("list")}
-                  className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
-                >
-                  <List className="h-5 w-5" />
-                </button>
+
+                {/* View Mode Toggle */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setViewMode("grid")}
+                    className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                  >
+                    <Grid className="h-5 w-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode("list")}
+                    className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                  >
+                    <List className="h-5 w-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Category Tree */}
+        {showCategoryTree && (
+          <section className="py-8 bg-gray-50 dark:bg-gray-800">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white mb-6">
+                  Иерархия категорий
+                </h2>
+                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm p-6">
+                  <CategoryTree 
+                    categories={ventilationCategories}
+                    onCategoryClick={(category) => {
+                      console.log('Selected category:', category);
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Categories Grid */}
         <section className="py-12">

@@ -6,9 +6,9 @@ import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
 import ProductFilters from '../../components/catalog/ProductFilters';
 import ProductRecommendations from '../../components/catalog/ProductRecommendations';
-import { Search, Filter, Grid, List, Star, Heart, BarChart2 } from 'lucide-react';
+import { Search, Filter, Grid, List, Star, Heart, BarChart2, ArrowRight } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
-import { ventilationProducts } from '../../data/ventilationData';
+import { ventilationProducts, ventilationCategories, VentilationCategory } from '../../data/ventilationData';
 
 interface Product {
   id: string;
@@ -127,7 +127,11 @@ const categoryInfo = {
 };
 
 const CategoryPage: React.FC = () => {
-  const { category } = useParams<{ category: string }>();
+  const { category, subcategory, subsubcategory } = useParams<{ 
+    category: string; 
+    subcategory?: string; 
+    subsubcategory?: string; 
+  }>();
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -137,22 +141,55 @@ const CategoryPage: React.FC = () => {
   const { addToComparison, isInComparison } = useComparison();
 
   // Get category data based on the category parameter
-  const getCategoryData = (cat: string) => {
-    const info = categoryInfo[cat as keyof typeof categoryInfo];
-    if (!info) return null;
-    
-    const categoryProducts = products.filter(product => product.category === cat);
+  const getCategoryData = (cat: string, subcat?: string, subsubcat?: string) => {
+    // Find the main category
+    const mainCategory = ventilationCategories.find(c => getCategorySlug(c.title) === cat);
+    if (!mainCategory) return null;
+
+    let targetCategory = mainCategory;
+    let targetSubcategory = null;
+    let targetSubsubcategory = null;
+
+    // Find subcategory if specified
+    if (subcat && mainCategory.subcategories) {
+      targetSubcategory = mainCategory.subcategories.find(sc => getCategorySlug(sc.title) === subcat);
+      if (targetSubcategory) {
+        targetCategory = targetSubcategory;
+      }
+    }
+
+    // Find sub-subcategory if specified
+    if (subsubcat && targetSubcategory && targetSubcategory.subcategories) {
+      targetSubsubcategory = targetSubcategory.subcategories.find(ssc => getCategorySlug(ssc.title) === subsubcat);
+      if (targetSubsubcategory) {
+        targetCategory = targetSubsubcategory;
+      }
+    }
+
+    // Filter products based on the target category
+    const categoryProducts = products.filter(product => {
+      const productCategorySlug = getCategorySlug(product.category);
+      if (subsubcat) {
+        return productCategorySlug === subsubcat;
+      } else if (subcat) {
+        return productCategorySlug === subcat;
+      } else {
+        return productCategorySlug === cat;
+      }
+    });
+
     return {
-      name: info.title,
-      description: info.description,
-      products: categoryProducts
+      name: targetCategory.title,
+      description: getCategoryDescription(targetCategory.title),
+      products: categoryProducts,
+      subcategories: targetCategory.subcategories || []
     };
   };
 
-  const categoryData = getCategoryData(category || '');
+  const categoryData = getCategoryData(category || '', subcategory, subsubcategory);
   
   if (!categoryData) {
-    return <Navigate to="/catalog\" replace />;
+    return <Navigate to="/catalog" replace />;
   }
 
   const getCategoryTitle = (cat: string) => {
@@ -364,6 +401,41 @@ const CategoryPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Subcategories */}
+        {categoryData.subcategories && categoryData.subcategories.length > 0 && (
+          <section className="py-8 bg-gray-50 dark:bg-gray-800">
+            <div className="container mx-auto px-4">
+              <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white mb-6">
+                Подкатегории
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {categoryData.subcategories.map((subcat) => (
+                  <Link
+                    key={subcat.id}
+                    to={`/catalog/${category}/${getCategorySlug(subcat.title)}`}
+                    className="group bg-white dark:bg-gray-900 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
+                  >
+                    <div className="p-6">
+                      <h3 className="font-heading font-semibold text-primary dark:text-white mb-2">
+                        {subcat.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        {getCategoryDescription(subcat.title)}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {subcat.productCount} товаров
+                        </span>
+                        <ArrowRight className="h-4 w-4 text-secondary group-hover:text-primary transition-colors" />
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Products Grid */}
         <section className="py-12">
