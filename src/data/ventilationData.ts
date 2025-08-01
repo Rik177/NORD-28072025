@@ -1,5 +1,5 @@
 // Данные парсера вентиляции с mircli.ru
-// Сгенерировано: 2025-08-01T18:53:17.711Z
+// Сгенерировано: 2025-08-01T19:01:21.450Z
 
 export interface VentilationCategory {
   id: number;
@@ -111,7 +111,7 @@ export const ventilationProducts: VentilationProduct[] = [
 export const ventilationData = {
   categories: ventilationCategories,
   products: ventilationProducts,
-  parsedAt: '2025-08-01T18:53:17.711Z',
+  parsedAt: '2025-08-01T19:01:21.450Z',
   totalCategories: 3,
   totalProducts: 3
 };
