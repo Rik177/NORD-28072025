@@ -13,10 +13,8 @@ import Brands from './pages/Brands';
 
 // Страницы каталога
 import Catalog from './pages/catalog/Catalog';
-import CategoryPage from './pages/catalog/CategoryPage';
-import ProductPage from './pages/catalog/ProductPage';
 import EnhancedCategoryPage from './pages/catalog/EnhancedCategoryPage';
-import EnhancedProductPage from './pages/catalog/EnhancedProductPage';
+import ProductPage from './pages/catalog/ProductPage';
 
 
 // Страницы услуг
@@ -104,9 +102,9 @@ function App() {
             
             {/* Каталог */}
             <Route path="/catalog" element={<Catalog />} />
-            <Route path="/catalog/:category" element={<CategoryPage />} />
-            <Route path="/catalog/:category/:subcategory" element={<CategoryPage />} />
-            <Route path="/catalog/:category/:subcategory/:subsubcategory" element={<CategoryPage />} />
+            <Route path="/catalog/:category" element={<EnhancedCategoryPage />} />
+            <Route path="/catalog/:category/:subcategory" element={<EnhancedCategoryPage />} />
+            <Route path="/catalog/:category/:subcategory/:subsubcategory" element={<EnhancedCategoryPage />} />
             <Route path="/catalog/:category/:subcategory/:subsubcategory/:productId" element={<ProductPage />} />
             <Route path="/catalog/:category/:subcategory/:productId" element={<ProductPage />} />
             <Route path="/catalog/:category/:productId" element={<ProductPage />} />

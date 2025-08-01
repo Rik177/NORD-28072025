@@ -466,6 +466,202 @@ export const enhancedProductDatabase: Record<string, EnhancedProduct> = {
     isPopular: true
   },
 
+  'vents-rk-100': {
+    id: 'vents-rk-100',
+    name: 'Канальный вентилятор ВЕНТС RK 100',
+    brand: 'ВЕНТС',
+    model: 'RK 100',
+    category: 'ventilation',
+    subcategory: 'duct-fans',
+    
+    shortDescription: 'Компактный канальный вентилятор для воздуховодов 100 мм',
+    fullDescription: 'Канальный вентилятор ВЕНТС RK 100 для установки в круглые воздуховоды диаметром 100 мм. Идеально подходит для вентиляции небольших помещений.',
+    technicalDescription: 'Оснащен энергоэффективным двигателем с низким уровнем шума.',
+    
+    price: 3890,
+    currency: 'RUB',
+    availability: 'В наличии',
+    deliveryTime: 'В день заказа',
+    
+    images: [
+      {
+        url: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=2',
+        alt: 'Канальный вентилятор ВЕНТС RK 100',
+        type: 'main',
+        caption: 'Компактный канальный вентилятор'
+      }
+    ],
+    
+    rating: 4.5,
+    reviewCount: 28,
+    
+    specifications: [
+      {
+        category: 'Основные характеристики',
+        specifications: {
+          'Диаметр воздуховода': '100 мм',
+          'Производительность': '145 м³/ч',
+          'Мощность': '14 Вт',
+          'Уровень шума': '24 дБ(А)',
+          'Класс защиты': 'IP44'
+        }
+      }
+    ],
+    
+    features: [
+      {
+        icon: <Volume2 className="h-6 w-6" />,
+        title: 'Тихая работа',
+        description: 'Уровень шума всего 24 дБ'
+      },
+      {
+        icon: <Zap className="h-6 w-6" />,
+        title: 'Энергоэффективность',
+        description: 'Потребление всего 14 Вт'
+      }
+    ],
+    
+    applications: [
+      {
+        icon: <Home className="h-6 w-6" />,
+        title: 'Ванные комнаты',
+        description: 'Эффективное удаление влаги',
+        benefits: ['Предотвращение плесени', 'Быстрое удаление влаги'],
+        recommendedFor: ['Ванные до 6 м²', 'Туалеты']
+      }
+    ],
+    
+    installation: {
+      complexity: 'Простая',
+      time: '1 час',
+      team: '1 специалист',
+      requirements: ['Воздуховод 100 мм', 'Электропитание 220В'],
+      steps: ['Установка в воздуховод', 'Подключение к сети'],
+      warranty: '2 года',
+      maintenance: 'Очистка каждые 6 месяцев',
+      tools: ['Отвертки'],
+      materials: ['Кабель', 'Крепеж']
+    },
+    
+    seoTitle: 'Канальный вентилятор ВЕНТС RK 100 - купить в Москве',
+    seoDescription: 'Тихий канальный вентилятор ВЕНТС RK 100 для воздуховодов 100 мм. Цена 3,890 ₽.',
+    keywords: ['канальный вентилятор', 'ВЕНТС RK 100', 'вентилятор 100 мм'],
+    
+    certifications: ['CE', 'EAC'],
+    energyClass: 'A',
+    noiseLevel: '24 дБ',
+    
+    dimensions: {
+      length: 170,
+      width: 100,
+      height: 100,
+      weight: 0.3
+    },
+    
+    relatedProducts: ['rk-125', 'vents-rk-150'],
+    accessories: ['decorative-grille-100'],
+    
+    isPopular: true
+  },
+
+  'vents-rk-150': {
+    id: 'vents-rk-150',
+    name: 'Канальный вентилятор ВЕНТС RK 150',
+    brand: 'ВЕНТС',
+    model: 'RK 150',
+    category: 'ventilation',
+    subcategory: 'duct-fans',
+    
+    shortDescription: 'Мощный канальный вентилятор для воздуховодов 150 мм',
+    fullDescription: 'Канальный вентилятор ВЕНТС RK 150 для установки в круглые воздуховоды диаметром 150 мм. Высокая производительность для средних помещений.',
+    technicalDescription: 'Оснащен надежным двигателем с защитой от перегрузки.',
+    
+    price: 5290,
+    currency: 'RUB',
+    availability: 'В наличии',
+    deliveryTime: 'В день заказа',
+    
+    images: [
+      {
+        url: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=2',
+        alt: 'Канальный вентилятор ВЕНТС RK 150',
+        type: 'main',
+        caption: 'Мощный канальный вентилятор'
+      }
+    ],
+    
+    rating: 4.7,
+    reviewCount: 42,
+    
+    specifications: [
+      {
+        category: 'Основные характеристики',
+        specifications: {
+          'Диаметр воздуховода': '150 мм',
+          'Производительность': '265 м³/ч',
+          'Мощность': '24 Вт',
+          'Уровень шума': '28 дБ(А)',
+          'Класс защиты': 'IP44'
+        }
+      }
+    ],
+    
+    features: [
+      {
+        icon: <Wind className="h-6 w-6" />,
+        title: 'Высокая производительность',
+        description: 'Производительность 265 м³/ч'
+      },
+      {
+        icon: <Shield className="h-6 w-6" />,
+        title: 'Защита IP44',
+        description: 'Надежная защита от влаги'
+      }
+    ],
+    
+    applications: [
+      {
+        icon: <Building className="h-6 w-6" />,
+        title: 'Кухни и офисы',
+        description: 'Эффективная вентиляция средних помещений',
+        benefits: ['Удаление запахов', 'Комфортная атмосфера'],
+        recommendedFor: ['Кухни до 15 м²', 'Офисы']
+      }
+    ],
+    
+    installation: {
+      complexity: 'Простая',
+      time: '1-2 часа',
+      team: '1 специалист',
+      requirements: ['Воздуховод 150 мм', 'Электропитание 220В'],
+      steps: ['Установка в воздуховод', 'Подключение к сети'],
+      warranty: '2 года',
+      maintenance: 'Очистка каждые 6 месяцев',
+      tools: ['Отвертки'],
+      materials: ['Кабель', 'Крепеж']
+    },
+    
+    seoTitle: 'Канальный вентилятор ВЕНТС RK 150 - купить в Москве',
+    seoDescription: 'Мощный канальный вентилятор ВЕНТС RK 150 для воздуховодов 150 мм. Цена 5,290 ₽.',
+    keywords: ['канальный вентилятор', 'ВЕНТС RK 150', 'вентилятор 150 мм'],
+    
+    certifications: ['CE', 'EAC'],
+    energyClass: 'A',
+    noiseLevel: '28 дБ',
+    
+    dimensions: {
+      length: 210,
+      width: 150,
+      height: 150,
+      weight: 0.5
+    },
+    
+    relatedProducts: ['rk-125', 'vents-rk-100'],
+    accessories: ['decorative-grille-150'],
+    
+    isPopular: true
+  },
+
   'mitsubishi-msz-ln25vg': {
     id: 'mitsubishi-msz-ln25vg',
     name: 'Кондиционер Mitsubishi Electric MSZ-LN25VG',
@@ -996,7 +1192,16 @@ export const getEnhancedProduct = (id: string): EnhancedProduct | undefined => {
 
 export const getProductsByCategory = (category: string): EnhancedProduct[] => {
   return Object.values(enhancedProductDatabase).filter(
-    product => product.category === category
+    product => product.category === category || 
+               product.category === 'ventilation' ||
+               (category === 'ventilyatory' && product.name.toLowerCase().includes('вентилятор')) ||
+               (category === 'vozdukhovody' && product.name.toLowerCase().includes('воздуховод')) ||
+               (category === 'diffuzory' && product.name.toLowerCase().includes('диффузор')) ||
+               (category === 'anemostaty' && product.name.toLowerCase().includes('анемостат')) ||
+               (category === 'ventilyatsionnye-reshetki' && product.name.toLowerCase().includes('решетка')) ||
+               (category === 'ventilyatsionnye-ustanovki' && product.name.toLowerCase().includes('установка')) ||
+               (category === 'setevye-elementy' && (product.name.toLowerCase().includes('отвод') || product.name.toLowerCase().includes('тройник'))) ||
+               (category === 'avtomatika' && product.name.toLowerCase().includes('датчик'))
   );
 };
 

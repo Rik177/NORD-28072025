@@ -11,6 +11,94 @@ import { Search, Filter, Grid, List, SlidersHorizontal, TrendingUp, Award, Zap, 
 import { enhancedProductDatabase, getProductsByCategory, EnhancedProduct } from '../../data/enhancedProductData';
 
 const categoryInfo = {
+  'ventilyatory': {
+    name: 'Вентиляторы',
+    description: 'Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования',
+    heroImage: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Высокая производительность',
+      'Низкое энергопотребление',
+      'Долгий срок службы',
+      'Простое обслуживание'
+    ]
+  },
+  'ventilyatsionnye-ustanovki': {
+    name: 'Вентиляционные установки',
+    description: 'Компактные и наборные вентиляционные установки для эффективной обработки воздуха',
+    heroImage: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Рекуперация тепла до 85%',
+      'Автоматическое управление',
+      'Компактные размеры',
+      'Двухступенчатая фильтрация'
+    ]
+  },
+  'setevye-elementy': {
+    name: 'Сетевые элементы',
+    description: 'Фасонные изделия, крепления и изоляция для воздуховодов',
+    heroImage: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Высокое качество материалов',
+      'Точные размеры',
+      'Простая установка',
+      'Долговечность'
+    ]
+  },
+  'avtomatika': {
+    name: 'Автоматика',
+    description: 'Системы автоматизации и управления вентиляцией',
+    heroImage: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Точное управление',
+      'Энергосбережение',
+      'Удаленный мониторинг',
+      'Простая настройка'
+    ]
+  },
+  'ventilyatsionnye-reshetki': {
+    name: 'Вентиляционные решетки',
+    description: 'Приточные и вытяжные решетки для систем вентиляции',
+    heroImage: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Равномерное распределение воздуха',
+      'Эстетичный внешний вид',
+      'Простая установка',
+      'Различные размеры'
+    ]
+  },
+  'diffuzory': {
+    name: 'Диффузоры',
+    description: 'Диффузоры и распределители воздуха для равномерного распределения',
+    heroImage: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Равномерное распределение',
+      'Низкий уровень шума',
+      'Регулируемый поток',
+      'Современный дизайн'
+    ]
+  },
+  'anemostaty': {
+    name: 'Анемостаты',
+    description: 'Анемостаты для регулировки воздушного потока',
+    heroImage: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Точная регулировка потока',
+      'Простое управление',
+      'Надежная конструкция',
+      'Долгий срок службы'
+    ]
+  },
+  'vozdukhovody': {
+    name: 'Воздуховоды',
+    description: 'Круглые и прямоугольные воздуховоды из оцинкованной стали и пластика',
+    heroImage: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
+    benefits: [
+      'Коррозионная стойкость',
+      'Герметичные соединения',
+      'Различные диаметры',
+      'Простой монтаж'
+    ]
+  },
   'air-conditioning': {
     name: 'Кондиционеры и системы кондиционирования',
     description: 'Широкий выбор кондиционеров: настенные, кассетные, канальные, VRF системы. Профессиональный подбор и установка климатического оборудования от ведущих мировых производителей.',
@@ -78,7 +166,9 @@ const EnhancedCategoryPage: React.FC = () => {
   const [quickViewProduct, setQuickViewProduct] = useState<EnhancedProduct | null>(null);
 
   const categoryData = category ? categoryInfo[category as keyof typeof categoryInfo] : null;
-  const products = category ? getProductsByCategory(category) : [];
+  
+  // Get products based on category
+  const products = category ? getProductsByCategory(category) : Object.values(enhancedProductDatabase);
 
   if (!categoryData) {
     return <Navigate to="/catalog" replace />;

@@ -155,6 +155,54 @@ const categoryInfo = {
   'ventilyatory': {
     title: 'Вентиляторы',
     description: 'Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования',
+    image: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 150
+  },
+  'ventilyatsionnye-ustanovki': {
+    title: 'Вентиляционные установки',
+    description: 'Компактные и наборные вентиляционные установки',
+    image: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 80
+  },
+  'setevye-elementy': {
+    title: 'Сетевые элементы',
+    description: 'Фасонные изделия, отводы, тройники для воздуховодов',
+    image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 120
+  },
+  'avtomatika': {
+    title: 'Автоматика',
+    description: 'Системы автоматизации и управления вентиляцией',
+    image: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 90
+  },
+  'ventilyatsionnye-reshetki': {
+    title: 'Вентиляционные решетки',
+    description: 'Приточные и вытяжные решетки для систем вентиляции',
+    image: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 200
+  },
+  'diffuzory': {
+    title: 'Диффузоры',
+    description: 'Диффузоры и распределители воздуха для равномерного распределения',
+    image: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 150
+  },
+  'anemostaty': {
+    title: 'Анемостаты',
+    description: 'Анемостаты для регулировки воздушного потока',
+    image: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 100
+  },
+  'vozdukhovody': {
+    title: 'Воздуховоды',
+    description: 'Круглые и прямоугольные воздуховоды из оцинкованной стали',
+    image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1',
+    productCount: 180
+  },
+  'ventilyatory': {
+    title: 'Вентиляторы',
+    description: 'Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования',
     image: 'https://picsum.photos/800/400?random=1',
     productCount: 150
   },
@@ -270,6 +318,14 @@ const CategoryPage: React.FC = () => {
 
   const getCategoryTitle = (cat: string) => {
     const titles: Record<string, string> = {
+      'ventilyatory': 'Вентиляторы',
+      'ventilyatsionnye-ustanovki': 'Вентиляционные установки',
+      'setevye-elementy': 'Сетевые элементы',
+      'avtomatika': 'Автоматика',
+      'ventilyatsionnye-reshetki': 'Вентиляционные решетки',
+      'diffuzory': 'Диффузоры',
+      'anemostaty': 'Анемостаты',
+      'vozdukhovody': 'Воздуховоды',
       'ventilators': 'Вентиляторы',
       'air-ducts': 'Воздуховоды',
       'grilles-diffusers': 'Решетки и диффузоры',

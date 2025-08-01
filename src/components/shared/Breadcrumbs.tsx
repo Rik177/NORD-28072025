@@ -42,6 +42,11 @@ const routeLabels: Record<string, string> = {
   'curtains': 'Тепловые завесы',
   'accessories': 'Аксессуары и комплектующие',
   'smart-home': 'Умный дом',
+  'ventilyatory': 'Вентиляторы',
+  'ventilyatsionnye-ustanovki': 'Вентиляционные установки',
+  'setevye-elementy': 'Сетевые элементы',
+  'avtomatika': 'Автоматика',
+  'ventilyatsionnye-reshetki': 'Вентиляционные решетки',
 
   // Услуги
   'design': 'Проектирование',

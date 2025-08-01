@@ -31,14 +31,11 @@ const menuItems: MenuItem[] = [
     path: '/catalog',
     icon: <Box className="h-5 w-5" />,
     submenu: [
+      { label: 'Кондиционеры', path: '/catalog/air-conditioning' },
       { label: 'Вентиляторы', path: '/catalog/ventilyatory' },
-      { label: 'Вентиляционные установки', path: '/catalog/ventilyatsionnye-ustanovki' },
-      { label: 'Сетевые элементы', path: '/catalog/setevye-elementy' },
-      { label: 'Автоматика', path: '/catalog/avtomatika' },
-      { label: 'Вентиляционные решетки', path: '/catalog/ventilyatsionnye-reshetki' },
-      { label: 'Диффузоры', path: '/catalog/diffuzory' },
-      { label: 'Анемостаты', path: '/catalog/anemostaty' },
-      { label: 'Воздуховоды', path: '/catalog/vozdukhovody' }
+      { label: 'Отопление', path: '/catalog/heating' },
+      { label: 'Тепловые завесы', path: '/catalog/curtains' },
+      { label: 'Аксессуары', path: '/catalog/accessories' }
     ]
   },
   {

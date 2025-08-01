@@ -73,7 +73,7 @@ const quickLinks: QuickLink[] = [
 
 const popularPages = [
   { title: 'Кондиционеры', href: '/catalog/air-conditioning' },
-          { title: 'Вентиляторы', href: '/catalog/ventilators' },
+  { title: 'Вентиляторы', href: '/catalog/ventilyatory' },
   { title: 'Проектирование систем', href: '/services/design' },
   { title: 'Монтаж оборудования', href: '/services/installation' },
   { title: 'Отзывы клиентов', href: '/reviews' },

@@ -96,7 +96,12 @@ function getCategorySlug(categoryTitle: string): string {
     "Вентиляционные решетки": "ventilyatsionnye-reshetki",
     "Диффузоры": "diffuzory",
     "Анемостаты": "anemostaty",
-    "Воздуховоды": "vozdukhovody"
+    "Воздуховоды": "vozdukhovody",
+    // Добавляем основные категории
+    "Кондиционеры": "air-conditioning",
+    "Отопление": "heating",
+    "Тепловые завесы": "curtains",
+    "Аксессуары": "accessories"
   };
   
   return slugs[categoryTitle] || categoryTitle.toLowerCase().replace(/\s+/g, '-');
