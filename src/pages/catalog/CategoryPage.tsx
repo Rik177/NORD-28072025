@@ -28,7 +28,7 @@ interface Product {
 // Преобразуем данные вентиляции в формат для отображения
 const products: Product[] = ventilationProducts.map((product, index) => ({
   id: product.id.toString(),
-  name: product.title,
+          name: product.name,
   description: product.description || 'Оборудование для систем вентиляции и кондиционирования',
   price: product.price ? parseInt(product.price.replace(/[^\d]/g, '')) : Math.floor(Math.random() * 50000) + 5000,
   oldPrice: Math.random() > 0.7 ? Math.floor(Math.random() * 50000) + 5000 : undefined,
@@ -99,6 +99,7 @@ function getBrandFromCategory(category: string): string {
 // Функция для получения slug категории
 function getCategorySlug(category: string): string {
   const slugs: { [key: string]: string } = {
+    // Основные категории
     "Вентиляторы": "ventilyatory",
     "Вентиляционные установки": "ventilyatsionnye-ustanovki",
     "Сетевые элементы": "setevye-elementy",
@@ -107,48 +108,89 @@ function getCategorySlug(category: string): string {
     "Диффузоры": "diffuzory",
     "Анемостаты": "anemostaty",
     "Воздуховоды": "vozdukhovody",
-    "Канальные вентиляторы": "kanalnye-ventilyatory",
-    "Осевые вентиляторы": "osevye-ventilyatory",
-    "Крышные вентиляторы": "kryshnye-ventilyatory",
-    "Центробежные вентиляторы": "tsentrobezhnye-ventilyatory",
-    "Приточно-вытяжные установки": "pritochno-vytyazhnye-ustanovki",
-    "Приточные установки": "pritochnye-ustanovki",
-    "Фасонные изделия": "fasonnye-izdeliya",
-    "Крепления": "krepleniya",
-    "Изоляция": "izolyatsiya",
-    "Датчики": "datchiki",
-    "Контроллеры": "kontrollery",
-    "Приводы": "privody",
-    "Приточные решетки": "pritochnye-reshetki",
-    "Вытяжные решетки": "vytyazhnye-reshetki",
-    "Универсальные решетки": "universalnye-reshetki",
-    "Круглые диффузоры": "kruglye-diffuzory",
-    "Прямоугольные диффузоры": "pryamougolnye-diffuzory",
-    "Линейные диффузоры": "lineynye-diffuzory",
-    "Приточные анемостаты": "pritochnye-anemostaty",
-    "Вытяжные анемостаты": "vytyazhnye-anemostaty",
-    "Универсальные анемостаты": "universalnye-anemostaty",
-    "Круглые воздуховоды": "kruglye-vozdukhovody",
-    "Прямоугольные воздуховоды": "pryamougolnye-vozdukhovody",
-    "Круглые канальные": "kruglye-kanalnye",
-    "Прямоугольные канальные": "pryamougolnye-kanalnye",
-    "Настенные осевые": "nastennye-osevye",
-    "Потолочные осевые": "potolochnye-osevye",
-    "Компактные ПВУ": "kompaktnye-pvu",
-    "Наборные ПВУ": "nabornye-pvu",
-    "Отводы": "otvody",
-    "Тройники": "troyniki",
-    "Переходы": "perekhody",
-    "Датчики температуры": "datchiki-temperatury",
-    "Датчики влажности": "datchiki-vlazhnosti",
-    "Датчики давления": "datchiki-davleniya",
-    "Оцинкованные круглые": "otsinkovannye-kruglye",
-    "Пластиковые круглые": "plastikovye-kruglye",
-    "Оцинкованные прямоугольные": "otsinkovannye-pryamougolnye",
-    "Пластиковые прямоугольные": "plastikovye-pryamougolnye"
+    
+    // Подкатегории вентиляторов
+    "Напольные вентиляторы": "napolnye-ventilyatory",
+    "Настенные вентиляторы": "nastennye-ventilyatory",
+    "Настольные вентиляторы": "nastolnye-ventilyatory",
+    "Потолочные вентиляторы": "potolochnye-ventilyatory",
+    "Вытяжки для ванной": "vytyazhki-dlya-vannoj",
+    "Промышленные": "promyshlennye",
+    "Аксессуары": "aksessuary",
+    
+    // Подкатегории напольных вентиляторов
+    "Лопастные напольные": "lopastnye",
+    "Безлопастные": "bezlopastnye",
+    "Колонные": "kolonnye",
+    
+    // Подкатегории настольных вентиляторов
+    "Лопастные настольные": "lopastnie",
+    
+    // Подкатегории потолочных вентиляторов
+    "С подсветкой": "s-podsvetkoj",
+    "Без подсветки": "bez-podsvetki",
+    
+    // Подкатегории вытяжек для ванной
+    "100 мм": "100-mm",
+    "120 мм": "120-mm",
+    "125 мм": "125-mm",
+    "150 мм": "150-mm",
+    "свыше 150 мм": "svyshe-150-mm",
+    
+    // Подкатегории промышленных вентиляторов
+    "Канальные круглые": "kruglyye-kanalnye",
+    "Канальные прямоугольные": "pryamougolnye-kanalnye",
+    "Крышные": "kryshnye",
+    "Осевые": "osevye",
+    "Центробежные": "centrobezhnye",
+    "Дестратификаторы": "destratifikatory",
+    "Дымоудаления": "dymoudaleniya",
+    "Кухонные": "zharostojkie",
+    "Каминные": "kaminnye",
+    
+    // Подкатегории канальных прямоугольных
+    "300x150 мм": "300x150-mm",
+    "400x200 мм": "400x200-mm",
+    "400x420 мм": "400x420-mm",
+    "500x250 мм": "500x250-mm",
+    "500x300 мм": "500x300-mm",
+    "590х590 мм": "590h590-mm",
+    "600х300 мм": "600h300-mm",
+    "600x350 мм": "600x350-mm",
+    "700x400 мм": "700x400-mm",
+    "720x720 мм": "720x720-mm",
+    "800x500 мм": "800x500-mm",
+    "900x500 мм": "900x500-mm",
+    "920x920 мм": "920x920-mm",
+    "1000x500 мм": "1000x500-mm",
+    
+    // Подкатегории крышных
+    "190 мм": "190-mm",
+    "225 мм": "225-mm",
+    "280 мм": "280-mm",
+    "310 мм": "310-mm",
+    "355 мм": "355-mm",
+    "≥ 860 мм": "-860-mm",
+    
+    // Подкатегории осевых
+    "≤ 150 мм": "-150mm",
+    "550 мм": "550-mm",
+    "≥ 1000 мм": "-1000-mm",
+    
+    // Подкатегории центробежных
+    "≤500 м³ч": "-500m-ch",
+    "501-700 м³ч": "501-700m-ch",
+    "701-1000 м³ч": "701-1000m-ch",
+    "1001-1500 м³ч": "1001-1500m-ch",
+    "1501-2000 м³ч": "1501-2000m-ch",
+    "2001-3000 м³ч": "2001-3000m-ch",
+    "3001-5000 м³ч": "3001-5000m-ch",
+    "5001-7000 м³ч": "5001-7000m-ch",
+    "7001-10000 м³ч": "7001-10000m-ch",
+    ">10000 м³ч": "10000m-ch"
   };
   
-  return slugs[category] || "ventilyatory";
+  return slugs[category] || category.toLowerCase().replace(/\s+/g, '-');
 }
 
 const categoryInfo = {
