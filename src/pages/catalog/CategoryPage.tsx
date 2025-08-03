@@ -25,21 +25,23 @@ interface Product {
   category: string;
 }
 
-// Преобразуем данные вентиляции в формат для отображения
-const products: Product[] = ventilationProducts.map((product, index) => ({
-  id: product.id.toString(),
-          name: product.name,
-  description: product.description || 'Оборудование для систем вентиляции и кондиционирования',
-  price: product.price ? parseInt(product.price.replace(/[^\d]/g, '')) : Math.floor(Math.random() * 50000) + 5000,
-  oldPrice: Math.random() > 0.7 ? Math.floor(Math.random() * 50000) + 5000 : undefined,
-  image: product.image || `https://picsum.photos/400/300?random=${product.id}`,
-  rating: 4.0 + Math.random() * 1.0,
-  reviewCount: Math.floor(Math.random() * 50) + 5,
-  isNew: Math.random() > 0.8,
-  isSale: Math.random() > 0.7,
-  brand: getBrandFromCategory(product.category),
-  category: product.category
-}));
+// Функция для преобразования данных вентиляции в формат для отображения
+const createProducts = (): Product[] => {
+  return ventilationProducts.map((product, index) => ({
+    id: product.id.toString(),
+    name: product.name,
+    description: product.description || 'Оборудование для систем вентиляции и кондиционирования',
+    price: product.price ? parseInt(product.price.replace(/[^\d]/g, '')) : Math.floor(Math.random() * 50000) + 5000,
+    oldPrice: Math.random() > 0.7 ? Math.floor(Math.random() * 50000) + 5000 : undefined,
+    image: product.image || `https://picsum.photos/400/300?random=${product.id}`,
+    rating: 4.0 + Math.random() * 1.0,
+    reviewCount: Math.floor(Math.random() * 50) + 5,
+    isNew: Math.random() > 0.8,
+    isSale: Math.random() > 0.7,
+    brand: getBrandFromCategory(product.category),
+    category: product.category
+  }));
+};
 
 // Функция для получения бренда из категории
 function getBrandFromCategory(category: string): string {
@@ -284,8 +286,9 @@ const CategoryPage: React.FC = () => {
       }
     }
 
-    // Filter products based on the target category
-    const categoryProducts = products.filter(product => {
+    // Create products and filter based on the target category
+    const allProducts = createProducts();
+    const categoryProducts = allProducts.filter(product => {
       const productCategorySlug = getCategorySlug(product.category);
       if (subsubcat) {
         return productCategorySlug === subsubcat;
