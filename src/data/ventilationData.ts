@@ -206,238 +206,127 @@ export const ventilationCategories: VentilationCategory[] = [
       },
       {
         id: 16,
-        title: 'Промышленные',
+        title: 'Промышленные вентиляторы',
         url: 'https://mircli.ru/promyshlennye-ventilyatory/',
         image: undefined,
-        productCount: 420,
+        productCount: 320,
         subcategories: [
           {
             id: 161,
-            title: 'Канальные круглые',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/kruglyye-kanalnye/',
+            title: 'Канальные',
+            url: 'https://mircli.ru/promyshlennye-ventilyatory/kanalnye/',
             image: undefined,
-            productCount: 180,
+            productCount: 120,
             subcategories: [
               {
                 id: 1611,
-                title: '100 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/100-mm/',
+                title: 'Круглые',
+                url: 'https://mircli.ru/promyshlennye-ventilyatory/kruglye-kanalnye/',
                 image: undefined,
-                productCount: 15,
-                subcategories: []
+                productCount: 60,
+                subcategories: [
+                  {
+                    id: 16111,
+                    title: '100 мм',
+                    url: 'https://mircli.ru/kruglye-kanalnye/100-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16112,
+                    title: '125 мм',
+                    url: 'https://mircli.ru/kruglye-kanalnye/125-mm/',
+                    image: undefined,
+                    productCount: 15,
+                    subcategories: []
+                  },
+                  {
+                    id: 16113,
+                    title: '150 мм',
+                    url: 'https://mircli.ru/kruglye-kanalnye/150-mm/',
+                    image: undefined,
+                    productCount: 20,
+                    subcategories: []
+                  },
+                  {
+                    id: 16114,
+                    title: '200 мм',
+                    url: 'https://mircli.ru/kruglye-kanalnye/200-mm/',
+                    image: undefined,
+                    productCount: 15,
+                    subcategories: []
+                  }
+                ]
               },
               {
                 id: 1612,
-                title: '125 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/125-mm/',
+                title: 'Прямоугольные',
+                url: 'https://mircli.ru/promyshlennye-ventilyatory/pryamougolnye-kanalnye/',
                 image: undefined,
-                productCount: 20,
-                subcategories: []
-              },
-              {
-                id: 1613,
-                title: '150 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/150-mm/',
-                image: undefined,
-                productCount: 25,
-                subcategories: []
-              },
-              {
-                id: 1614,
-                title: '160 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/160-mm/',
-                image: undefined,
-                productCount: 20,
-                subcategories: []
-              },
-              {
-                id: 1615,
-                title: '200 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/200-mm/',
-                image: undefined,
-                productCount: 30,
-                subcategories: []
-              },
-              {
-                id: 1616,
-                title: '250 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/250-mm/',
-                image: undefined,
-                productCount: 25,
-                subcategories: []
-              },
-              {
-                id: 1617,
-                title: '315 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/315-mm/',
-                image: undefined,
-                productCount: 20,
-                subcategories: []
-              },
-              {
-                id: 1618,
-                title: '350 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/350-mm/',
-                image: undefined,
-                productCount: 15,
-                subcategories: []
-              },
-              {
-                id: 1619,
-                title: '400 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/400-mm/',
-                image: undefined,
-                productCount: 15,
-                subcategories: []
-              },
-              {
-                id: 16110,
-                title: '450 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/450-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 16111,
-                title: '≥ 500 мм',
-                url: 'https://mircli.ru/kruglyye-kanalnye/-500-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
+                productCount: 60,
+                subcategories: [
+                  {
+                    id: 16121,
+                    title: '300x150 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/300x150-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16122,
+                    title: '400x200 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/400x200-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16123,
+                    title: '500x250 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/500x250-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16124,
+                    title: '600x300 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/600x300-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16125,
+                    title: '800x400 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/800x400-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  },
+                  {
+                    id: 16126,
+                    title: '1000x500 мм',
+                    url: 'https://mircli.ru/pryamougolnye-kanalnye/1000x500-mm/',
+                    image: undefined,
+                    productCount: 10,
+                    subcategories: []
+                  }
+                ]
               }
             ]
           },
           {
             id: 162,
-            title: 'Канальные прямоугольные',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/pryamougolnye-kanalnye/',
-            image: undefined,
-            productCount: 120,
-            subcategories: [
-              {
-                id: 1621,
-                title: '300x150 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/300x150-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1622,
-                title: '400x200 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/400x200-mm/',
-                image: undefined,
-                productCount: 15,
-                subcategories: []
-              },
-              {
-                id: 1623,
-                title: '400x420 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/400x420-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1624,
-                title: '500x250 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/500x250-mm/',
-                image: undefined,
-                productCount: 15,
-                subcategories: []
-              },
-              {
-                id: 1625,
-                title: '500x300 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/500x300-mm/',
-                image: undefined,
-                productCount: 15,
-                subcategories: []
-              },
-              {
-                id: 1626,
-                title: '590х590 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/590h590-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1627,
-                title: '600х300 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/600h300-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1628,
-                title: '600x350 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/600x350-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1629,
-                title: '700x400 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/700x400-mm/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 16210,
-                title: '720x720 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/720x720-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16211,
-                title: '800x500 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/800x500-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16212,
-                title: '900x500 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/900x500-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16213,
-                title: '920x920 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/920x920-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16214,
-                title: '1000x500 мм',
-                url: 'https://mircli.ru/pryamougolnye-kanalnye/1000x500-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              }
-            ]
-          },
-          {
-            id: 163,
             title: 'Крышные',
             url: 'https://mircli.ru/promyshlennye-ventilyatory/kryshnye/',
             image: undefined,
             productCount: 80,
             subcategories: [
               {
-                id: 1631,
+                id: 1621,
                 title: '125 мм',
                 url: 'https://mircli.ru/kryshnye/125-mm/',
                 image: undefined,
@@ -445,7 +334,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1632,
+                id: 1622,
                 title: '160 мм',
                 url: 'https://mircli.ru/kryshnye/160-mm/',
                 image: undefined,
@@ -453,15 +342,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1633,
-                title: '190 мм',
-                url: 'https://mircli.ru/kryshnye/190-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1634,
+                id: 1623,
                 title: '200 мм',
                 url: 'https://mircli.ru/kryshnye/200-mm/',
                 image: undefined,
@@ -469,15 +350,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1635,
-                title: '225 мм',
-                url: 'https://mircli.ru/kryshnye/225-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1636,
+                id: 1624,
                 title: '250 мм',
                 url: 'https://mircli.ru/kryshnye/250-mm/',
                 image: undefined,
@@ -485,23 +358,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1637,
-                title: '280 мм',
-                url: 'https://mircli.ru/kryshnye/280-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1638,
-                title: '310 мм',
-                url: 'https://mircli.ru/kryshnye/310-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1639,
+                id: 1625,
                 title: '315 мм',
                 url: 'https://mircli.ru/kryshnye/315-mm/',
                 image: undefined,
@@ -509,15 +366,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 16310,
-                title: '355 мм',
-                url: 'https://mircli.ru/kryshnye/355-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16311,
+                id: 1626,
                 title: '400 мм',
                 url: 'https://mircli.ru/kryshnye/400-mm/',
                 image: undefined,
@@ -525,39 +374,23 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 16312,
-                title: '450 мм',
-                url: 'https://mircli.ru/kryshnye/450-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16313,
+                id: 1627,
                 title: '500 мм',
                 url: 'https://mircli.ru/kryshnye/500-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 16314,
-                title: '560 мм',
-                url: 'https://mircli.ru/kryshnye/560-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16315,
+                id: 1628,
                 title: '630 мм',
                 url: 'https://mircli.ru/kryshnye/630-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 16316,
+                id: 1629,
                 title: '710 мм',
                 url: 'https://mircli.ru/kryshnye/710-mm/',
                 image: undefined,
@@ -565,7 +398,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 16317,
+                id: 16210,
                 title: '≥ 860 мм',
                 url: 'https://mircli.ru/kryshnye/-860-mm/',
                 image: undefined,
@@ -575,14 +408,14 @@ export const ventilationCategories: VentilationCategory[] = [
             ]
           },
           {
-            id: 164,
+            id: 163,
             title: 'Осевые',
             url: 'https://mircli.ru/promyshlennye-ventilyatory/osevye/',
             image: undefined,
             productCount: 60,
             subcategories: [
               {
-                id: 1641,
+                id: 1631,
                 title: '≤ 150 мм',
                 url: 'https://mircli.ru/osevye/-150mm/',
                 image: undefined,
@@ -590,7 +423,7 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1642,
+                id: 1632,
                 title: '200 мм',
                 url: 'https://mircli.ru/osevye/200-mm/',
                 image: undefined,
@@ -598,87 +431,39 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 1643,
+                id: 1633,
                 title: '250 мм',
                 url: 'https://mircli.ru/osevye/250-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 1644,
-                title: '300 мм',
-                url: 'https://mircli.ru/osevye/300-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1645,
+                id: 1634,
                 title: '315 мм',
                 url: 'https://mircli.ru/osevye/315-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 1646,
-                title: '350 мм',
-                url: 'https://mircli.ru/osevye/350-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1647,
-                title: '355 мм',
-                url: 'https://mircli.ru/osevye/355-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1648,
+                id: 1635,
                 title: '400 мм',
                 url: 'https://mircli.ru/osevye/400-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 1649,
-                title: '450 мм',
-                url: 'https://mircli.ru/osevye/450-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16410,
+                id: 1636,
                 title: '500 мм',
                 url: 'https://mircli.ru/osevye/500-mm/',
                 image: undefined,
-                productCount: 5,
+                productCount: 10,
                 subcategories: []
               },
               {
-                id: 16411,
-                title: '550 мм',
-                url: 'https://mircli.ru/osevye/550-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16412,
-                title: '560 мм',
-                url: 'https://mircli.ru/osevye/560-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16413,
+                id: 1637,
                 title: '630 мм',
                 url: 'https://mircli.ru/osevye/630-mm/',
                 image: undefined,
@@ -686,228 +471,326 @@ export const ventilationCategories: VentilationCategory[] = [
                 subcategories: []
               },
               {
-                id: 16414,
+                id: 1638,
                 title: '710 мм',
                 url: 'https://mircli.ru/osevye/710-mm/',
                 image: undefined,
                 productCount: 5,
                 subcategories: []
-              },
-              {
-                id: 16415,
-                title: '800 мм',
-                url: 'https://mircli.ru/osevye/800-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16416,
-                title: '900 мм',
-                url: 'https://mircli.ru/osevye/900-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16417,
-                title: '≥ 1000 мм',
-                url: 'https://mircli.ru/osevye/-1000-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
               }
             ]
           },
           {
-            id: 165,
+            id: 164,
             title: 'Центробежные',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/centrobezhnye/',
+            url: 'https://mircli.ru/promyshlennye-ventilyatory/tsentrobezhnye/',
             image: undefined,
-            productCount: 80,
-            subcategories: [
-              {
-                id: 1651,
-                title: '≤500 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/-500m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1652,
-                title: '501-700 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/501-700m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1653,
-                title: '701-1000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/701-1000m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1654,
-                title: '1001-1500 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/1001-1500m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1655,
-                title: '1501-2000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/1501-2000m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1656,
-                title: '2001-3000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/2001-3000m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1657,
-                title: '3001-5000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/3001-5000m-ch/',
-                image: undefined,
-                productCount: 10,
-                subcategories: []
-              },
-              {
-                id: 1658,
-                title: '5001-7000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/5001-7000m-ch/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1659,
-                title: '7001-10000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/7001-10000m-ch/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 16510,
-                title: '>10000 м³ч',
-                url: 'https://mircli.ru/centrobezhnye/10000m-ch/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              }
-            ]
-          },
-          {
-            id: 166,
-            title: 'Дестратификаторы',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/destratifikatory/',
-            image: undefined,
-            productCount: 20,
-            subcategories: []
-          },
-          {
-            id: 167,
-            title: 'Дымоудаления',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/dymoudaleniya/',
-            image: undefined,
-            productCount: 40,
-            subcategories: [
-              {
-                id: 1671,
-                title: '200 мм',
-                url: 'https://mircli.ru/dymoudaleniya/200-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1672,
-                title: '300 мм',
-                url: 'https://mircli.ru/dymoudaleniya/300-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1673,
-                title: '400 мм',
-                url: 'https://mircli.ru/dymoudaleniya/400-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1674,
-                title: '500 мм',
-                url: 'https://mircli.ru/dymoudaleniya/500-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1675,
-                title: '600 мм',
-                url: 'https://mircli.ru/dymoudaleniya/600-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              },
-              {
-                id: 1676,
-                title: '800 мм',
-                url: 'https://mircli.ru/dymoudaleniya/800-mm/',
-                image: undefined,
-                productCount: 5,
-                subcategories: []
-              }
-            ]
-          },
-          {
-            id: 168,
-            title: 'Кухонные',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/zharostojkie/',
-            image: undefined,
-            productCount: 30,
-            subcategories: []
-          },
-          {
-            id: 169,
-            title: 'Каминные',
-            url: 'https://mircli.ru/promyshlennye-ventilyatory/kaminnye/',
-            image: undefined,
-            productCount: 25,
+            productCount: 60,
             subcategories: []
           }
         ]
-      },
-      {
-        id: 17,
-        title: 'Аксессуары',
-        url: 'https://mircli.ru/aksessuary-dlya-ventilyatorov/',
-        image: undefined,
-        productCount: 85,
-        subcategories: []
       }
     ]
   },
   {
     id: 2,
     title: 'Вентиляционные установки',
-    url: 'https://mircli.ru/ventilyatsionnye-ustanovki/',
+    url: 'https://mircli.ru/ventilyacionnye-ustanovki/',
     image: undefined,
-    productCount: 320,
-    subcategories: []
+    productCount: 300,
+    subcategories: [
+      {
+        id: 21,
+        title: 'Приточные установки',
+        url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/',
+        image: undefined,
+        productCount: 100,
+        subcategories: [
+          {
+            id: 211,
+            title: '500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 212,
+            title: '750 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/750-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 213,
+            title: '1000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/1000-m-ch/',
+            image: undefined,
+            productCount: 15,
+            subcategories: []
+          },
+          {
+            id: 214,
+            title: '1500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/1500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 215,
+            title: '2000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/2000-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 216,
+            title: '2500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/2500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 217,
+            title: '3000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/3000-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 218,
+            title: '3500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/3500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 219,
+            title: '4000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/4000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2110,
+            title: '4500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/4500-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2111,
+            title: '5500 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/5500-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2112,
+            title: '6000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/6000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2113,
+            title: '8000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/8000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2114,
+            title: '10000 м³/ч',
+            url: 'https://mircli.ru/pritochnye-ventilyacionnye-ustanovki/10000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 22,
+        title: 'Приточно-вытяжные',
+        url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/',
+        image: undefined,
+        productCount: 100,
+        subcategories: [
+          {
+            id: 221,
+            title: '500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 222,
+            title: '750 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/750-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 223,
+            title: '1000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/1000-m-ch/',
+            image: undefined,
+            productCount: 15,
+            subcategories: []
+          },
+          {
+            id: 224,
+            title: '1500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/1500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 225,
+            title: '2000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/2000-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 226,
+            title: '2500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/2500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 227,
+            title: '3000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/3000-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 228,
+            title: '3500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/3500-m-ch/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 229,
+            title: '4000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/4000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2210,
+            title: '4500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/4500-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2211,
+            title: '5500 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/5500-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2212,
+            title: '6000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/6000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2213,
+            title: '8000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/8000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 2214,
+            title: '10000 м³/ч',
+            url: 'https://mircli.ru/pritochno-vytyazhnye-ventilyacionnye-unstanovki/10000-m-ch/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 23,
+        title: 'Бытовые установки',
+        url: 'https://mircli.ru/bytovye-ustanovki/',
+        image: undefined,
+        productCount: 60,
+        subcategories: [
+          {
+            id: 231,
+            title: 'Бытовые приточные',
+            url: 'https://mircli.ru/bytovye-ustanovki/bytovye-pritochnye/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          },
+          {
+            id: 232,
+            title: 'Бытовые приточно-вытяжные',
+            url: 'https://mircli.ru/bytovye-ustanovki/bytovye-pritochno-vytyazhnye/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          },
+          {
+            id: 233,
+            title: 'Проветриватели',
+            url: 'https://mircli.ru/bytovye-ustanovki/provetrivateli/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 24,
+        title: 'Вытяжные установки',
+        url: 'https://mircli.ru/vytyazhnye-ustanovki/',
+        image: undefined,
+        productCount: 40,
+        subcategories: []
+      },
+      {
+        id: 25,
+        title: 'Аксессуары',
+        url: 'https://mircli.ru/aksessuary-dlya-ventilyacionnykh-ustanovok/',
+        image: undefined,
+        productCount: 30,
+        subcategories: []
+      }
+    ]
   },
   {
     id: 3,
@@ -915,30 +798,285 @@ export const ventilationCategories: VentilationCategory[] = [
     url: 'https://mircli.ru/setevye-elementy/',
     image: undefined,
     productCount: 450,
-    subcategories: []
+    subcategories: [
+      {
+        id: 31,
+        title: 'Нагреватели',
+        url: 'https://mircli.ru/setevye-elementy/nagrevateli/',
+        image: undefined,
+        productCount: 80,
+        subcategories: []
+      },
+      {
+        id: 32,
+        title: 'Охладители',
+        url: 'https://mircli.ru/setevye-elementy/ohladiteli/',
+        image: undefined,
+        productCount: 60,
+        subcategories: []
+      },
+      {
+        id: 33,
+        title: 'Фильтр-боксы',
+        url: 'https://mircli.ru/setevye-elementy/filtr-boksy/',
+        image: undefined,
+        productCount: 70,
+        subcategories: []
+      },
+      {
+        id: 34,
+        title: 'Блоки обеззараживания',
+        url: 'https://mircli.ru/setevye-elementy/bloki-obezzarazhivaniya/',
+        image: undefined,
+        productCount: 40,
+        subcategories: []
+      },
+      {
+        id: 35,
+        title: 'Воздушные клапаны',
+        url: 'https://mircli.ru/setevye-elementy/vozdushnye-klapany/',
+        image: undefined,
+        productCount: 100,
+        subcategories: []
+      },
+      {
+        id: 36,
+        title: 'Шумоглушители',
+        url: 'https://mircli.ru/setevye-elementy/shumoglushiteli/',
+        image: undefined,
+        productCount: 50,
+        subcategories: []
+      },
+      {
+        id: 37,
+        title: 'Рекуператоры',
+        url: 'https://mircli.ru/setevye-elementy/rekuperatory/',
+        image: undefined,
+        productCount: 50,
+        subcategories: []
+      }
+    ]
   },
   {
     id: 4,
     title: 'Автоматика',
-    url: 'https://mircli.ru/avtomatika/',
+    url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/',
     image: undefined,
     productCount: 280,
-    subcategories: []
+    subcategories: [
+      {
+        id: 41,
+        title: 'Регуляторы скорости',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/regulyatory-skorosti/',
+        image: undefined,
+        productCount: 60,
+        subcategories: [
+          {
+            id: 411,
+            title: 'Плавные',
+            url: 'https://mircli.ru/regulyatory-skorosti/plavnye/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          },
+          {
+            id: 412,
+            title: 'Пятиступенчатые',
+            url: 'https://mircli.ru/regulyatory-skorosti/pyatistupenchatye/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          },
+          {
+            id: 413,
+            title: 'Частотные преобразователи',
+            url: 'https://mircli.ru/regulyatory-skorosti/chastotnye-preobrazovateli/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 42,
+        title: 'Смесительные узлы',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/smesitelnye-uzly/',
+        image: undefined,
+        productCount: 30,
+        subcategories: [
+          {
+            id: 421,
+            title: 'для водяных калориферов',
+            url: 'https://mircli.ru/smesitelnye-uzly/dlya-vodyanyh-kaloriferov/',
+            image: undefined,
+            productCount: 30,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 43,
+        title: 'Щиты управления',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/shity-upravleniya/',
+        image: undefined,
+        productCount: 40,
+        subcategories: [
+          {
+            id: 431,
+            title: 'Для установок с водяным нагревателем',
+            url: 'https://mircli.ru/shity-upravleniya/dlya-ustanovok-s-vodyanym-nagrevatelem/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          },
+          {
+            id: 432,
+            title: 'Для установок с электрическим нагревателем',
+            url: 'https://mircli.ru/shity-upravleniya/dlya-ustanovok-s-elektricheskim-nagrevatelem/',
+            image: undefined,
+            productCount: 20,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 44,
+        title: 'Контроллеры',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/kontrollery/',
+        image: undefined,
+        productCount: 30,
+        subcategories: []
+      },
+      {
+        id: 45,
+        title: 'Пульты управления',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/pulty-upravleniya/',
+        image: undefined,
+        productCount: 25,
+        subcategories: []
+      },
+      {
+        id: 46,
+        title: 'Датчики',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/datchiki-dlya-ventilyacii/',
+        image: undefined,
+        productCount: 60,
+        subcategories: [
+          {
+            id: 461,
+            title: 'Давления',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/davleniya/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 462,
+            title: 'Температуры',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/temperatury/',
+            image: undefined,
+            productCount: 15,
+            subcategories: []
+          },
+          {
+            id: 463,
+            title: 'Термостаты',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/termostaty/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 464,
+            title: 'Гигростаты',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/gigrostaty/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 465,
+            title: 'Влажности',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/vlazhnosti/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          },
+          {
+            id: 466,
+            title: 'Обратной воды',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/obratnoj-vody/',
+            image: undefined,
+            productCount: 5,
+            subcategories: []
+          },
+          {
+            id: 467,
+            title: 'Качества воздуха и CO2',
+            url: 'https://mircli.ru/datchiki-dlya-ventilyacii/kachestva-vozdukha-i-co2/',
+            image: undefined,
+            productCount: 10,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 47,
+        title: 'Электроприводы',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/elektroprivody/',
+        image: undefined,
+        productCount: 25,
+        subcategories: []
+      },
+      {
+        id: 48,
+        title: 'Регуляторы температуры',
+        url: 'https://mircli.ru/avtomatika-dlya-ventilyatsii/regulyatory-temperatury/',
+        image: undefined,
+        productCount: 20,
+        subcategories: []
+      }
+    ]
   },
   {
     id: 5,
     title: 'Вентиляционные решетки',
     url: 'https://mircli.ru/ventilyatsionnye-reshetki/',
     image: undefined,
-    productCount: 380,
-    subcategories: []
+    productCount: 200,
+    subcategories: [
+      {
+        id: 51,
+        title: 'Пластиковые',
+        url: 'https://mircli.ru/ventilyatsionnye-reshetki/plastik/',
+        image: undefined,
+        productCount: 80,
+        subcategories: []
+      },
+      {
+        id: 52,
+        title: 'Металлические',
+        url: 'https://mircli.ru/ventilyatsionnye-reshetki/metall/',
+        image: undefined,
+        productCount: 80,
+        subcategories: []
+      },
+      {
+        id: 53,
+        title: 'Деревянные',
+        url: 'https://mircli.ru/ventilyatsionnye-reshetki/derevyannye/',
+        image: undefined,
+        productCount: 40,
+        subcategories: []
+      }
+    ]
   },
   {
     id: 6,
     title: 'Диффузоры',
     url: 'https://mircli.ru/diffuzory/',
     image: undefined,
-    productCount: 220,
+    productCount: 150,
     subcategories: []
   },
   {
@@ -946,7 +1084,7 @@ export const ventilationCategories: VentilationCategory[] = [
     title: 'Анемостаты',
     url: 'https://mircli.ru/anemostaty/',
     image: undefined,
-    productCount: 180,
+    productCount: 100,
     subcategories: []
   },
   {
@@ -955,7 +1093,83 @@ export const ventilationCategories: VentilationCategory[] = [
     url: 'https://mircli.ru/vozdukhovody/',
     image: undefined,
     productCount: 520,
-    subcategories: []
+    subcategories: [
+      {
+        id: 81,
+        title: 'Гибкие воздуховоды',
+        url: 'https://mircli.ru/vozdukhovody/gibkiye-vozdukhovody/',
+        image: undefined,
+        productCount: 200,
+        subcategories: [
+          {
+            id: 811,
+            title: 'Изолированные',
+            url: 'https://mircli.ru/gibkiye-vozdukhovody/izolirovannyye/',
+            image: undefined,
+            productCount: 100,
+            subcategories: []
+          },
+          {
+            id: 812,
+            title: 'Неизолированные',
+            url: 'https://mircli.ru/gibkiye-vozdukhovody/neizolirovannyye/',
+            image: undefined,
+            productCount: 100,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 82,
+        title: 'Полужесткие воздуховоды',
+        url: 'https://mircli.ru/vozdukhovody/poluzhestkiye-vozdukhovody/',
+        image: undefined,
+        productCount: 120,
+        subcategories: [
+          {
+            id: 821,
+            title: 'Алюминиевые',
+            url: 'https://mircli.ru/poluzhestkiye-vozdukhovody/alyuminiyevyye/',
+            image: undefined,
+            productCount: 60,
+            subcategories: []
+          },
+          {
+            id: 822,
+            title: 'Пластиковые',
+            url: 'https://mircli.ru/poluzhestkiye-vozdukhovody/plastikovyye/',
+            image: undefined,
+            productCount: 60,
+            subcategories: []
+          }
+        ]
+      },
+      {
+        id: 83,
+        title: 'Жесткие воздуховоды',
+        url: 'https://mircli.ru/vozdukhovody/zhestkiye-vozdukhovody/',
+        image: undefined,
+        productCount: 200,
+        subcategories: [
+          {
+            id: 831,
+            title: 'Круглые',
+            url: 'https://mircli.ru/zhestkiye-vozdukhovody/kruglyye/',
+            image: undefined,
+            productCount: 100,
+            subcategories: []
+          },
+          {
+            id: 832,
+            title: 'Прямоугольные',
+            url: 'https://mircli.ru/zhestkiye-vozdukhovody/pryamougolnyye/',
+            image: undefined,
+            productCount: 100,
+            subcategories: []
+          }
+        ]
+      }
+    ]
   }
 ];
 
