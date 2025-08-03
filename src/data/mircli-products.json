@@ -1,0 +1,2049 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Вентиляторы",
+      "url": "https://mircli.ru/ventilyatsiya/ventilyatory",
+      "image": null,
+      "productCount": 150,
+      "subcategories": []
+    },
+    {
+      "id": 2,
+      "title": "Вентиляционные установки",
+      "url": "https://mircli.ru/ventilyatsiya/ventilyatsionnye-ustanovki",
+      "image": null,
+      "productCount": 80,
+      "subcategories": []
+    },
+    {
+      "id": 3,
+      "title": "Воздуховоды",
+      "url": "https://mircli.ru/ventilyatsiya/vozdukhovody",
+      "image": null,
+      "productCount": 120,
+      "subcategories": []
+    },
+    {
+      "id": 4,
+      "title": "Решетки и диффузоры",
+      "url": "https://mircli.ru/ventilyatsiya/reshetki-diffuzory",
+      "image": null,
+      "productCount": 200,
+      "subcategories": []
+    },
+    {
+      "id": 5,
+      "title": "Автоматика",
+      "url": "https://mircli.ru/ventilyatsiya/avtomatika",
+      "image": null,
+      "productCount": 90,
+      "subcategories": []
+    }
+  ],
+  "products": [
+    {
+      "id": "mircli-1",
+      "name": "Systemair вытяжная 1",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 48313,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=1",
+          "alt": "Systemair приточно-вытяжная 1"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 49,
+      "brand": "Systemair",
+      "category": "Вентиляционные установки",
+      "sku": "SYSTEMAIR-001",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "8 кВт",
+        "Производительность": "1195 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1318x597 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": true,
+      "url": "https://mircli.ru/product/test-1",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-2",
+      "name": "Systemair приточная 2",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 45915,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=2",
+          "alt": "Systemair приточно-вытяжная 2"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 31,
+      "brand": "Systemair",
+      "category": "Вентиляционные установки",
+      "sku": "SYSTEMAIR-002",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "8 кВт",
+        "Производительность": "2217 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1368x218 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": true,
+      "url": "https://mircli.ru/product/test-2",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-3",
+      "name": "Systemair диффузор 3",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 46329,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=3",
+          "alt": "Systemair анемостат 3"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 35,
+      "brand": "Systemair",
+      "category": "Решетки и диффузоры",
+      "sku": "SYSTEMAIR-003",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "109x183 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-3",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-4",
+      "name": "Vents прямоугольный 4",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 35339,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=4",
+          "alt": "Vents прямоугольный 4"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 36,
+      "brand": "Vents",
+      "category": "Воздуховоды",
+      "sku": "VENTS-004",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "385 мм",
+        "Толщина": "1.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-4",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-5",
+      "name": "Ruck контроллер 5",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 42375,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=5",
+          "alt": "Ruck контроллер 5"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 43,
+      "brand": "Ruck",
+      "category": "Автоматика",
+      "sku": "RUCK-005",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-5",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-6",
+      "name": "Mircli приточная решетка 6",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 12344,
+      "oldPrice": 17785,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=6",
+          "alt": "Mircli вытяжная решетка 6"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 35,
+      "brand": "Mircli",
+      "category": "Решетки и диффузоры",
+      "sku": "MIRCLI-006",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "146x186 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-6",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-7",
+      "name": "Maico приточная 7",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 41155,
+      "oldPrice": 44481,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=7",
+          "alt": "Maico приточно-вытяжная 7"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 25,
+      "brand": "Maico",
+      "category": "Вентиляционные установки",
+      "sku": "MAICO-007",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "3 кВт",
+        "Производительность": "1415 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1379x692 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-7",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-8",
+      "name": "Vents приточная решетка 8",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 30416,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=8",
+          "alt": "Vents вытяжная решетка 8"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 31,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-008",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "259x158 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Вытяжная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-8",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-9",
+      "name": "Ruck гибкий 9",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 6775,
+      "oldPrice": 7250,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=9",
+          "alt": "Ruck прямоугольный 9"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 26,
+      "brand": "Ruck",
+      "category": "Воздуховоды",
+      "sku": "RUCK-009",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "134 мм",
+        "Толщина": "1.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-9",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-10",
+      "name": "Vents приточная решетка 10",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 38737,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=10",
+          "alt": "Vents приточная решетка 10"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 24,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-010",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "230x169 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": true,
+      "url": "https://mircli.ru/product/test-10",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-11",
+      "name": "Vents настенный 11",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 35781,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=11",
+          "alt": "Vents центробежный 11"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 52,
+      "brand": "Vents",
+      "category": "Вентиляторы",
+      "sku": "VENTS-011",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "343 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "125 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-11",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-12",
+      "name": "Systemair канальный 12",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 44187,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=12",
+          "alt": "Systemair настенный 12"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 7,
+      "brand": "Systemair",
+      "category": "Вентиляторы",
+      "sku": "SYSTEMAIR-012",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "441 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "133 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-12",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-13",
+      "name": "Ruck термостат 13",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 54737,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=13",
+          "alt": "Ruck термостат 13"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 9,
+      "brand": "Ruck",
+      "category": "Автоматика",
+      "sku": "RUCK-013",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-13",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-14",
+      "name": "Mircli канальный 14",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 20891,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=14",
+          "alt": "Mircli настенный 14"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 19,
+      "brand": "Mircli",
+      "category": "Вентиляторы",
+      "sku": "MIRCLI-014",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "236 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "126 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-14",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-15",
+      "name": "Ruck датчик 15",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 23792,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=15",
+          "alt": "Ruck датчик 15"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 39,
+      "brand": "Ruck",
+      "category": "Автоматика",
+      "sku": "RUCK-015",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-15",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-16",
+      "name": "Vents жесткий 16",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 51394,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=16",
+          "alt": "Vents жесткий 16"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 23,
+      "brand": "Vents",
+      "category": "Воздуховоды",
+      "sku": "VENTS-016",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "336 мм",
+        "Толщина": "0.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-16",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-17",
+      "name": "Systemair круглый 17",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 23500,
+      "oldPrice": 32992,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=17",
+          "alt": "Systemair прямоугольный 17"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 53,
+      "brand": "Systemair",
+      "category": "Воздуховоды",
+      "sku": "SYSTEMAIR-017",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "203 мм",
+        "Толщина": "0.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-17",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-18",
+      "name": "Maico прямоугольный 18",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 10487,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=18",
+          "alt": "Maico круглый 18"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 39,
+      "brand": "Maico",
+      "category": "Воздуховоды",
+      "sku": "MAICO-018",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "284 мм",
+        "Толщина": "0.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-18",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-19",
+      "name": "Maico приточная 19",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 25951,
+      "oldPrice": 27570,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=19",
+          "alt": "Maico приточная 19"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 34,
+      "brand": "Maico",
+      "category": "Вентиляционные установки",
+      "sku": "MAICO-019",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "9 кВт",
+        "Производительность": "2335 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1060x561 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-19",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-20",
+      "name": "Ruck вытяжная 20",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 34485,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=20",
+          "alt": "Ruck приточная 20"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 17,
+      "brand": "Ruck",
+      "category": "Вентиляционные установки",
+      "sku": "RUCK-020",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "5 кВт",
+        "Производительность": "1112 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "926x527 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-20",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-21",
+      "name": "Vents приточная решетка 21",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 23624,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=21",
+          "alt": "Vents приточная решетка 21"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 38,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-021",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "289x152 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-21",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-22",
+      "name": "Maico круглый 22",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 17279,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=22",
+          "alt": "Maico жесткий 22"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 44,
+      "brand": "Maico",
+      "category": "Воздуховоды",
+      "sku": "MAICO-022",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "345 мм",
+        "Толщина": "1.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-22",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-23",
+      "name": "Vents осевой 23",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 27658,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=23",
+          "alt": "Vents центробежный 23"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 15,
+      "brand": "Vents",
+      "category": "Вентиляторы",
+      "sku": "VENTS-023",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "138 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "142 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-23",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-24",
+      "name": "Ruck центробежный 24",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 36644,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=24",
+          "alt": "Ruck осевой 24"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 34,
+      "brand": "Ruck",
+      "category": "Вентиляторы",
+      "sku": "RUCK-024",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "1.1 кВт",
+        "Производительность": "295 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "157 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-24",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-25",
+      "name": "Vents осевой 25",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 16897,
+      "oldPrice": 18777,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=25",
+          "alt": "Vents центробежный 25"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 12,
+      "brand": "Vents",
+      "category": "Вентиляторы",
+      "sku": "VENTS-025",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "1.1 кВт",
+        "Производительность": "584 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "183 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-25",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-26",
+      "name": "Ruck центробежный 26",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 29310,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=26",
+          "alt": "Ruck центробежный 26"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 18,
+      "brand": "Ruck",
+      "category": "Вентиляторы",
+      "sku": "RUCK-026",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "277 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "205 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-26",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-27",
+      "name": "Ruck датчик 27",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 43610,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=27",
+          "alt": "Ruck регулятор 27"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 48,
+      "brand": "Ruck",
+      "category": "Автоматика",
+      "sku": "RUCK-027",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-27",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-28",
+      "name": "Vents диффузор 28",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 53463,
+      "oldPrice": 61714,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=28",
+          "alt": "Vents диффузор 28"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 47,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-028",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "192x167 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-28",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-29",
+      "name": "Vents настенный 29",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 37188,
+      "oldPrice": 42590,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=29",
+          "alt": "Vents канальный 29"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 50,
+      "brand": "Vents",
+      "category": "Вентиляторы",
+      "sku": "VENTS-029",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "209 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "203 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-29",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-30",
+      "name": "Systemair приточно-вытяжная 30",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 54934,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=30",
+          "alt": "Systemair рекуперационная 30"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 51,
+      "brand": "Systemair",
+      "category": "Вентиляционные установки",
+      "sku": "SYSTEMAIR-030",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "5 кВт",
+        "Производительность": "1514 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1355x480 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-30",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-31",
+      "name": "Vents анемостат 31",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 16747,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=31",
+          "alt": "Vents вытяжная решетка 31"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 15,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-031",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "176x223 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Вытяжная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-31",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-32",
+      "name": "Ruck приточная решетка 32",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 21709,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=32",
+          "alt": "Ruck диффузор 32"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 51,
+      "brand": "Ruck",
+      "category": "Решетки и диффузоры",
+      "sku": "RUCK-032",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "168x155 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-32",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-33",
+      "name": "Maico анемостат 33",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 9569,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=33",
+          "alt": "Maico анемостат 33"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 8,
+      "brand": "Maico",
+      "category": "Решетки и диффузоры",
+      "sku": "MAICO-033",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "227x106 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-33",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-34",
+      "name": "Mircli приточно-вытяжная 34",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 52461,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=34",
+          "alt": "Mircli приточная 34"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 27,
+      "brand": "Mircli",
+      "category": "Вентиляционные установки",
+      "sku": "MIRCLI-034",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "10 кВт",
+        "Производительность": "2388 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "976x520 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-34",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-35",
+      "name": "Mircli крышный 35",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 32938,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=35",
+          "alt": "Mircli крышный 35"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 6,
+      "brand": "Mircli",
+      "category": "Вентиляторы",
+      "sku": "MIRCLI-035",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "176 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "245 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-35",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-36",
+      "name": "Vents жесткий 36",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 36308,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=36",
+          "alt": "Vents круглый 36"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 6,
+      "brand": "Vents",
+      "category": "Воздуховоды",
+      "sku": "VENTS-036",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "230 мм",
+        "Толщина": "0.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-36",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-37",
+      "name": "Maico центробежный 37",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 46282,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=37",
+          "alt": "Maico крышный 37"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 27,
+      "brand": "Maico",
+      "category": "Вентиляторы",
+      "sku": "MAICO-037",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "1.1 кВт",
+        "Производительность": "217 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "107 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-37",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-38",
+      "name": "Maico вытяжная решетка 38",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 9680,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=38",
+          "alt": "Maico анемостат 38"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 29,
+      "brand": "Maico",
+      "category": "Решетки и диффузоры",
+      "sku": "MAICO-038",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "222x222 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-38",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-39",
+      "name": "Ruck регулятор 39",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 20013,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=39",
+          "alt": "Ruck регулятор 39"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 16,
+      "brand": "Ruck",
+      "category": "Автоматика",
+      "sku": "RUCK-039",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-39",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-40",
+      "name": "Ruck диффузор 40",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 35058,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=40",
+          "alt": "Ruck диффузор 40"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 24,
+      "brand": "Ruck",
+      "category": "Решетки и диффузоры",
+      "sku": "RUCK-040",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "258x176 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-40",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-41",
+      "name": "Systemair термостат 41",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 48812,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=41",
+          "alt": "Systemair контроллер 41"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 6,
+      "brand": "Systemair",
+      "category": "Автоматика",
+      "sku": "SYSTEMAIR-041",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-41",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-42",
+      "name": "Ruck приточная 42",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 41240,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=42",
+          "alt": "Ruck приточная 42"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 27,
+      "brand": "Ruck",
+      "category": "Вентиляционные установки",
+      "sku": "RUCK-042",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "3 кВт",
+        "Производительность": "2264 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "1283x213 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-42",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-43",
+      "name": "Vents приточная решетка 43",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 26294,
+      "oldPrice": 26356,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=43",
+          "alt": "Vents приточная решетка 43"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 45,
+      "brand": "Vents",
+      "category": "Решетки и диффузоры",
+      "sku": "VENTS-043",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "172x100 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Приточная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-43",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-44",
+      "name": "Mircli настенный 44",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 47146,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=44",
+          "alt": "Mircli крышный 44"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 20,
+      "brand": "Mircli",
+      "category": "Вентиляторы",
+      "sku": "MIRCLI-044",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "0.1 кВт",
+        "Производительность": "383 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "146 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-44",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": "A+",
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-45",
+      "name": "Vents настенный 45",
+      "description": "Вентиляционное оборудование от Vents",
+      "price": 12671,
+      "oldPrice": 18088,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=45",
+          "alt": "Vents крышный 45"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 49,
+      "brand": "Vents",
+      "category": "Вентиляторы",
+      "sku": "VENTS-045",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "1.1 кВт",
+        "Производительность": "264 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "290 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": true,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-45",
+      "shortDescription": "Качественное вентиляционное оборудование от Vents",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-46",
+      "name": "Maico гибкий 46",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 22567,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=46",
+          "alt": "Maico круглый 46"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 45,
+      "brand": "Maico",
+      "category": "Воздуховоды",
+      "sku": "MAICO-046",
+      "availability": "В наличии",
+      "specifications": {
+        "Диаметр": "195 мм",
+        "Толщина": "0.5 мм",
+        "Материал": "Оцинкованная сталь",
+        "Длина": "3 м"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-46",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-47",
+      "name": "Systemair регулятор 47",
+      "description": "Вентиляционное оборудование от Systemair",
+      "price": 32641,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=47",
+          "alt": "Systemair контроллер 47"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 53,
+      "brand": "Systemair",
+      "category": "Автоматика",
+      "sku": "SYSTEMAIR-047",
+      "availability": "В наличии",
+      "specifications": {
+        "Напряжение": "24 В",
+        "Температурный диапазон": "-20°C до +60°C",
+        "Точность": "±0.5°C",
+        "Интерфейс": "RS485"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": true,
+      "url": "https://mircli.ru/product/test-47",
+      "shortDescription": "Качественное вентиляционное оборудование от Systemair",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-48",
+      "name": "Maico настенный 48",
+      "description": "Вентиляционное оборудование от Maico",
+      "price": 43612,
+      "oldPrice": null,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=48",
+          "alt": "Maico настенный 48"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 27,
+      "brand": "Maico",
+      "category": "Вентиляторы",
+      "sku": "MAICO-048",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "1.1 кВт",
+        "Производительность": "360 м³/ч",
+        "Напряжение": "220 В",
+        "Диаметр": "195 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": false,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-48",
+      "shortDescription": "Качественное вентиляционное оборудование от Maico",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-49",
+      "name": "Mircli приточно-вытяжная 49",
+      "description": "Вентиляционное оборудование от Mircli",
+      "price": 32334,
+      "oldPrice": 38858,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=49",
+          "alt": "Mircli приточная 49"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 35,
+      "brand": "Mircli",
+      "category": "Вентиляционные установки",
+      "sku": "MIRCLI-049",
+      "availability": "В наличии",
+      "specifications": {
+        "Мощность": "5 кВт",
+        "Производительность": "2096 м³/ч",
+        "Напряжение": "380 В",
+        "Размеры": "504x395 мм"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-49",
+      "shortDescription": "Качественное вентиляционное оборудование от Mircli",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    },
+    {
+      "id": "mircli-50",
+      "name": "Ruck диффузор 50",
+      "description": "Вентиляционное оборудование от Ruck",
+      "price": 27298,
+      "oldPrice": 29269,
+      "images": [
+        {
+          "url": "https://picsum.photos/400/300?random=50",
+          "alt": "Ruck диффузор 50"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 28,
+      "brand": "Ruck",
+      "category": "Решетки и диффузоры",
+      "sku": "RUCK-050",
+      "availability": "В наличии",
+      "specifications": {
+        "Размер": "259x224 мм",
+        "Материал": "Пластик",
+        "Цвет": "Белый",
+        "Тип": "Вытяжная"
+      },
+      "features": [
+        "Гарантия качества",
+        "Сертифицированная продукция"
+      ],
+      "isNew": false,
+      "isSale": true,
+      "isBestseller": false,
+      "url": "https://mircli.ru/product/test-50",
+      "shortDescription": "Качественное вентиляционное оборудование от Ruck",
+      "deliveryTime": "1-3 дня",
+      "energyClass": null,
+      "certifications": [
+        "ГОСТ",
+        "СЕ"
+      ]
+    }
+  ],
+  "parsedAt": "2025-08-03T15:06:06.107Z",
+  "totalCategories": 5,
+  "totalProducts": 50
+}

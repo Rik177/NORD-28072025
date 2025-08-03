@@ -17,6 +17,8 @@ import CategoryPage from './pages/catalog/CategoryPage';
 import ProductPage from './pages/catalog/ProductPage';
 import EnhancedCategoryPage from './pages/catalog/EnhancedCategoryPage';
 import EnhancedProductPage from './pages/catalog/EnhancedProductPage';
+import MircliCatalogPage from './pages/catalog/MircliCatalogPage';
+import MircliProductPage from './pages/catalog/MircliProductPage';
 
 
 // Страницы услуг
@@ -112,7 +114,9 @@ function App() {
             <Route path="/catalog/:category/:productId" element={<ProductPage />} />
             
             {/* Вентиляция */}
-
+            <Route path="/ventilation" element={<MircliCatalogPage />} />
+            <Route path="/ventilation/:category" element={<MircliCatalogPage />} />
+            <Route path="/ventilation/:category/:productId" element={<MircliProductPage />} />
             
             {/* Услуги */}
             <Route path="/services" element={<Services />} />

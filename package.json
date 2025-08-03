@@ -12,7 +12,9 @@
     "validate": "ajv compile -s ./src/schemas/",
     "parse:ventilation": "node scripts/start-parsing.js",
     "parse:ventilation:simple": "node scripts/run-parser.js",
-    "parse:ventilation:test": "node scripts/ventilation-parser-enhanced.js"
+    "parse:ventilation:test": "node scripts/ventilation-parser-enhanced.js",
+    "parse:mircli": "node scripts/run-mircli-parser.js",
+    "parse:mircli:test": "node scripts/test-mircli-parser.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
