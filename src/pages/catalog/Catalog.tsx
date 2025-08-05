@@ -4,110 +4,90 @@ import SEOHelmet from "../../components/shared/SEOHelmet";
 import Header from "../../components/home/Header";
 import Footer from "../../components/home/Footer";
 import Breadcrumbs from "../../components/shared/Breadcrumbs";
-import { Search, Filter, Grid, List, ArrowRight, Menu } from "lucide-react";
+import { Search, Filter, Grid, List, ArrowRight } from "lucide-react";
 import { seoPages } from "../../utils/seo";
 import OptimizedImage, {
   generateCategoryAlt,
 } from "../../components/shared/OptimizedImage";
-import { ventilationCategories } from "../../data/ventilationData";
-import CategoryTree from "../../components/catalog/CategoryTree";
+import { categories, getProductsByCategory } from "./Categories";
 
 interface Category {
   id: string;
   name: string;
-  description: string;
-  image: string;
-  productCount: number;
   path: string;
+  url: string;
+  parentId: string;
+  level: number;
+  subcategories?: Category[];
 }
 
-// Преобразуем данные вентиляции в формат для каталога
-const categories: Category[] = ventilationCategories.map((cat, index) => ({
-  id: cat.id.toString(),
-  name: cat.title,
-  description: getCategoryDescription(cat.title),
-  image: getCategoryImage(cat.title),
-  productCount: getProductCount(cat),
-  path: `/catalog/${getCategorySlug(cat.title)}`,
-}));
-
-// Функция для получения описания категории
-function getCategoryDescription(categoryTitle: string): string {
-  const descriptions: { [key: string]: string } = {
-    "Вентиляторы": "Канальные, осевые, крышные вентиляторы для систем вентиляции и кондиционирования",
-    "Вентиляционные установки": "Компактные и наборные вентиляционные установки",
-    "Сетевые элементы": "Фасонные изделия, отводы, тройники для воздуховодов",
-    "Автоматика": "Системы автоматизации и управления вентиляцией",
-    "Вентиляционные решетки": "Приточные и вытяжные решетки для систем вентиляции",
-    "Диффузоры": "Диффузоры и распределители воздуха для равномерного распределения",
-    "Анемостаты": "Анемостаты для регулировки воздушного потока",
-    "Воздуховоды": "Круглые и прямоугольные воздуховоды из оцинкованной стали"
-  };
-  
-  return descriptions[categoryTitle] || "Оборудование для систем вентиляции и кондиционирования";
-}
-
-// Функция для получения изображения категории
-function getCategoryImage(categoryTitle: string): string {
-  const images: { [key: string]: string } = {
-    "Вентиляторы": "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Вентиляционные установки": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Сетевые элементы": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Автоматика": "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Вентиляционные решетки": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Диффузоры": "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Анемостаты": "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Воздуховоды": "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  };
-  
-  return images[categoryTitle] || "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-}
-
-// Функция для получения количества товаров в категории
-function getProductCount(category: any): number {
-  // Подсчитываем все товары в категории и подкатегориях
-  let count = 0;
-  
-  // Рекурсивная функция для подсчета товаров
-  function countProducts(cat: any): number {
-    let productCount = 0;
-    
-    // Если есть подкатегории, рекурсивно считаем их
-    if (cat.subcategories && cat.subcategories.length > 0) {
-      cat.subcategories.forEach((subcat: any) => {
-        productCount += countProducts(subcat);
-      });
-    }
-    
-    // Добавляем базовое количество товаров для категории
-    return productCount + Math.floor(Math.random() * 50) + 10;
-  }
-  
-  return countProducts(category);
-}
-
-// Функция для получения slug категории
-function getCategorySlug(categoryTitle: string): string {
-  const slugs: { [key: string]: string } = {
-    "Вентиляторы": "ventilyatory",
-    "Вентиляционные установки": "ventilyatsionnye-ustanovki",
-    "Сетевые элементы": "setevye-elementy",
-    "Автоматика": "avtomatika",
-    "Вентиляционные решетки": "ventilyatsionnye-reshetki",
-    "Диффузоры": "diffuzory",
-    "Анемостаты": "anemostaty",
-    "Воздуховоды": "vozdukhovody"
-  };
-  
-  return slugs[categoryTitle] || categoryTitle.toLowerCase().replace(/\s+/g, '-');
-}
+// const categories: Category[] = [
+//   {
+//     id: "ventilation",
+//     name: "Вентиляционное оборудование",
+//     description:
+//       "Канальные и осевые вентиляторы, приточно-вытяжные установки, воздуховоды",
+//     image:
+//       "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     productCount: 156,
+//     path: "/catalog/ventilation",
+//   },
+//   {
+//     id: "air-conditioning",
+//     name: "Кондиционеры",
+//     description:
+//       "Настенные, кассетные, канальные кондиционеры, мульти-сплит системы",
+//     image:
+//       "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     productCount: 89,
+//     path: "/catalog/air-conditioning",
+//   },
+//   {
+//     id: "heating",
+//     name: "Отопительное оборудование",
+//     description: "Котлы, радиаторы, теплые полы, насосы и автоматика",
+//     image:
+//       "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     productCount: 124,
+//     path: "/catalog/heating",
+//   },
+//   {
+//     id: "curtains",
+//     name: "Тепловые завесы",
+//     description: "Электрические и водяные тепловые завесы для входных групп",
+//     image:
+//       "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     productCount: 45,
+//     path: "/catalog/curtains",
+//   },
+//   {
+//     id: "accessories",
+//     name: "Аксессуары и комплектующие",
+//     description: "Решетки, диффузоры, клапаны, фильтры и другие комплектующие",
+//     image:
+//       "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     productCount: 234,
+//     path: "/catalog/accessories",
+//   },
+// ];
 
 const Catalog: React.FC = () => {
+  console.log('Catalog: Component mounted');
+  console.log('Catalog: Current location:', window.location.href);
+  
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("name");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [showCategoryTree, setShowCategoryTree] = useState(false);
+
+  // Отладочная информация
+  console.log('Categories loaded:', categories.length);
+  console.log('Categories structure:', categories.map(cat => ({
+    name: cat.name,
+    path: cat.path,
+    subcategories: cat.subcategories?.length || 0
+  })));
+  console.log('First category details:', categories[0]);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -123,15 +103,14 @@ const Catalog: React.FC = () => {
         "@type": "ListItem",
         position: index + 1,
         name: category.name,
-        description: category.description,
+        description: `Каталог ${category.name.toLowerCase()}`,
       })),
     },
   };
 
   const filteredCategories = categories.filter((category) => {
     const matchesSearch =
-      category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      category.description.toLowerCase().includes(searchQuery.toLowerCase());
+      category.name.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
   });
 
@@ -171,61 +150,24 @@ const Catalog: React.FC = () => {
                 />
               </div>
 
-              {/* Controls */}
+              {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
-                {/* Category Tree Toggle */}
                 <button
-                  onClick={() => setShowCategoryTree(!showCategoryTree)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-                    showCategoryTree 
-                      ? 'bg-primary text-white' 
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
-                  }`}
+                  onClick={() => setViewMode("grid")}
+                  className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
                 >
-                  <Menu className="h-5 w-5" />
-                  <span className="hidden sm:inline">Дерево категорий</span>
+                  <Grid className="h-5 w-5" />
                 </button>
-
-                {/* View Mode Toggle */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
-                  >
-                    <Grid className="h-5 w-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode("list")}
-                    className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
-                  >
-                    <List className="h-5 w-5" />
-                  </button>
-                </div>
+                <button
+                  onClick={() => setViewMode("list")}
+                  className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                >
+                  <List className="h-5 w-5" />
+                </button>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Category Tree */}
-        {showCategoryTree && (
-          <section className="py-8 bg-gray-50 dark:bg-gray-800">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white mb-6">
-                  Иерархия категорий
-                </h2>
-                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm p-6">
-                  <CategoryTree 
-                    categories={ventilationCategories}
-                    onCategoryClick={(category) => {
-                      console.log('Selected category:', category);
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Categories Grid */}
         <section className="py-12">
@@ -257,19 +199,21 @@ const Catalog: React.FC = () => {
                       <div
                         className={`relative ${viewMode === "list" ? "w-1/3" : "aspect-w-16 aspect-h-9"}`}
                       >
-                        <OptimizedImage
-                          src={category.image}
-                          alt={generateCategoryAlt(category.name)}
-                          className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
-                            viewMode === "list"
-                              ? "w-full h-full"
-                              : "w-full h-48"
-                          }`}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div className={`bg-gradient-to-br from-primary to-secondary ${
+                          viewMode === "list"
+                            ? "w-full h-full"
+                            : "w-full h-48"
+                        } flex items-center justify-center`}>
+                          <div className="text-white text-center">
+                            <h3 className="text-xl font-bold mb-2">{category.name}</h3>
+                            <p className="text-sm opacity-90">
+                              {category.subcategories?.length || 0} подкатегорий
+                            </p>
+                          </div>
+                        </div>
                         <div className="absolute bottom-4 right-4">
                           <span className="bg-white/90 text-primary px-3 py-1 rounded-full text-sm font-semibold">
-                            {category.productCount} товаров
+                            {category.subcategories?.length || 0} подкатегорий
                           </span>
                         </div>
                       </div>
@@ -280,7 +224,7 @@ const Catalog: React.FC = () => {
                           {category.name}
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 mb-4">
-                          {category.description}
+                          Каталог {category.name.toLowerCase()} с полным ассортиментом товаров
                         </p>
                         <div className="flex items-center text-secondary group-hover:text-primary dark:group-hover:text-white transition-colors">
                           <span className="mr-2">Смотреть товары</span>
@@ -301,7 +245,7 @@ const Catalog: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary dark:text-white mb-2">
-                  {categories.reduce((sum, cat) => sum + cat.productCount, 0)}+
+                  {categories.reduce((sum, cat) => sum + (cat.subcategories?.length || 0), 0)}+
                 </div>
                 <div className="text-gray-600 dark:text-gray-400">
                   Товаров в каталоге

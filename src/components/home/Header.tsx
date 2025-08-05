@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Search, Phone, Heart, ChevronDown, Sun, Moon, MapPin, Building2, Box, Wrench, FolderOpen, Award, PanelTop, X, User, MessageCircle } from 'lucide-react';
 import GlobalSearch from '../shared/GlobalSearch';
 import ConsultationForm, { ConsultationFormData } from '../catalog/ConsultationForm';
+import SkipLink from '../shared/SkipLink';
 
 interface MenuItem {
   label: string;
@@ -31,14 +32,11 @@ const menuItems: MenuItem[] = [
     path: '/catalog',
     icon: <Box className="h-5 w-5" />,
     submenu: [
-      { label: 'Вентиляторы', path: '/catalog/ventilyatory' },
-      { label: 'Вентиляционные установки', path: '/catalog/ventilyatsionnye-ustanovki' },
-      { label: 'Сетевые элементы', path: '/catalog/setevye-elementy' },
-      { label: 'Автоматика', path: '/catalog/avtomatika' },
-      { label: 'Вентиляционные решетки', path: '/catalog/ventilyatsionnye-reshetki' },
-      { label: 'Диффузоры', path: '/catalog/diffuzory' },
-      { label: 'Анемостаты', path: '/catalog/anemostaty' },
-      { label: 'Воздуховоды', path: '/catalog/vozdukhovody' }
+      { label: 'Вентиляционное оборудование', path: '/catalog/ventilation' },
+      { label: 'Кондиционеры', path: '/catalog/air-conditioning' },
+      { label: 'Отопительное оборудование', path: '/catalog/heating' },
+      { label: 'Тепловые завесы', path: '/catalog/curtains' },
+      { label: 'Аксессуары и комплектующие', path: '/catalog/accessories' }
     ]
   },
   {

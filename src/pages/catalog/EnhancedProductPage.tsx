@@ -10,7 +10,7 @@ import ProductRecommendations from '../../components/catalog/ProductRecommendati
 import EnhancedProductCard from '../../components/catalog/EnhancedProductCard';
 import { Star, Heart, Share2, ChevronLeft, ChevronRight, Check, X, Phone, Mail, Download, Printer, ArrowLeft, ArrowRight, ShoppingCart, BarChart2, Info, Shield, Award, Truck, Clock, Zap } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
-import { getEnhancedProduct, getRelatedProducts, EnhancedProduct } from '../../data/enhancedProductData';
+import { getEnhancedProduct, getRelatedProducts, EnhancedProduct } from '../../data/mircliProductData';
 import ConsultationForm, { ConsultationFormData } from '../../components/catalog/ConsultationForm';
 import OptimizedImage from '../../components/shared/OptimizedImage';
 

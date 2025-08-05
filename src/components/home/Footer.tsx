@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               <h3 className="font-heading text-base font-bold mb-3 text-white">Каталог</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="/catalog/air-conditioning" className="hover:text-accent">Кондиционеры</a></li>
-                <li><a href="/catalog/ventilators" className="hover:text-accent">Вентиляторы</a></li>
+                <li><a href="/catalog/ventilation" className="hover:text-accent">Вентиляция</a></li>
                 <li><a href="/catalog/heating" className="hover:text-accent">Отопление</a></li>
                 <li><a href="/brands" className="hover:text-accent">Бренды</a></li>
               </ul>
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-1">
               <h3 className="font-heading text-lg font-bold mb-4 text-white">Каталог</h3>
               <ul className="space-y-2">
-                <li><a href="/catalog/ventilators" className="hover:text-accent">Вентиляторы</a></li>
+                <li><a href="/catalog/ventilation" className="hover:text-accent">Вентиляционное оборудование</a></li>
                 <li><a href="/catalog/air-conditioning" className="hover:text-accent">Кондиционирование</a></li>
                 <li><a href="/catalog/heating" className="hover:text-accent">Отопительное оборудование</a></li>
                 <li><a href="/catalog/accessories" className="hover:text-accent">Аксессуары и комплектующие</a></li>

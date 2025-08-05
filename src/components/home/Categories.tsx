@@ -23,7 +23,7 @@ const categories: Category[] = [
     title: "Вентиляция",
     description: "Приточно-вытяжные установки, вентиляторы",
     image: "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    link: "/catalog/ventilators",
+    link: "/catalog/ventilation",
   },
   {
     id: 3,

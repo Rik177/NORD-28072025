@@ -1,94 +1,126 @@
 import React, { useState, useMemo } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useLocation, Navigate, Link, useParams } from 'react-router-dom';
 import SEOHelmet from '../../components/shared/SEOHelmet';
 import Header from '../../components/home/Header';
 import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
-import ProductFilters from '../../components/catalog/ProductFilters';
-import EnhancedProductCard from '../../components/catalog/EnhancedProductCard';
-import ProductQuickView from '../../components/catalog/ProductQuickView';
-import { Search, Filter, Grid, List, SlidersHorizontal, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-import { enhancedProductDatabase, getProductsByCategory, EnhancedProduct } from '../../data/enhancedProductData';
-
-const categoryInfo = {
-  'air-conditioning': {
-    name: 'Кондиционеры и системы кондиционирования',
-    description: 'Широкий выбор кондиционеров: настенные, кассетные, канальные, VRF системы. Профессиональный подбор и установка климатического оборудования от ведущих мировых производителей.',
-    heroImage: 'https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    benefits: [
-      'Энергоэффективность класса A++ и выше',
-      'Инверторные технологии для экономии',
-      'Тихая работа от 19 дБ',
-      'Умное управление и Wi-Fi'
-    ]
-  },
-  'ventilation': {
-    name: 'Вентиляционное оборудование',
-    description: 'Профессиональные решения для вентиляции: приточно-вытяжные установки, канальные и осевые вентиляторы, воздуховоды и комплектующие от ведущих производителей.',
-    heroImage: 'https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    benefits: [
-      'Высокая производительность',
-      'Низкое энергопотребление',
-      'Долгий срок службы',
-      'Простое обслуживание'
-    ]
-  },
-  'heating': {
-    name: 'Отопительное оборудование',
-    description: 'Современные решения для отопления: конвекторы, инфракрасные обогреватели, тепловые насосы. Энергоэффективные технологии для комфортного обогрева.',
-    heroImage: 'https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    benefits: [
-      'Быстрый нагрев помещения',
-      'Экономичное потребление',
-      'Безопасная эксплуатация',
-      'Автоматическое управление'
-    ]
-  },
-  'curtains': {
-    name: 'Тепловые завесы',
-    description: 'Эффективная защита от холода: электрические и водяные тепловые завесы различной мощности. Надежная защита проемов от потерь тепла.',
-    heroImage: 'https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    benefits: [
-      'Защита от потерь тепла',
-      'Комфорт у входа',
-      'Экономия энергии',
-      'Простая установка'
-    ]
-  },
-  'accessories': {
-    name: 'Аксессуары и комплектующие',
-    description: 'Полный спектр комплектующих для климатических систем: фильтры, решетки, диффузоры, автоматика управления и другие компоненты.',
-    heroImage: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2',
-    benefits: [
-      'Совместимость с оборудованием',
-      'Высокое качество материалов',
-      'Простая установка',
-      'Долгий срок службы'
-    ]
-  }
-};
+import { Search, Filter, Grid, List, SlidersHorizontal, TrendingUp, Award, Zap, Shield, Heart } from 'lucide-react';
+import { getProductsByCategory, getCategoryByPath, getAllProducts, categories, Product } from './Categories';
 
 const EnhancedCategoryPage: React.FC = () => {
-  const { category } = useParams<{ category: string }>();
+  console.log('EnhancedCategoryPage: Component mounted');
+  console.log('EnhancedCategoryPage: Window location:', window.location.href);
+  const location = useLocation();
+  const params = useParams();
+  
+  // Извлекаем путь из параметров
+  const { category, subcategory, subsubcategory } = params;
+  const categoryPath = [category, subcategory, subsubcategory].filter(Boolean).join('/');
+  
+  console.log('EnhancedCategoryPage: Initial categoryPath:', categoryPath);
+  console.log('EnhancedCategoryPage: Params:', params);
+  console.log('EnhancedCategoryPage: Category:', category);
+  console.log('EnhancedCategoryPage: Subcategory:', subcategory);
+  console.log('EnhancedCategoryPage: Subsubcategory:', subsubcategory);
+  console.log('EnhancedCategoryPage: Full pathname:', location.pathname);
+  console.log('EnhancedCategoryPage: Window location:', window.location.href);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [filters, setFilters] = useState<Record<string, any>>({});
-  const [quickViewProduct, setQuickViewProduct] = useState<EnhancedProduct | null>(null);
 
-  const categoryData = category ? categoryInfo[category as keyof typeof categoryInfo] : null;
-  const products = category ? getProductsByCategory(category) : [];
-
-  if (!categoryData) {
-    return <Navigate to="/catalog" replace />;
+  // Находим данные категории
+  const categoryData = categoryPath ? getCategoryByPath(categoryPath) : null;
+  
+  // Отладочная информация
+  console.log('EnhancedCategoryPage: CategoryPath:', categoryPath);
+  console.log('EnhancedCategoryPage: Location pathname:', location.pathname);
+  console.log('EnhancedCategoryPage: CategoryData:', categoryData);
+  
+  // Проверяем функцию getCategoryByPath
+  if (categoryPath) {
+    console.log('EnhancedCategoryPage: Testing getCategoryByPath for:', categoryPath);
+    const testResult = getCategoryByPath(categoryPath);
+    console.log('EnhancedCategoryPage: getCategoryByPath result:', testResult);
+    
+    // Проверяем все возможные пути
+    console.log('EnhancedCategoryPage: All possible paths:');
+    function logAllPaths(cats: any[], level = 0) {
+      cats.forEach(cat => {
+        console.log('  '.repeat(level) + `- ${cat.path}`);
+        if (cat.subcategories) {
+          logAllPaths(cat.subcategories, level + 1);
+        }
+      });
+    }
+    logAllPaths(categories);
   }
+  
+  // Получаем товары для текущей категории и всех её подкатегорий
+  const getProductsForCategory = (categoryPath: string): Product[] => {
+    const allProducts = getAllProducts();
+    console.log('EnhancedCategoryPage: Getting products for categoryPath:', categoryPath);
+    console.log('EnhancedCategoryPage: Total products available:', allProducts.length);
+    
+    // Показываем первые несколько продуктов для отладки
+    console.log('EnhancedCategoryPage: Sample products:');
+    allProducts.slice(0, 5).forEach((product, index) => {
+      console.log(`  ${index + 1}. ${product.name} - category: "${product.category}"`);
+    });
+    
+    const categoryProducts = allProducts.filter((product: Product) => {
+      // Проверяем точное совпадение категории
+      const exactMatch = product.category === categoryPath;
+      // Проверяем, начинается ли категория товара с искомого пути
+      const startsWithMatch = product.category.startsWith(categoryPath + '/');
+      // Проверяем, является ли категория товара подкатегорией
+      const isSubcategory = product.category.includes(categoryPath + '/');
+      
+      const matches = exactMatch || startsWithMatch || isSubcategory;
+      
+      if (matches) {
+        console.log('EnhancedCategoryPage: Found product:', product.name, 'with category:', product.category);
+      }
+      
+      return matches;
+    });
+    
+    console.log('EnhancedCategoryPage: Found', categoryProducts.length, 'products for category:', categoryPath);
+    
+    // Если продуктов не найдено, показываем все категории продуктов
+    if (categoryProducts.length === 0) {
+      console.log('EnhancedCategoryPage: No products found. All product categories:');
+      const allCategories = [...new Set(allProducts.map(p => p.category))].sort();
+      allCategories.forEach(cat => {
+        console.log(`  - "${cat}"`);
+      });
+    }
+    
+    return categoryProducts;
+  };
+  
+  const products = categoryPath ? getProductsForCategory(categoryPath) : [];
+  console.log('EnhancedCategoryPage: Products for category:', products.length);
+  console.log('EnhancedCategoryPage: First few products:', products.slice(0, 3).map(p => ({ name: p.name, category: p.category })));
+
+  // Создаем динамическую информацию о категории
+  const categoryInfo = {
+    name: categoryData?.name || 'Категория',
+    description: `Каталог ${categoryData?.name?.toLowerCase() || 'товаров'} с полным ассортиментом товаров`,
+    heroImage: 'https://via.placeholder.com/1200x400?text=Категория',
+    benefits: [
+      'Высокое качество продукции',
+      'Профессиональная установка',
+      'Гарантийное обслуживание',
+      'Техническая поддержка'
+    ]
+  };
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = products.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           product.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            product.brand.toLowerCase().includes(searchQuery.toLowerCase());
       
       // Apply filters
@@ -108,11 +140,6 @@ const EnhancedCategoryPage: React.FC = () => {
       // Availability filter
       if (filters.availability && filters.availability.length > 0) {
         matchesFilters = matchesFilters && filters.availability.includes(product.availability);
-      }
-      
-      // Energy class filter
-      if (filters.energyClass && filters.energyClass.length > 0) {
-        matchesFilters = matchesFilters && product.energyClass && filters.energyClass.includes(product.energyClass);
       }
       
       return matchesSearch && matchesFilters;
@@ -140,287 +167,356 @@ const EnhancedCategoryPage: React.FC = () => {
     return filtered;
   }, [products, searchQuery, filters, sortBy]);
 
-  const handleQuickView = (product: EnhancedProduct) => {
-    setQuickViewProduct(product);
-  };
-
-  const handleAddToCart = (product: EnhancedProduct) => {
-    console.log('Add to cart:', product);
-    // Implement cart functionality
-  };
-
   const getActiveFiltersCount = () => {
-    return Object.keys(filters).length;
+    let count = 0;
+    if (filters.brand && filters.brand.length > 0) count++;
+    if (filters.price) count++;
+    if (filters.availability && filters.availability.length > 0) count++;
+    return count;
+  };
+
+  const getBrands = () => {
+    const brands = new Set(products.map(p => p.brand));
+    return Array.from(brands).sort();
+  };
+
+  const getPriceRange = () => {
+    const prices = products.map(p => p.price).filter(p => p > 0);
+    return {
+      min: Math.min(...prices),
+      max: Math.max(...prices)
+    };
   };
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": categoryData.name,
-    "description": categoryData.description,
-    "url": `https://nordengineering.ru/catalog/${category}`,
+    "name": categoryInfo.name,
+    "description": categoryInfo.description,
+    "url": `https://nordengineering.ru/catalog/${categoryPath}`,
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": filteredAndSortedProducts.length,
-      "itemListElement": filteredAndSortedProducts.slice(0, 10).map((product, index) => ({
+      "itemListElement": filteredAndSortedProducts.map((product, index) => ({
         "@type": "ListItem",
         "position": index + 1,
         "item": {
           "@type": "Product",
           "name": product.name,
-          "description": product.shortDescription,
-          "brand": product.brand,
+          "description": product.name,
           "offers": {
             "@type": "Offer",
             "price": product.price,
-            "priceCurrency": "RUB",
-            "availability": product.availability === 'В наличии' ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": product.rating,
-            "reviewCount": product.reviewCount
+            "priceCurrency": "RUB"
           }
         }
       }))
     }
   };
 
+  // Проверяем, что путь категории существует, если нет - показываем продукты без категории
+  if (!categoryPath) {
+    return <Navigate to="/catalog" replace />;
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <SEOHelmet
-        title={`${categoryData.name} - Каталог НОРДИНЖИНИРИНГ`}
-        description={categoryData.description}
-        keywords={`${categoryData.name.toLowerCase()}, каталог, климатическое оборудование, купить, цена, Москва`}
-        canonical={`https://nordengineering.ru/catalog/${category}`}
+        title={`${categoryInfo.name} - Каталог оборудования`}
+        description={categoryInfo.description}
         structuredData={structuredData}
       />
       <Header />
       <main className="pb-12">
         <Breadcrumbs />
-        
+
         {/* Hero Section */}
-        <section className="relative py-16 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${categoryData.heroImage})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
-          
-          <div className="relative container mx-auto px-4">
-            <div className="max-w-3xl">
-              <h1 className="font-heading font-bold text-h1-mobile md:text-h1-desktop text-white mb-6">
-                {categoryData.name}
-              </h1>
-              <p className="text-white/90 text-lg mb-8 leading-relaxed">
-                {categoryData.description}
-              </p>
-              
-              {/* Benefits */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {categoryData.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center text-white/90">
-                    <div className="bg-accent rounded-full p-1 mr-3">
-                      <Award className="h-4 w-4 text-white" />
+        <section className="bg-gradient-to-r from-primary to-secondary py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h1 className="font-heading font-bold text-h1-mobile md:text-h1-desktop text-white mb-6">
+                  {categoryInfo.name}
+                </h1>
+                <p className="text-white/90 text-lg mb-8">
+                  {categoryInfo.description}
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {categoryInfo.benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center text-white/90">
+                      <Shield className="h-5 w-5 mr-2 text-white" />
+                      <span className="text-sm">{benefit}</span>
                     </div>
-                    <span>{benefit}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+              <div className="hidden lg:block">
+                <img
+                  src={categoryInfo.heroImage}
+                  alt={categoryInfo.name}
+                  className="w-full h-64 object-cover rounded-lg"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Filters and Search */}
-        <section className="py-8 bg-lightBg dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        {/* Search and Filters */}
+        <section className="py-8 border-b border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
-              <div className="flex flex-col md:flex-row gap-4 flex-1">
-                <div className="relative w-full md:w-96">
-                  <input
-                    type="text"
-                    placeholder="Поиск товаров..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full py-3 px-4 pr-12 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  />
-                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                </div>
-                
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="popular">По популярности</option>
-                  <option value="price-asc">По цене (возрастание)</option>
-                  <option value="price-desc">По цене (убывание)</option>
-                  <option value="rating">По рейтингу</option>
-                  <option value="newest">Новинки</option>
-                  <option value="name">По названию</option>
-                </select>
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+              {/* Search */}
+              <div className="relative w-full lg:w-1/3">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <input
+                  type="text"
+                  placeholder="Поиск по товарам..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-secondary focus:border-transparent"
+                />
               </div>
-              
+
+              {/* Filters and View Mode */}
               <div className="flex items-center gap-4">
-                <button 
-                  onClick={() => setIsFiltersOpen(true)}
-                  className="flex items-center px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                <button
+                  onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+                  className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
-                  <SlidersHorizontal className="h-5 w-5 mr-2" />
+                  <Filter className="h-5 w-5" />
                   Фильтры
                   {getActiveFiltersCount() > 0 && (
-                    <span className="ml-2 bg-primary text-white text-xs px-2 py-1 rounded-full">
+                    <span className="bg-secondary text-white text-xs px-2 py-1 rounded-full">
                       {getActiveFiltersCount()}
                     </span>
                   )}
                 </button>
-                
-                <div className="flex border border-gray-300 dark:border-gray-700 rounded-md overflow-hidden">
+
+                <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-3 ${viewMode === 'grid' ? 'bg-primary text-white' : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300'}`}
+                    onClick={() => setViewMode("grid")}
+                    className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
                   >
                     <Grid className="h-5 w-5" />
                   </button>
                   <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-3 ${viewMode === 'list' ? 'bg-primary text-white' : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300'}`}
+                    onClick={() => setViewMode("list")}
+                    className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
                   >
                     <List className="h-5 w-5" />
                   </button>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Results Summary */}
-        <section className="py-6">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600 dark:text-gray-400">
-                Найдено товаров: <span className="font-semibold">{filteredAndSortedProducts.length}</span>
-              </p>
-              
-              {/* Quick Stats */}
-              <div className="hidden md:flex items-center space-x-6 text-sm">
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <TrendingUp className="h-4 w-4 mr-1 text-green-600" />
-                  <span>{products.filter(p => p.isPopular).length} популярных</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Zap className="h-4 w-4 mr-1 text-blue-600" />
-                  <span>{products.filter(p => p.isNew).length} новинок</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Award className="h-4 w-4 mr-1 text-purple-600" />
-                  <span>{products.filter(p => p.isBestseller).length} хитов продаж</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            {/* Filters Panel */}
+            {isFiltersOpen && (
+              <div className="mt-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Brand Filter */}
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Бренд</h3>
+                    <div className="space-y-2">
+                      {getBrands().map(brand => (
+                        <label key={brand} className="flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={filters.brand?.includes(brand.toLowerCase()) || false}
+                            onChange={(e) => {
+                              const currentBrands = filters.brand || [];
+                              const newBrands = e.target.checked
+                                ? [...currentBrands, brand.toLowerCase()]
+                                : currentBrands.filter((b: string) => b !== brand.toLowerCase());
+                              setFilters({ ...filters, brand: newBrands });
+                            }}
+                            className="rounded border-gray-300 text-secondary focus:ring-secondary"
+                          />
+                          <span className="ml-2 text-gray-700 dark:text-gray-300">{brand}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
 
-        {/* Products Grid */}
-        <section className="pb-12">
-          <div className="container mx-auto px-4">
-            {filteredAndSortedProducts.length === 0 ? (
-              <div className="text-center py-16">
-                <div className="bg-gray-100 dark:bg-gray-800 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                  <Search className="h-12 w-12 text-gray-400" />
+                  {/* Price Filter */}
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Цена</h3>
+                    <div className="space-y-2">
+                      <input
+                        type="number"
+                        placeholder="От"
+                        value={filters.price?.[0] || ''}
+                        onChange={(e) => {
+                          const currentPrice = filters.price || [0, 0];
+                          setFilters({ ...filters, price: [Number(e.target.value), currentPrice[1]] });
+                        }}
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      />
+                      <input
+                        type="number"
+                        placeholder="До"
+                        value={filters.price?.[1] || ''}
+                        onChange={(e) => {
+                          const currentPrice = filters.price || [0, 0];
+                          setFilters({ ...filters, price: [currentPrice[0], Number(e.target.value)] });
+                        }}
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Sort */}
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Сортировка</h3>
+                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    >
+                      <option value="popular">По популярности</option>
+                      <option value="price-asc">По цене (возрастание)</option>
+                      <option value="price-desc">По цене (убывание)</option>
+                      <option value="name">По названию</option>
+                      <option value="rating">По рейтингу</option>
+                      <option value="newest">По новизне</option>
+                    </select>
+                  </div>
                 </div>
-                <h3 className="font-heading font-bold text-h3-desktop text-primary dark:text-white mb-4">
-                  Товары не найдены
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-                  По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска или фильтры.
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchQuery('');
-                    setFilters({});
-                  }}
-                  className="bg-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-md transition-colors"
-                >
-                  Сбросить фильтры
-                </button>
-              </div>
-            ) : (
-              <div className={`grid gap-6 ${
-                viewMode === 'grid' 
-                  ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
-                  : 'grid-cols-1'
-              }`}>
-                {filteredAndSortedProducts.map((product) => (
-                  <EnhancedProductCard
-                    key={product.id}
-                    product={product}
-                    viewMode={viewMode}
-                    onQuickView={handleQuickView}
-                    onAddToCart={handleAddToCart}
-                  />
-                ))}
               </div>
             )}
           </div>
         </section>
 
-        {/* Category Benefits */}
-        <section className="py-12 bg-lightBg dark:bg-gray-800">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white text-center mb-8">
-                Преимущества {categoryData.name.toLowerCase()}
+        {/* Subcategories */}
+        {categoryData?.subcategories && categoryData.subcategories.length > 0 && (
+          <section className="py-8 border-b border-gray-200 dark:border-gray-700">
+            <div className="container mx-auto px-4">
+              <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white mb-6">
+                Подкатегории
               </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {categoryData.benefits.map((benefit, index) => (
-                  <div key={index} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
-                    <div className="flex items-start">
-                      <div className="bg-primary/10 rounded-lg p-3 mr-4">
-                        {index % 4 === 0 && <Award className="h-6 w-6 text-primary" />}
-                        {index % 4 === 1 && <Zap className="h-6 w-6 text-primary" />}
-                        {index % 4 === 2 && <TrendingUp className="h-6 w-6 text-primary" />}
-                        {index % 4 === 3 && <Shield className="h-6 w-6 text-primary" />}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {categoryData.subcategories.map((subcat) => {
+                  console.log('EnhancedCategoryPage: Subcategory link:', { name: subcat.name, path: subcat.path, fullUrl: `/catalog/${subcat.path}` });
+                  return (
+                    <Link
+                      key={subcat.id}
+                      to={`/catalog/${subcat.path}`}
+                      className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-card hover:shadow-card-hover transition-all duration-300"
+                      onClick={() => {
+                        console.log('EnhancedCategoryPage: Clicked on subcategory:', subcat.name);
+                        console.log('EnhancedCategoryPage: Navigating to:', `/catalog/${subcat.path}`);
+                      }}
+                    >
+                      <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
+                        {subcat.name}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
+                        {subcat.subcategories?.length || 0} подкатегорий
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Products Grid - показываем товары всегда */}
+        {filteredAndSortedProducts.length > 0 && (
+          <section className="py-12">
+            <div className="container mx-auto px-4">
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white">
+                  {categoryData?.subcategories && categoryData.subcategories.length > 0 
+                    ? `Товары в категории "${categoryData.name}" (${filteredAndSortedProducts.length})`
+                    : `Найдено товаров: ${filteredAndSortedProducts.length}`
+                  }
+                </h2>
+              </div>
+
+            {filteredAndSortedProducts.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600 dark:text-gray-400 text-lg">
+                  {categoryData?.subcategories && categoryData.subcategories.length > 0 
+                    ? `В данной категории пока нет товаров. Перейдите в подкатегории для просмотра товаров.`
+                    : `По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска.`
+                  }
+                </p>
+              </div>
+            ) : (
+              <div
+                className={`grid gap-6 ${
+                  viewMode === "grid"
+                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    : "grid-cols-1"
+                }`}
+              >
+                {filteredAndSortedProducts.map((product) => (
+                  <div
+                    key={product.id}
+                    className="bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
+                  >
+                    <div className="relative">
+                      <img
+                        src={product.image || 'https://via.placeholder.com/300x200?text=Нет+изображения'}
+                        alt={product.name}
+                        className="w-full h-48 object-cover"
+                      />
+                      {product.isNew && (
+                        <span className="absolute top-2 left-2 bg-secondary text-white text-xs font-semibold px-2 py-1 rounded">
+                          Новинка
+                        </span>
+                      )}
+                      {product.isSale && (
+                        <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                          Скидка
+                        </span>
+                      )}
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                        {product.brand}
+                      </p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-1">
+                          {Array.from({ length: 5 }, (_, i) => (
+                            <span
+                              key={i}
+                              className={`text-sm ${i < product.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                            >
+                              ★
+                            </span>
+                          ))}
+                          <span className="text-sm text-gray-500 ml-1">
+                            ({product.reviewCount})
+                          </span>
+                        </div>
+                        <span className="text-lg font-bold text-primary dark:text-white">
+                          {product.price.toLocaleString()} ₽
+                        </span>
                       </div>
-                      <div>
-                        <h3 className="font-heading font-semibold text-primary dark:text-white mb-2">
-                          {benefit}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                          {index % 4 === 0 && 'Высокое качество и надежность оборудования от ведущих производителей.'}
-                          {index % 4 === 1 && 'Современные технологии для максимальной эффективности и экономии.'}
-                          {index % 4 === 2 && 'Оптимальное соотношение цены и качества для любого бюджета.'}
-                          {index % 4 === 3 && 'Профессиональная установка и обслуживание с гарантией.'}
-                        </p>
+                      <div className="flex gap-2">
+                        <Link 
+                          to={`/catalog/${categoryPath}/${product.id}`}
+                          className="flex-1 bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-dark transition-colors text-center"
+                        >
+                          Подробнее
+                        </Link>
+                        <button className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                          <Heart className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+                        </button>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            )}
           </div>
         </section>
+        )}
       </main>
-      
-      {/* Filters Modal */}
-      <ProductFilters
-        isOpen={isFiltersOpen}
-        onClose={() => setIsFiltersOpen(false)}
-        onFiltersChange={setFilters}
-        category={category}
-      />
-      
-      {/* Quick View Modal */}
-      {quickViewProduct && (
-        <ProductQuickView
-          product={quickViewProduct}
-          isOpen={!!quickViewProduct}
-          onClose={() => setQuickViewProduct(null)}
-          onAddToCart={handleAddToCart}
-        />
-      )}
-      
       <Footer />
     </div>
   );

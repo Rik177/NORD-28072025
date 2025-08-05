@@ -7,7 +7,7 @@ import Breadcrumbs from '../../components/shared/Breadcrumbs';
 import ProductApplications from '../../components/catalog/ProductApplications';
 import ProductInstallation from '../../components/catalog/ProductInstallation';
 import ProductRecommendations from '../../components/catalog/ProductRecommendations';
-import { extendedProductData } from '../../data/productData';
+import { getEnhancedProduct } from '../../data/mircliProductData';
 import { Star, Heart, Share2, ChevronLeft, ChevronRight, Check, X, Phone, Mail } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
 import ConsultationForm from '../../components/catalog/ConsultationForm';
@@ -46,7 +46,7 @@ const ProductPage: React.FC = () => {
   
   const { addToComparison, isInComparison } = useComparison();
 
-  const product = extendedProductData[productId || ''];
+  const product = getEnhancedProduct(productId || '');
 
   if (!product) {
     return <Navigate to="/catalog\" replace />;
