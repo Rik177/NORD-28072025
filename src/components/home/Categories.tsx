@@ -35,7 +35,7 @@ const Categories: React.FC = () => {
 
               <div className="relative h-full flex flex-col justify-end p-6 text-white z-10">
                 <div>
-                  <h3 className="font-heading font-bold text-xl lg:text-2xl mb-2 group-hover:text-accent transition-colors duration-300">
+                  <h3 className="font-heading font-bold text-xl lg:text-2xl mb-2 text-white group-hover:text-accent transition-colors duration-300">
                     {category.name}
                   </h3>
 
