@@ -100,13 +100,13 @@ const lazyLoadResources = () => {
 const loadAnalytics = () => {
   // Google Analytics или другие аналитические скрипты
   // Загружаем только после полной загрузки страницы
-  console.log('Analytics loaded');
+  // no-op in production
 };
 
 // Загрузка чат-виджета
 const loadChatWidget = () => {
   // Загружаем чат-виджет с задержкой
-  console.log('Chat widget loaded');
+  // no-op in production
 };
 
 // Оптимизация шрифтов
@@ -134,14 +134,14 @@ const monitorWebVitals = () => {
   new PerformanceObserver((entryList) => {
     const entries = entryList.getEntries();
     const lastEntry = entries[entries.length - 1];
-    console.log('LCP:', lastEntry.startTime);
+    // no-op in production
   }).observe({ entryTypes: ['largest-contentful-paint'] });
   
   // First Input Delay (FID)
   new PerformanceObserver((entryList) => {
     const entries = entryList.getEntries();
     entries.forEach(entry => {
-      console.log('FID:', entry.processingStart - entry.startTime);
+      // no-op in production
     });
   }).observe({ entryTypes: ['first-input'] });
   
@@ -154,7 +154,7 @@ const monitorWebVitals = () => {
         clsValue += entry.value;
       }
     });
-    console.log('CLS:', clsValue);
+    // no-op in production
   }).observe({ entryTypes: ['layout-shift'] });
 };
 
@@ -276,10 +276,10 @@ export const setupCaching = () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then(registration => {
-        console.log('Service Worker registered:', registration);
+        // no-op in production
       })
       .catch(error => {
-        console.log('Service Worker registration failed:', error);
+        // no-op in production
       });
   }
 };
@@ -326,7 +326,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now();
-  console.log(`${name} took ${end - start} milliseconds`);
+  // no-op in production
 };
 
 // Оптимизация для PWA

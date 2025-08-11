@@ -1,10 +1,7 @@
 // Автоматически сгенерировано на основе MIRCLI_CATALOGUE_results.json
 import { categories, products, getCategoryById, getCategoryByPath, getProductsByCategory, getProductsByBrand, searchProducts, getCategoryHierarchy, getSubcategories, getAllProducts, getProductsBySubcategory } from '../../data/enhanced-categories';
 
-// Отладочная информация
-console.log('Categories.ts: Loading categories from enhanced-categories.ts');
-console.log('Categories.ts: Categories count:', categories.length);
-console.log('Categories.ts: First category:', categories[0]);
+// Debug logs removed for production
 
 export interface Subcategory {
   id: string;

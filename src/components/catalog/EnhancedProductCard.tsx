@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Heart, BarChart2, Eye, ShoppingCart, Zap, Shield, Award } from 'lucide-react';
-import { EnhancedProduct } from '../../data/enhancedProductData';
+import type { EnhancedProduct } from '../../data/mircliProductData';
 import OptimizedImage from '../shared/OptimizedImage';
 import { useComparison } from '../../hooks/useComparison';
 
@@ -108,7 +108,7 @@ const EnhancedProductCard: React.FC<EnhancedProductCardProps> = ({
               <div>
                 <span className="text-sm text-secondary font-semibold">{product.brand}</span>
                 <Link 
-                  to={`/catalog/${product.category}/${product.id}`}
+                  to={`/catalog/${product.category}/product/${product.id}`}
                   className="block hover:text-primary dark:hover:text-white transition-colors"
                 >
                   <h3 className="font-heading font-semibold text-lg text-primary dark:text-white line-clamp-2">
@@ -191,7 +191,7 @@ const EnhancedProductCard: React.FC<EnhancedProductCardProps> = ({
                 <Heart className="h-4 w-4" />
               </button>
               <Link
-                to={`/catalog/${product.category}/${product.id}`}
+                to={`/catalog/${product.category}/product/${product.id}`}
                 className="bg-primary hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
               >
                 Подробнее
@@ -304,7 +304,7 @@ const EnhancedProductCard: React.FC<EnhancedProductCardProps> = ({
 
         {/* Title */}
         <Link 
-          to={`/catalog/${product.category}/${product.id}`}
+          to={`/catalog/${product.category}/product/${product.id}`}
           className="block hover:text-primary dark:hover:text-white transition-colors mb-2"
         >
           <h3 className="font-heading font-semibold text-primary dark:text-white line-clamp-2">
@@ -379,7 +379,7 @@ const EnhancedProductCard: React.FC<EnhancedProductCardProps> = ({
         {/* Actions */}
         <div className="flex space-x-2 mt-auto">
           <Link
-            to={`/catalog/${product.category}/${product.id}`}
+            to={`/catalog/${product.category}/product/${product.id}`}
             className="flex-1 bg-primary hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-md transition-colors text-center text-sm"
           >
             Подробнее

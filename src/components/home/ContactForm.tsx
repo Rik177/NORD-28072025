@@ -4,7 +4,7 @@ import EnhancedContactForm from '../shared/EnhancedContactForm';
 const ContactForm: React.FC = () => {
   const handleSubmit = async (data: any) => {
     // Здесь будет логика отправки на сервер
-    console.log('Form submitted:', data);
+    
     
     // Симуляция API запроса
     const response = await fetch('/api/contact', {

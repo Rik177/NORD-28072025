@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getEnhancedProduct } from '../../data/mircliProductData';
+import { getAllProducts as getAllCatalogProducts, getCategoryByPath } from '../../pages/catalog/Categories';
 import { ChevronRight } from 'lucide-react';
 
 interface BreadcrumbConfig {
@@ -42,6 +44,11 @@ const routeLabels: Record<string, string> = {
   'curtains': 'Тепловые завесы',
   'accessories': 'Аксессуары и комплектующие',
   'smart-home': 'Умный дом',
+  
+  // Категории из MIRCLI каталога
+  'ventilyatory': 'Вентиляторы',
+  'napol-nye-ventilyatory': 'Напольные вентиляторы',
+  'lopastnye': 'Лопастные',
 
   // Услуги
   'design': 'Проектирование',
@@ -79,14 +86,47 @@ const getBreadcrumbLabel = (path: string, fullPath: string): string => {
   
   // Проверяем динамические маршруты
   const pathSegments = fullPath.split('/').filter(x => x);
-  
-  // Для товаров в каталоге
-  if (pathSegments.length === 3 && pathSegments[0] === 'catalog') {
-    const productId = pathSegments[2];
-    if (productNames[productId]) {
-      return productNames[productId];
+
+  // Категории каталога: подставляем названия из базы по cumulative path
+  if (pathSegments[0] === 'catalog' && path !== 'catalog') {
+    const productIdx = pathSegments.indexOf('product');
+    const currentIdx = pathSegments.indexOf(path);
+    const isBeforeProduct = productIdx === -1 || currentIdx < productIdx;
+    if (isBeforeProduct && currentIdx >= 1) {
+      const categoryPath = pathSegments.slice(1, currentIdx + 1).join('/');
+      const cat = getCategoryByPath(categoryPath);
+      if (cat?.name) return cat.name;
     }
-    return 'Товар';
+  }
+  
+  // Для товаров в каталоге - поддерживаем любые уровни вложенности
+  if (pathSegments[0] === 'catalog' && pathSegments.includes('product')) {
+    const productIndex = pathSegments.findIndex(segment => segment === 'product');
+    if (productIndex !== -1 && productIndex + 1 < pathSegments.length) {
+      const productId = pathSegments[productIndex + 1];
+      // Если текущий сегмент — это сам productId, показываем название товара
+      if (path === productId) {
+        // 1) Пытаемся найти в расширенной базе товаров
+        const enhanced = getEnhancedProduct(productId);
+        if (enhanced?.name) return enhanced.name;
+
+        // 2) Пытаемся найти в каталожной базе
+        try {
+          const catalogProduct = getAllCatalogProducts().find(p => p.id === productId);
+          if (catalogProduct?.name) return catalogProduct.name;
+        } catch (_) {
+          // ignore
+        }
+
+        // 3) Фолбэк: если не нашли — "Товар"
+        return 'Товар';
+      }
+
+      // Если сегмент — "product", показываем как "Товар"
+      if (path === 'product') {
+        return 'Товар';
+      }
+    }
   }
   
   // Для статей блога
@@ -129,6 +169,10 @@ const Breadcrumbs: React.FC = () => {
             </Link>
           </li>
           {pathnames.map((name, index) => {
+            // Пропускаем служебный сегмент "product" в каталоге, чтобы не было лишнего "Товар"
+            if (name === 'product' && pathnames[0] === 'catalog') {
+              return null;
+            }
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const label = getBreadcrumbLabel(name, location.pathname);
             const isLast = index === pathnames.length - 1;

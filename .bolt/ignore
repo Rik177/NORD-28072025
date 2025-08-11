@@ -19,21 +19,25 @@ src/pages/Tools.tsx
 src/pages/Brands.tsx
 src/pages/Blog.tsx
 src/pages/BlogPost.tsx
-# src/components/home/Footer.tsx
+src/components/home/Footer.tsx
+
+src/pages/Home.tsx
+src/main.tsx
+src/components/home/AboutCompany.tsx
+src/components/home/AdvancedFeatures.tsx
+src/components/home/Categories.tsx
+src/components/home/ContactForm.tsx
+src/components/home/Features.tsx
+src/components/home/FrequentlyOrdered.tsx
+src/components/home/HeroSlider.tsx
+src/components/home/LatestProjects.tsx
+src/components/home/Partners.tsx
+src/components/home/PopularProducts.tsx
+src/components/home/Partners.tsx
+src/components/home/RecommendationLetters.tsx
+src/components/home/Services.tsx
+src/components/home/Testimonials.tsx
+
+./MIRCLI_CATALOGUE_results.json
+./SEO_IMPROVEMENTS.md
 # src/pages/catalog/*
-# src/pages/Home.tsx
-# src/main.tsx
-# src/components/home/AboutCompany.tsx
-# src/components/home/AdvancedFeatures.tsx
-# src/components/home/Categories.tsx
-# src/components/home/ContactForm.tsx
-# src/components/home/Features.tsx
-# src/components/home/FrequentlyOrdered.tsx
-# src/components/home/HeroSlider.tsx
-# src/components/home/LatestProjects.tsx
-# src/components/home/Partners.tsx
-# src/components/home/PopularProducts.tsx
-# src/components/home/Partners.tsx
-# src/components/home/RecommendationLetters.tsx
-# src/components/home/Services.tsx
-# src/components/home/Testimonials.tsx

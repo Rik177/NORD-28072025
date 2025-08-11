@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Search, Phone, Heart, ChevronDown, Sun, Moon, MapPin, Building2, Box, Wrench, FolderOpen, Award, PanelTop, X, User, MessageCircle } from 'lucide-react';
 import GlobalSearch from '../shared/GlobalSearch';
 import ConsultationForm, { ConsultationFormData } from '../catalog/ConsultationForm';
+import { categories as allCategories } from '../../data/enhanced-categories';
 import SkipLink from '../shared/SkipLink';
 
 interface MenuItem {
@@ -81,6 +82,15 @@ const Header: React.FC = () => {
     message: ''
   });
 
+  // Категории из каталога (только верхнего уровня)
+  const topCategories = React.useMemo(() => {
+    try {
+      return (allCategories || []).filter((cat: any) => !cat.parentId || cat.parentId === '');
+    } catch {
+      return [] as any[];
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -149,7 +159,7 @@ const Header: React.FC = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Consultation form submitted:', formData);
+    
     setShowConsultationForm(false);
     setFormData({ name: '', phone: '', email: '', message: '' });
     alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
@@ -319,7 +329,7 @@ const Header: React.FC = () => {
                         role="menu"
                         aria-label={`Подменю ${item.label}`}
                       >
-                        {item.submenu.map((subItem, subIndex) => (
+                        {(item.label === 'Каталог' ? topCategories.map((cat) => ({ label: cat.name, path: `/catalog/${cat.path}` })) : item.submenu).map((subItem: any, subIndex: number) => (
                           <Link
                             key={subIndex}
                             to={subItem.path}
@@ -451,7 +461,7 @@ const Header: React.FC = () => {
                       </div>
                       {item.submenu && expandedSubmenu === item.label && (
                         <div className="ml-8 space-y-1 pb-2">
-                          {item.submenu.map((subItem, subIndex) => (
+                          {(item.label === 'Каталог' ? topCategories.map((cat) => ({ label: cat.name, path: `/catalog/${cat.path}` })) : item.submenu).map((subItem: any, subIndex: number) => (
                             <Link
                               key={subIndex}
                               to={subItem.path}

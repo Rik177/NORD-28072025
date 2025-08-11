@@ -35,7 +35,7 @@ const PWAInstallPrompt: React.FC<PWAInstallPromptProps> = ({ className = '' }) =
       setIsInstalled(true);
       setShowPrompt(false);
       // Log app installation to analytics
-      console.log('PWA was installed');
+      
     });
 
     return () => {
@@ -59,9 +59,9 @@ const PWAInstallPrompt: React.FC<PWAInstallPromptProps> = ({ className = '' }) =
     setDeferredPrompt(null);
 
     if (outcome === 'accepted') {
-      console.log('User accepted the install prompt');
+      
     } else {
-      console.log('User dismissed the install prompt');
+      
     }
   };
 

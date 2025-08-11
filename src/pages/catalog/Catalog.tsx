@@ -72,22 +72,14 @@ interface Category {
 // ];
 
 const Catalog: React.FC = () => {
-  console.log('Catalog: Component mounted');
-  console.log('Catalog: Current location:', window.location.href);
+  // Debug logs removed for production
   
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("name");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
-  // Отладочная информация
-  console.log('Categories loaded:', categories.length);
-  console.log('Categories structure:', categories.map(cat => ({
-    name: cat.name,
-    path: cat.path,
-    subcategories: cat.subcategories?.length || 0
-  })));
-  console.log('First category details:', categories[0]);
+  
 
   const structuredData = {
     "@context": "https://schema.org",

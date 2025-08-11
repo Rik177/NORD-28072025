@@ -72,25 +72,28 @@ function extractSpecifications(characteristics) {
 
 // Функция для извлечения бренда из названия товара
 function extractBrand(productName) {
+  if (!productName) return 'Неизвестный бренд';
   const lines = productName.split('\n');
   if (lines.length > 1) {
-    const secondLine = lines[1];
-    const brandMatch = secondLine.match(/^([A-Z][A-Z0-9\s]+)/);
-    if (brandMatch) {
-      return brandMatch[1].trim();
-    }
+    const secondLine = String(lines[1] || '').trim();
+    const cleaned = secondLine.replace(/^бренд[:\s-]*/i, '');
+    const firstToken = cleaned.split(/\s+/)[0];
+    return firstToken && firstToken.length > 0 ? firstToken.trim() : 'Неизвестный бренд';
   }
   return 'Неизвестный бренд';
 }
 
 // Функция для извлечения модели из названия товара
 function extractModel(productName) {
+  if (!productName) return '';
   const lines = productName.split('\n');
   if (lines.length > 1) {
-    const secondLine = lines[1];
-    const modelMatch = secondLine.match(/[A-Z][A-Z0-9\s-]+/g);
-    if (modelMatch && modelMatch.length > 1) {
-      return modelMatch.slice(1).join(' ').trim();
+    const secondLine = String(lines[1] || '').trim();
+    const cleaned = secondLine.replace(/^бренд[:\s-]*/i, '');
+    const parts = cleaned.split(/\s+/);
+    if (parts.length > 1) {
+      const rest = cleaned.slice(parts[0].length).trim();
+      return rest.replace(/арт[:\s].*$/i, '').trim();
     }
   }
   return '';
@@ -150,45 +153,74 @@ function mapOldPathToNewPath(oldPath) {
   // Разбиваем путь на части
   const pathParts = oldPath.split('/');
   const mappedParts = pathParts.map(part => pathMapping[part] || part);
-  return mappedParts.join('/');
+  let mapped = mappedParts.join('/');
+  // Специальное правило: diffuzory должны быть на верхнем уровне, а не под ventilyatsionnye-reshetki
+  if (/^ventilyatsionnye-reshetki\/diffuzory/.test(mapped)) {
+    mapped = mapped.replace(/^ventilyatsionnye-reshetki\/diffuzory/, 'diffuzory');
+  }
+  return mapped;
 }
 
 // Функция для поиска товаров во всей структуре данных
 function findProducts(data) {
   const products = [];
   let productCount = 0;
+
+  // Определяем материал для решеток и маппим подкатегорию
+  function mapVentGrilleMaterialCategory(originalPath, specs) {
+    if (typeof originalPath !== 'string') return originalPath;
+    if (!/^ventilyatsionnye-reshetki(\/|$)/.test(originalPath)) return originalPath;
+    if (!specs || typeof specs !== 'object') return originalPath;
+
+    const materialValueRaw = specs['Материал'] || specs['Материал корпуса'] || specs['Материал решетки'];
+    if (!materialValueRaw) return originalPath;
+    const material = String(materialValueRaw).toLowerCase();
+
+    // Простая эвристика по материалам
+    if (/(пласт|abs)/.test(material)) {
+      return 'ventilyatsionnye-reshetki/plastikovye';
+    }
+    if (/(дерев|мдф|mdf|бук|дуб)/.test(material)) {
+      return 'ventilyatsionnye-reshetki/derevyannye';
+    }
+    if (/(сталь|металл|алюм|нержав)/.test(material)) {
+      return 'ventilyatsionnye-reshetki/metallicheskie';
+    }
+    return originalPath;
+  }
   
   // Рекурсивная функция для поиска товаров в любом объекте
   function searchForProductsRecursively(obj, path = '') {
-    // Проверяем, есть ли у объекта товары
-    if (obj.products && Array.isArray(obj.products)) {
+    if (!obj || typeof obj !== 'object') return;
+
+    // 1) Прямые товары на этом уровне
+    if (Array.isArray(obj.products)) {
       console.log(`📦 Найдены товары в: ${path}`);
-      obj.products.forEach((product, index) => {
+      obj.products.forEach((product) => {
         productCount++;
-        if (productCount % 100 === 0) {
-          console.log(`   Обработано товаров: ${productCount}`);
-        }
-        
-        const productId = createId(product.name);
-        const brand = extractBrand(product.name);
-        const model = extractModel(product.name);
+        if (productCount % 100 === 0) console.log(`   Обработано товаров: ${productCount}`);
+
+        const productId = createId(product.name || `product-${productCount}`);
+        const brand = extractBrand(product.name || '');
+        const model = extractModel(product.name || '');
         const price = extractPrice(product.price);
         const specifications = extractSpecifications(product.characteristics);
-        
-        // Используем ту же логику создания пути, что и для категорий
-        const categoryPath = mapOldPathToNewPath(path);
-        
+
+        let categoryPath = mapOldPathToNewPath(path);
+        // Для решеток уточняем подкатегорию по материалу
+        categoryPath = mapVentGrilleMaterialCategory(categoryPath, specifications);
+
         const enhancedProduct = {
           id: productId,
-          name: product.name.split('\n')[0],
-          brand: brand,
-          model: model,
+          name: String(product.name || '').split('\n')[0],
+          brand,
+          model,
           category: categoryPath,
-          price: price,
+          price,
           currency: 'RUB',
           availability: 'В наличии',
           image: product.image || product.image_url || '',
-          specifications: specifications,
+          specifications,
           url: product.image_url || '',
           rating: 0,
           reviewCount: 0,
@@ -197,39 +229,67 @@ function findProducts(data) {
           isPopular: false,
           isBestseller: false
         };
-        
+
         products.push(enhancedProduct);
       });
     }
-    
-    // Рекурсивно ищем в подкатегориях
-    if (obj.selection1) {
-      obj.selection1.forEach(item => {
-        const newPath = createCategoryPath(item, path);
-        searchForProductsRecursively(item, newPath);
+
+    // 2) Пагинация с товарами
+    if (Array.isArray(obj.pagination)) {
+      obj.pagination.forEach((page) => {
+        if (Array.isArray(page.products)) {
+          console.log(`📦 Найдены товары (pagination) в: ${path}`);
+          page.products.forEach((product) => {
+            productCount++;
+            if (productCount % 100 === 0) console.log(`   Обработано товаров: ${productCount}`);
+
+            const productId = createId(product.name || `product-${productCount}`);
+            const brand = extractBrand(product.name || '');
+            const model = extractModel(product.name || '');
+            const price = extractPrice(product.price);
+            const specifications = extractSpecifications(product.characteristics);
+
+          let categoryPath = mapOldPathToNewPath(path);
+          categoryPath = mapVentGrilleMaterialCategory(categoryPath, specifications);
+
+            const enhancedProduct = {
+              id: productId,
+              name: String(product.name || '').split('\n')[0],
+              brand,
+              model,
+              category: categoryPath,
+              price,
+              currency: 'RUB',
+              availability: 'В наличии',
+              image: product.image || product.image_url || '',
+              specifications,
+              url: product.image_url || '',
+              rating: 0,
+              reviewCount: 0,
+              isNew: false,
+              isSale: false,
+              isPopular: false,
+              isBestseller: false
+            };
+
+            products.push(enhancedProduct);
+          });
+        }
+        // На случай, если внутри страницы тоже есть вложенные уровни
+        searchForProductsRecursively(page, path);
       });
     }
-    
-    if (obj.selection2) {
-      obj.selection2.forEach(item => {
-        const newPath = createCategoryPath(item, path);
-        searchForProductsRecursively(item, newPath);
-      });
-    }
-    
-    if (obj.selection3) {
-      obj.selection3.forEach(item => {
-        const newPath = createCategoryPath(item, path);
-        searchForProductsRecursively(item, newPath);
-      });
-    }
-    
-    if (obj.selection4) {
-      obj.selection4.forEach(item => {
-        const newPath = createCategoryPath(item, path);
-        searchForProductsRecursively(item, newPath);
-      });
-    }
+
+    // 3) Любые selectionN ключи (selection1..selectionX)
+    Object.keys(obj).forEach((key) => {
+      const value = obj[key];
+      if (/^selection\d+$/.test(key) && Array.isArray(value)) {
+        value.forEach((item) => {
+          const newPath = createCategoryPath(item, path);
+          searchForProductsRecursively(item, newPath);
+        });
+      }
+    });
   }
   
   // Ищем товары во всех ключах объекта data
@@ -314,12 +374,21 @@ export const categories: Category[] = ${JSON.stringify(categoriesStructure.categ
 export const products: Product[] = ${JSON.stringify(categoriesStructure.products, null, 2)};
 
 // Функции для работы с данными
+const findCategoryRecursive = (cats: Category[], predicate: (c: Category) => boolean): Category | undefined => {
+  for (const cat of cats) {
+    if (predicate(cat)) return cat;
+    const found = cat.subcategories ? findCategoryRecursive(cat.subcategories, predicate) : undefined;
+    if (found) return found;
+  }
+  return undefined;
+};
+
 export const getCategoryById = (id: string): Category | undefined => {
-  return categories.find(cat => cat.id === id);
+  return findCategoryRecursive(categories, (cat) => cat.id === id);
 };
 
 export const getCategoryByPath = (path: string): Category | undefined => {
-  return categories.find(cat => cat.path === path);
+  return findCategoryRecursive(categories, (cat) => cat.path === path);
 };
 
 export const getProductsByCategory = (categoryPath: string): Product[] => {
@@ -356,7 +425,7 @@ export const getCategoryHierarchy = (categoryId: string): Category[] => {
 };
 
 export const getSubcategories = (categoryId: string): Category[] => {
-  const category = categories.find(cat => cat.id === categoryId);
+  const category = getCategoryById(categoryId);
   return category?.subcategories || [];
 };
 

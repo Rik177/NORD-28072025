@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Star, Heart, BarChart2, ShoppingCart, Check, Zap, Shield } from 'lucide-react';
-import { EnhancedProduct } from '../../data/enhancedProductData';
+import type { EnhancedProduct } from '../../data/mircliProductData';
 import OptimizedImage from '../shared/OptimizedImage';
 import { useComparison } from '../../hooks/useComparison';
 
@@ -356,7 +356,7 @@ const ProductQuickView: React.FC<ProductQuickViewProps> = ({
               
               <div className="flex space-x-3">
                 <a
-                  href={`/catalog/${product.category}/${product.id}`}
+                  href={`/catalog/${product.category}/product/${product.id}`}
                   className="flex-1 bg-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-md transition-colors text-center"
                 >
                   Подробнее

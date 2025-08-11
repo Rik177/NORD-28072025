@@ -132,7 +132,7 @@ const ChatWidget: React.FC = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-80 md:w-96 h-[500px] max-h-[80vh] bg-white dark:bg-gray-900 rounded-xl shadow-xl transition-all duration-300 overflow-hidden ${
+        className={`fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-80 md:w-96 h-[80vh] sm:h-[500px] bg-white dark:bg-gray-900 rounded-xl shadow-xl transition-all duration-300 overflow-hidden flex flex-col ${
           isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
         }`}
         style={{
@@ -140,7 +140,7 @@ const ChatWidget: React.FC = () => {
         }}
       >
         {/* Header */}
-        <div className="bg-primary text-white p-4 rounded-t-xl flex items-center justify-between">
+        <div className="bg-primary text-white p-4 rounded-t-xl flex items-center justify-between relative">
           <div className="flex items-center">
             <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-3">
               <User className="h-5 w-5" />
@@ -155,7 +155,7 @@ const ChatWidget: React.FC = () => {
           </div>
           <button
             onClick={toggleChat}
-            className="text-white hover:text-gray-300 p-1 absolute right-4"
+            className="text-white hover:text-gray-300 p-1 absolute right-4 top-4"
             aria-label="Закрыть чат"
           >
             <X className="h-5 w-5" />
@@ -163,7 +163,7 @@ const ChatWidget: React.FC = () => {
         </div>
 
         {/* Messages */}
-        <div className="h-[calc(100%-128px)] overflow-y-auto p-4 space-y-3 bg-gray-50 dark:bg-gray-800">
+        <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-3 bg-gray-50 dark:bg-gray-800">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -202,7 +202,7 @@ const ChatWidget: React.FC = () => {
         </div>
 
         {/* Input */}
-        <div className="p-4 border-t dark:border-gray-700 bg-white dark:bg-gray-900">
+        <div className="p-4 border-t dark:border-gray-700 bg-white dark:bg-gray-900 shrink-0">
           <div className="flex space-x-2">
             <input
               type="text"

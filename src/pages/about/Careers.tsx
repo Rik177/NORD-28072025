@@ -103,7 +103,7 @@ const Careers: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    
     setSelectedPosition(null);
     setFormData({
       name: '',

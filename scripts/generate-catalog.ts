@@ -100,13 +100,18 @@ function collectProducts(obj: any, parentCategoryId: string, products: Product[]
 function productFromRaw(prod: any, categoryId: string): Product {
   // id: slug по имени + hash
   const id = slugify(prod.name) + '-' + Math.random().toString(36).slice(2, 8);
-  // brand: ищем в name (если есть)
+  // brand: берем первое слово второй строки после первого переноса
   let brand = '';
-  const brandMatch = prod.name.match(/([A-ZА-Я][A-Za-zА-ЯёЁ0-9\- ]+)/);
-  if (brandMatch) brand = brandMatch[1].trim();
+  if (prod?.name) {
+    const parts = String(prod.name).split('\n');
+    if (parts.length > 1) {
+      const second = String(parts[1] || '').trim().replace(/^бренд[:\s-]*/i, '');
+      brand = (second.split(/\s+/)[0] || '').trim();
+    }
+  }
   return {
     id,
-    name: prod.name.replace(/\n/g, ' '),
+    name: String(prod.name || '').split('\n')[0] || '',
     description: prod.characteristics?.map((c: any) => c.name.replace(/\n/g, ': ')).join('; ') || '',
     price: parsePrice(prod.price),
     image: prod.image_url || prod.image || '',

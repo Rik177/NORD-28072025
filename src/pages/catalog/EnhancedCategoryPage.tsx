@@ -1,29 +1,23 @@
-import React, { useState, useMemo } from 'react';
-import { useLocation, Navigate, Link, useParams } from 'react-router-dom';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useLocation, Navigate, Link } from 'react-router-dom';
 import SEOHelmet from '../../components/shared/SEOHelmet';
 import Header from '../../components/home/Header';
 import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
-import { Search, Filter, Grid, List, SlidersHorizontal, TrendingUp, Award, Zap, Shield, Heart } from 'lucide-react';
-import { getProductsByCategory, getCategoryByPath, getAllProducts, categories, Product } from './Categories';
+import { Search, Filter, Grid, List, Shield, Heart } from 'lucide-react';
+import { getCategoryByPath, getAllProducts, Product } from './Categories';
+import { getAllProducts as getAllProductsFromMircli, EnhancedProduct as MircliEnhancedProduct } from '../../data/mircliProductData';
 
 const EnhancedCategoryPage: React.FC = () => {
-  console.log('EnhancedCategoryPage: Component mounted');
-  console.log('EnhancedCategoryPage: Window location:', window.location.href);
+  // Debug logs removed for production
   const location = useLocation();
-  const params = useParams();
   
-  // Извлекаем путь из параметров
-  const { category, subcategory, subsubcategory } = params;
-  const categoryPath = [category, subcategory, subsubcategory].filter(Boolean).join('/');
+  // Поддержка произвольной глубины: извлекаем путь категории из URL после /catalog
+  const pathAfterCatalog = location.pathname.replace(/^\/?catalog\/?/, '');
+  // Если вдруг в пути встретится product, обрезаем после него (на всякий случай)
+  const categoryPath = pathAfterCatalog.split('/product')[0].replace(/\/$/, '');
   
-  console.log('EnhancedCategoryPage: Initial categoryPath:', categoryPath);
-  console.log('EnhancedCategoryPage: Params:', params);
-  console.log('EnhancedCategoryPage: Category:', category);
-  console.log('EnhancedCategoryPage: Subcategory:', subcategory);
-  console.log('EnhancedCategoryPage: Subsubcategory:', subsubcategory);
-  console.log('EnhancedCategoryPage: Full pathname:', location.pathname);
-  console.log('EnhancedCategoryPage: Window location:', window.location.href);
+  
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -34,75 +28,72 @@ const EnhancedCategoryPage: React.FC = () => {
   const categoryData = categoryPath ? getCategoryByPath(categoryPath) : null;
   
   // Отладочная информация
-  console.log('EnhancedCategoryPage: CategoryPath:', categoryPath);
-  console.log('EnhancedCategoryPage: Location pathname:', location.pathname);
-  console.log('EnhancedCategoryPage: CategoryData:', categoryData);
+  
   
   // Проверяем функцию getCategoryByPath
-  if (categoryPath) {
-    console.log('EnhancedCategoryPage: Testing getCategoryByPath for:', categoryPath);
-    const testResult = getCategoryByPath(categoryPath);
-    console.log('EnhancedCategoryPage: getCategoryByPath result:', testResult);
-    
-    // Проверяем все возможные пути
-    console.log('EnhancedCategoryPage: All possible paths:');
-    function logAllPaths(cats: any[], level = 0) {
-      cats.forEach(cat => {
-        console.log('  '.repeat(level) + `- ${cat.path}`);
-        if (cat.subcategories) {
-          logAllPaths(cat.subcategories, level + 1);
-        }
-      });
-    }
-    logAllPaths(categories);
-  }
+  // Removed verbose debug tracing
   
+  // Адаптация товара из mircliProductData к типу Product (каталога)
+  const mapMircliToCatalogProduct = (p: MircliEnhancedProduct): Product => {
+    return {
+      id: p.id,
+      name: p.name,
+      brand: p.brand,
+      model: p.model,
+      category: p.category,
+      price: p.price,
+      currency: p.currency,
+      availability: p.availability,
+      image: p.images?.[0]?.url || '',
+      specifications: {},
+      url: '',
+      rating: p.rating || 0,
+      reviewCount: p.reviewCount || 0,
+      isNew: Boolean(p.isNew),
+      isSale: Boolean(p.isSale),
+      isPopular: Boolean(p.isPopular),
+      isBestseller: Boolean(p.isBestseller)
+    };
+  };
+
+  const mergeById = (primary: Product[], secondary: Product[]): Product[] => {
+    const map = new Map<string, Product>();
+    primary.forEach(p => map.set(p.id, p));
+    secondary.forEach(p => {
+      if (!map.has(p.id)) map.set(p.id, p);
+    });
+    return Array.from(map.values());
+  };
+
   // Получаем товары для текущей категории и всех её подкатегорий
   const getProductsForCategory = (categoryPath: string): Product[] => {
-    const allProducts = getAllProducts();
-    console.log('EnhancedCategoryPage: Getting products for categoryPath:', categoryPath);
-    console.log('EnhancedCategoryPage: Total products available:', allProducts.length);
+    const baseProducts = getAllProducts();
+    const mircliProductsMapped = getAllProductsFromMircli().map(mapMircliToCatalogProduct);
+    const allProducts = mergeById(baseProducts, mircliProductsMapped);
     
-    // Показываем первые несколько продуктов для отладки
-    console.log('EnhancedCategoryPage: Sample products:');
-    allProducts.slice(0, 5).forEach((product, index) => {
-      console.log(`  ${index + 1}. ${product.name} - category: "${product.category}"`);
-    });
     
     const categoryProducts = allProducts.filter((product: Product) => {
-      // Проверяем точное совпадение категории
-      const exactMatch = product.category === categoryPath;
-      // Проверяем, начинается ли категория товара с искомого пути
-      const startsWithMatch = product.category.startsWith(categoryPath + '/');
-      // Проверяем, является ли категория товара подкатегорией
-      const isSubcategory = product.category.includes(categoryPath + '/');
+      const productCat = product.category;
+      const exactMatch = productCat === categoryPath;
+      // Потомки: товары лежат глубже текущей категории
+      const descendantMatch = productCat.startsWith(categoryPath + '/');
+      // Родители: товары лежат на уровне выше текущей категории (частый кейс в источнике)
+      const ancestorMatch = categoryPath.startsWith(productCat + '/');
+
+      const matches = exactMatch || descendantMatch || ancestorMatch;
+
       
-      const matches = exactMatch || startsWithMatch || isSubcategory;
-      
-      if (matches) {
-        console.log('EnhancedCategoryPage: Found product:', product.name, 'with category:', product.category);
-      }
-      
+
       return matches;
     });
     
-    console.log('EnhancedCategoryPage: Found', categoryProducts.length, 'products for category:', categoryPath);
     
-    // Если продуктов не найдено, показываем все категории продуктов
-    if (categoryProducts.length === 0) {
-      console.log('EnhancedCategoryPage: No products found. All product categories:');
-      const allCategories = [...new Set(allProducts.map(p => p.category))].sort();
-      allCategories.forEach(cat => {
-        console.log(`  - "${cat}"`);
-      });
-    }
     
     return categoryProducts;
   };
   
   const products = categoryPath ? getProductsForCategory(categoryPath) : [];
-  console.log('EnhancedCategoryPage: Products for category:', products.length);
-  console.log('EnhancedCategoryPage: First few products:', products.slice(0, 3).map(p => ({ name: p.name, category: p.category })));
+  
 
   // Создаем динамическую информацию о категории
   const categoryInfo = {
@@ -167,6 +158,77 @@ const EnhancedCategoryPage: React.FC = () => {
     return filtered;
   }, [products, searchQuery, filters, sortBy]);
 
+  // Pagination state
+  const [pageSize, setPageSize] = useState<number>(20);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  // Reset to first page when filters, search, sort or page size change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, JSON.stringify(filters), sortBy, pageSize, categoryPath]);
+
+  const totalItems = filteredAndSortedProducts.length;
+  const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+  const startIndex = (currentPage - 1) * pageSize;
+  const paginatedProducts = filteredAndSortedProducts.slice(startIndex, startIndex + pageSize);
+
+  const goToPage = (page: number) => {
+    const clamped = Math.max(1, Math.min(page, totalPages));
+    setCurrentPage(clamped);
+    // Scroll to top of product grid for better UX
+    try {
+      const el = document.getElementById('category-products-top');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch {}
+  };
+
+  const renderPageNumbers = () => {
+    const pages: (number | '…')[] = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      const add = (n: number) => pages.push(n);
+      add(1);
+      const left = Math.max(2, currentPage - 2);
+      const right = Math.min(totalPages - 1, currentPage + 2);
+      if (left > 2) pages.push('…');
+      for (let i = left; i <= right; i++) add(i);
+      if (right < totalPages - 1) pages.push('…');
+      add(totalPages);
+    }
+    return (
+      <div className="flex items-center gap-2">
+        <button
+          onClick={() => goToPage(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded disabled:opacity-50"
+        >
+          Назад
+        </button>
+        {pages.map((p, idx) => (
+          p === '…' ? (
+            <span key={`ellipsis-${idx}`} className="px-2 text-gray-500">…</span>
+          ) : (
+            <button
+              key={p}
+              onClick={() => goToPage(p)}
+              className={`px-3 py-2 rounded border ${p === currentPage ? 'bg-secondary text-white border-secondary' : 'border-gray-300 dark:border-gray-600'}`}
+            >
+              {p}
+            </button>
+          )
+        ))}
+        <button
+          onClick={() => goToPage(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded disabled:opacity-50"
+        >
+          Вперёд
+        </button>
+      </div>
+    );
+  };
+
   const getActiveFiltersCount = () => {
     let count = 0;
     if (filters.brand && filters.brand.length > 0) count++;
@@ -180,13 +242,7 @@ const EnhancedCategoryPage: React.FC = () => {
     return Array.from(brands).sort();
   };
 
-  const getPriceRange = () => {
-    const prices = products.map(p => p.price).filter(p => p > 0);
-    return {
-      min: Math.min(...prices),
-      max: Math.max(...prices)
-    };
-  };
+  
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -395,15 +451,14 @@ const EnhancedCategoryPage: React.FC = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categoryData.subcategories.map((subcat) => {
-                  console.log('EnhancedCategoryPage: Subcategory link:', { name: subcat.name, path: subcat.path, fullUrl: `/catalog/${subcat.path}` });
+                  
                   return (
                     <Link
                       key={subcat.id}
                       to={`/catalog/${subcat.path}`}
                       className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-card hover:shadow-card-hover transition-all duration-300"
                       onClick={() => {
-                        console.log('EnhancedCategoryPage: Clicked on subcategory:', subcat.name);
-                        console.log('EnhancedCategoryPage: Navigating to:', `/catalog/${subcat.path}`);
+                        
                       }}
                     >
                       <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
@@ -424,22 +479,32 @@ const EnhancedCategoryPage: React.FC = () => {
         {filteredAndSortedProducts.length > 0 && (
           <section className="py-12">
             <div className="container mx-auto px-4">
-              <div className="flex justify-between items-center mb-8">
+              <div id="category-products-top" className="flex justify-between items-center mb-8">
                 <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white">
-                  {categoryData?.subcategories && categoryData.subcategories.length > 0 
+                  {categoryData?.subcategories && categoryData.subcategories.length > 0
                     ? `Товары в категории "${categoryData.name}" (${filteredAndSortedProducts.length})`
-                    : `Найдено товаров: ${filteredAndSortedProducts.length}`
-                  }
+                    : `Найдено товаров: ${filteredAndSortedProducts.length}`}
                 </h2>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Показывать:</span>
+                  {[20, 40, 60].map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setPageSize(size)}
+                      className={`px-3 py-1 rounded border ${pageSize === size ? 'bg-secondary text-white border-secondary' : 'border-gray-300 dark:border-gray-600'}`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
 
             {filteredAndSortedProducts.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  {categoryData?.subcategories && categoryData.subcategories.length > 0 
+                  {categoryData?.subcategories && categoryData.subcategories.length > 0
                     ? `В данной категории пока нет товаров. Перейдите в подкатегории для просмотра товаров.`
-                    : `По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска.`
-                  }
+                    : `По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска.`}
                 </p>
               </div>
             ) : (
@@ -450,7 +515,7 @@ const EnhancedCategoryPage: React.FC = () => {
                     : "grid-cols-1"
                 }`}
               >
-                {filteredAndSortedProducts.map((product) => (
+                {paginatedProducts.map((product) => (
                   <div
                     key={product.id}
                     className="bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
@@ -499,7 +564,7 @@ const EnhancedCategoryPage: React.FC = () => {
                       </div>
                       <div className="flex gap-2">
                         <Link 
-                          to={`/catalog/${categoryPath}/${product.id}`}
+                          to={`/catalog/${categoryPath}/product/${product.id}`}
                           className="flex-1 bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-dark transition-colors text-center"
                         >
                           Подробнее
@@ -511,6 +576,15 @@ const EnhancedCategoryPage: React.FC = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+            {/* Pagination controls */}
+            {totalPages > 1 && (
+              <div className="mt-10 flex items-center justify-between">
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  Показаны {startIndex + 1}-{Math.min(startIndex + pageSize, totalItems)} из {totalItems}
+                </div>
+                {renderPageNumbers()}
               </div>
             )}
           </div>

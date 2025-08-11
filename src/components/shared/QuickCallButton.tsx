@@ -13,7 +13,7 @@ const QuickCallButton: React.FC = () => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim()) return;
     
-    console.log('Callback request:', formData);
+    
     
     setIsSubmitted(true);
     setTimeout(() => {

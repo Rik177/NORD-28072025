@@ -95,7 +95,7 @@ const PopularProducts: React.FC = () => {
     }
     
     // Here you would typically send the form data to your backend
-    console.log('Form submitted:', { product: selectedProduct, ...formData });
+    
     
     // Reset form and close modal
     setFormData({ name: '', phone: '', email: '', message: '' });

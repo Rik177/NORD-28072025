@@ -48,7 +48,7 @@ const Tools: React.FC = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   const handleConsultationSubmit = (data: any) => {
-    console.log('Consultation booked:', data);
+    
     setIsConsultationOpen(false);
     // Here you would typically send the data to your backend
     alert('Консультация успешно забронирована! Мы свяжемся с вами в ближайшее время.');

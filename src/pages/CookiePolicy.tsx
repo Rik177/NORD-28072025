@@ -78,7 +78,7 @@ const CookiePolicy: React.FC = () => {
 
   const saveSettings = () => {
     // Здесь будет логика сохранения настроек cookies
-    console.log('Cookie settings saved:', cookieSettings);
+    
     alert('Настройки cookies сохранены!');
   };
 

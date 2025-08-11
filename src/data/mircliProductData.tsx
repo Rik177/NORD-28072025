@@ -4,6 +4,48 @@ import { Home, Building, Factory, Store, Hotel, Guitar as Hospital, School, Shop
 // Импортируем данные из JSON файла
 import mircliData from './mircli-catalog-data.json';
 
+type RawMircliProduct = {
+  id: string;
+  name: string;
+  brand: string;
+  model: string;
+  category: string;
+  subcategory: string;
+  shortDescription: string;
+  fullDescription: string;
+  technicalDescription: string;
+  price: number;
+  oldPrice?: number;
+  currency: string;
+  availability: 'В наличии' | 'Под заказ' | 'Нет в наличии';
+  deliveryTime: string;
+  images: { url: string; alt: string; type: 'main' | 'gallery' | 'technical' | 'installation'; caption?: string }[];
+  rating: number;
+  reviewCount: number;
+  specifications: { category: string; specifications: Record<string, string> }[];
+  features: { icon: string; title: string; description: string }[];
+  applications: { icon: string; title: string; description: string; benefits: string[]; recommendedFor: string[] }[];
+  installation: any;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords: string[];
+  certifications: string[];
+  energyClass?: string;
+  noiseLevel?: string;
+  dimensions?: { length: number; width: number; height: number; weight: number };
+  relatedProducts?: string[];
+  accessories?: string[];
+  isNew?: boolean;
+  isSale?: boolean;
+  isPopular?: boolean;
+  isBestseller?: boolean;
+};
+
+type RawMircliData = {
+  categories: any[];
+  products: RawMircliProduct[];
+};
+
 export interface ProductSpecification {
   category: string;
   specifications: Record<string, string>;
@@ -139,9 +181,28 @@ function getIconByName(iconName: string): React.ReactNode {
 // Преобразуем данные из JSON в формат EnhancedProduct
 export const enhancedProductDatabase: Record<string, EnhancedProduct> = {};
 
-mircliData.products.forEach((product: any) => {
+// Нормализуем бренд: если в исходных данных он "Неизвестный бренд" или пустой,
+// пытаемся извлечь бренд из краткого описания до первого " - "
+function normalizeBrand(originalBrand: string, shortDescription: string): string {
+  const unknown = !originalBrand || /неизвестный бренд/i.test(originalBrand);
+  if (!unknown) return originalBrand;
+  if (shortDescription && typeof shortDescription === 'string') {
+    const beforeDash = shortDescription.split(' - ')[0] || '';
+    const firstToken = beforeDash.trim().split(/\s+/)[0] || '';
+    return firstToken || originalBrand;
+  }
+  return originalBrand;
+}
+
+const typedMircliData = mircliData as unknown as RawMircliData;
+typedMircliData.products.forEach((product) => {
+  const brand = normalizeBrand(product.brand, product.shortDescription);
   enhancedProductDatabase[product.id] = {
     ...product,
+    brand,
+    dimensions: product.dimensions || { length: 0, width: 0, height: 0, weight: 0 },
+    relatedProducts: product.relatedProducts || [],
+    accessories: product.accessories || [],
     features: product.features.map((feature: any) => ({
       ...feature,
       icon: getIconByName(feature.icon)
@@ -154,7 +215,7 @@ mircliData.products.forEach((product: any) => {
 });
 
 // Экспортируем категории
-export const categories = mircliData.categories;
+export const categories = typedMircliData.categories;
 
 // Функции для работы с данными
 export const getEnhancedProduct = (id: string): EnhancedProduct | undefined => {

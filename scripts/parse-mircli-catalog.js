@@ -48,27 +48,28 @@ function extractSpecifications(characteristics) {
 
 // Функция для извлечения бренда из названия товара
 function extractBrand(productName) {
+  if (!productName) return 'Неизвестный бренд';
   const lines = productName.split('\n');
   if (lines.length > 1) {
-    const secondLine = lines[1];
-    // Ищем бренд в строке (обычно это первое слово)
-    const brandMatch = secondLine.match(/^([A-Z][A-Z0-9\s]+)/);
-    if (brandMatch) {
-      return brandMatch[1].trim();
-    }
+    const secondLine = String(lines[1] || '').trim();
+    const cleaned = secondLine.replace(/^бренд[:\s-]*/i, '');
+    const firstToken = cleaned.split(/\s+/)[0];
+    return firstToken && firstToken.length > 0 ? firstToken.trim() : 'Неизвестный бренд';
   }
   return 'Неизвестный бренд';
 }
 
 // Функция для извлечения модели из названия товара
 function extractModel(productName) {
+  if (!productName) return '';
   const lines = productName.split('\n');
   if (lines.length > 1) {
-    const secondLine = lines[1];
-    // Ищем модель (обычно это код после бренда)
-    const modelMatch = secondLine.match(/[A-Z][A-Z0-9\s-]+/g);
-    if (modelMatch && modelMatch.length > 1) {
-      return modelMatch.slice(1).join(' ').trim();
+    const secondLine = String(lines[1] || '').trim();
+    const cleaned = secondLine.replace(/^бренд[:\s-]*/i, '');
+    const parts = cleaned.split(/\s+/);
+    if (parts.length > 1) {
+      const rest = cleaned.slice(parts[0].length).trim();
+      return rest.replace(/арт[:\s].*$/i, '').trim();
     }
   }
   return '';
@@ -226,12 +227,21 @@ export const categories: Category[] = ${JSON.stringify(categoriesStructure.categ
 export const products: Product[] = ${JSON.stringify(categoriesStructure.products, null, 2)};
 
 // Функции для работы с данными
+const findCategoryRecursive = (cats: Category[], predicate: (c: Category) => boolean): Category | undefined => {
+  for (const cat of cats) {
+    if (predicate(cat)) return cat;
+    const found = cat.subcategories ? findCategoryRecursive(cat.subcategories, predicate) : undefined;
+    if (found) return found;
+  }
+  return undefined;
+};
+
 export const getCategoryById = (id: string): Category | undefined => {
-  return categories.find(cat => cat.id === id);
+  return findCategoryRecursive(categories, (cat) => cat.id === id);
 };
 
 export const getCategoryByPath = (path: string): Category | undefined => {
-  return categories.find(cat => cat.path === path);
+  return findCategoryRecursive(categories, (cat) => cat.path === path);
 };
 
 export const getProductsByCategory = (categoryPath: string): Product[] => {
@@ -268,7 +278,7 @@ export const getCategoryHierarchy = (categoryId: string): Category[] => {
 };
 
 export const getSubcategories = (categoryId: string): Category[] => {
-  const category = categories.find(cat => cat.id === categoryId);
+  const category = getCategoryById(categoryId);
   return category?.subcategories || [];
 };
 

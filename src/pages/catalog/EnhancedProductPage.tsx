@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Navigate, Link, useLocation } from 'react-router-dom';
 import SEOHelmet from '../../components/shared/SEOHelmet';
 import Header from '../../components/home/Header';
 import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
-import ProductApplications from '../../components/catalog/ProductApplications';
-import ProductInstallation from '../../components/catalog/ProductInstallation';
-import ProductRecommendations from '../../components/catalog/ProductRecommendations';
+// Removed unused imports
 import EnhancedProductCard from '../../components/catalog/EnhancedProductCard';
-import { Star, Heart, Share2, ChevronLeft, ChevronRight, Check, X, Phone, Mail, Download, Printer, ArrowLeft, ArrowRight, ShoppingCart, BarChart2, Info, Shield, Award, Truck, Clock, Zap } from 'lucide-react';
+import { Star, Heart, ChevronLeft, ChevronRight, Check, X, Download, Printer, ArrowLeft, ArrowRight, BarChart2, Info, Shield, Award, Truck, Clock, Zap } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
 import { getEnhancedProduct, getRelatedProducts, EnhancedProduct } from '../../data/mircliProductData';
 import ConsultationForm, { ConsultationFormData } from '../../components/catalog/ConsultationForm';
 import OptimizedImage from '../../components/shared/OptimizedImage';
+import { getAllProducts, Product as BasicCatalogProduct } from './Categories';
 
 const EnhancedProductPage: React.FC = () => {
-  const { category, productId } = useParams<{ category: string; productId: string }>();
+  const { productId } = useParams<{ category: string; subcategory?: string; subsubcategory?: string; productId: string }>();
+  const location = useLocation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'description' | 'specifications' | 'applications' | 'installation' | 'reviews'>('description');
   const [showConsultationForm, setShowConsultationForm] = useState(false);
@@ -31,7 +31,72 @@ const EnhancedProductPage: React.FC = () => {
   
   const { addToComparison, isInComparison } = useComparison();
 
-  const product = productId ? getEnhancedProduct(productId) : undefined;
+  // Fallback: если товар не найден в базе расширенных товаров, пробуем взять его из каталога
+  function mapBasicProductToEnhanced(basic: BasicCatalogProduct): EnhancedProduct {
+    return {
+      id: basic.id,
+      name: basic.name,
+      brand: basic.brand,
+      model: basic.model,
+      category: basic.category,
+      subcategory: basic.category.split('/').slice(-1)[0] || basic.category,
+      shortDescription: basic.name,
+      fullDescription: basic.name,
+      technicalDescription: 'Характеристики товара доступны по запросу.',
+      price: Number(basic.price) || 0,
+      currency: basic.currency || 'RUB',
+      availability: (basic.availability as any) || 'В наличии',
+      deliveryTime: 'Уточняйте у менеджера',
+      images: [
+        {
+          url: basic.image || '',
+          alt: basic.name,
+          type: 'main',
+        },
+      ],
+      rating: Number(basic.rating) || 0,
+      reviewCount: Number(basic.reviewCount) || 0,
+      specifications: [
+        {
+          category: 'Характеристики',
+          specifications: basic.specifications || {},
+        },
+      ],
+      features: [],
+      applications: [],
+      installation: {
+        complexity: 'Средняя',
+        time: 'Уточняйте у менеджера',
+        team: 'Сертифицированные специалисты',
+        requirements: [],
+        steps: [],
+        warranty: 'Гарантия по условиям производителя',
+        maintenance: 'Сервисное обслуживание по договору',
+        tools: [],
+        materials: [],
+      },
+      seoTitle: undefined,
+      seoDescription: undefined,
+      keywords: [basic.name, basic.brand, basic.model, basic.category].filter(Boolean) as string[],
+      certifications: [],
+      dimensions: { length: 0, width: 0, height: 0, weight: 0 },
+      relatedProducts: [],
+      accessories: [],
+      isNew: basic.isNew,
+      isSale: basic.isSale,
+      isPopular: basic.isPopular,
+      isBestseller: basic.isBestseller,
+    };
+  }
+
+  const primaryProduct = productId ? getEnhancedProduct(productId) : undefined;
+  const fallbackBasic = productId ? getAllProducts().find(p => p.id === productId) : undefined;
+  // Debug logs removed for production
+  const product: EnhancedProduct | undefined = primaryProduct ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
+
+  // Формируем путь категории из фактического URL, поддерживая произвольную глубину
+  const pathAfterCatalog = location.pathname.replace(/^\/?catalog\/?/, '');
+  const currentCategoryPath = pathAfterCatalog.split('/product')[0].replace(/\/$/, '');
 
   useEffect(() => {
     if (product) {
@@ -107,7 +172,7 @@ const EnhancedProductPage: React.FC = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
     setFormData({ name: '', phone: '', email: '', message: '' });
     setShowConsultationForm(false);
     setShowInstallationForm(false);
@@ -155,7 +220,7 @@ const EnhancedProductPage: React.FC = () => {
         title={product.seoTitle || `${product.name} - ${product.brand} | НОРДИНЖИНИРИНГ`}
         description={product.seoDescription || `${product.shortDescription} Цена: ${product.price.toLocaleString()} ₽. Профессиональная установка и гарантия. Заказать в НОРДИНЖИНИРИНГ.`}
         keywords={product.keywords.join(', ')}
-        canonical={`https://nordengineering.ru/catalog/${product.category}/${product.id}`}
+        canonical={`https://nordengineering.ru/catalog/${currentCategoryPath}/product/${product.id}`}
         ogTitle={`${product.name} - Купить с установкой`}
         ogDescription={`${product.shortDescription} Цена: ${product.price.toLocaleString()} ₽. Профессиональная установка и гарантия.`}
         ogImage={product.images[0]?.url}

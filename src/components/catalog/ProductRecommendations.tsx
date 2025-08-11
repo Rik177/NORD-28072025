@@ -222,7 +222,7 @@ const ProductRecommendations: React.FC<ProductRecommendationsProps> = ({
                     )}
                   </div>
                   <Link
-                    to={product.category === 'services' ? '/services' : `/catalog/${product.category}/${product.id}`}
+                    to={product.category === 'services' ? '/services' : `/catalog/${product.category}/product/${product.id}`}
                     className="bg-primary hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-md transition-colors text-sm"
                   >
                     {product.category === 'services' ? 'Заказать' : 'Подробнее'}

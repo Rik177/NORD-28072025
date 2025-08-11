@@ -131,7 +131,7 @@ const FrequentlyOrdered: React.FC = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Consultation form submitted:', formData);
+    
     setShowConsultationForm(false);
     setFormData({ name: '', phone: '', email: '', message: '' });
     alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
