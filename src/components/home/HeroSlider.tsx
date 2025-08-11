@@ -111,11 +111,11 @@ const HeroSlider: React.FC = () => {
               
               {/* Content */}
               <div className="relative h-full container mx-auto px-4 flex items-center z-10">
-                <div className="max-w-full sm:max-w-2xl text-white">
-                  <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
+                <div className="max-w-full sm:max-w-2xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                  <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 leading-tight text-white">
                     {slide.title}
                   </h1>
-                  <p className="text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed opacity-90 max-w-lg text-left">
+                  <p className="text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed text-white max-w-lg text-left">
                     {slide.description}
                   </p>
                   

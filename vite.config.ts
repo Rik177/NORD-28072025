@@ -44,7 +44,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   server: {
-    port: 2543,
+    port: 4555,
     headers: {
       'Content-Security-Policy': [
         "default-src 'self'",
