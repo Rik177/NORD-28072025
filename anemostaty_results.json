@@ -1,0 +1,3630 @@
+{
+ "product_card": [
+  {
+   "name": "Анемостат\nERA 10АВП\nарт: 228284",
+   "product_model": "Анемостат\nERA 10АВП",
+   "product_model_url": "https://mircli.ru/ERA-10avp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n165x165"
+    }
+   ],
+   "product_price": "990 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10DVM\nарт: 228211",
+   "product_model": "Анемостат\nERA 10DVM",
+   "product_model_url": "https://mircli.ru/ERA-10DVM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n138x138"
+    }
+   ],
+   "product_price": "1 060 руб"
+  },
+  {
+   "name": "Анемостат\nAirone DVS-100\nарт: 228764",
+   "product_model": "Анемостат\nAirone DVS-100",
+   "product_model_url": "https://mircli.ru/Airone-DVS-100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n138x138"
+    }
+   ],
+   "product_price": "1 080 руб"
+  },
+  {
+   "name": "Анемостат\nERA 20АВП\nарт: 228382",
+   "product_model": "Анемостат\nERA 20АВП",
+   "product_model_url": "https://mircli.ru/ERA-20avp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n275x275"
+    }
+   ],
+   "product_price": "1 150 руб"
+  },
+  {
+   "name": "Анемостат\nVANVENT DVS-P 100\nарт: 228466",
+   "product_model": "Анемостат\nVANVENT DVS-P 100",
+   "product_model_url": "https://mircli.ru/VANVENT-DVS-P-100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n138x138"
+    }
+   ],
+   "product_price": "1 030 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E-P 125\nарт: 227090",
+   "product_model": "Анемостат\nShuft DVS E-P 125",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-P-125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 100 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E-P 200\nарт: 227095",
+   "product_model": "Анемостат\nShuft DVS E-P 200",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-P-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n248.5x248.5"
+    }
+   ],
+   "product_price": "1 300 руб"
+  },
+  {
+   "name": "Анемостат\nDEC REGA BLACK DVS-P100\nарт: 228444",
+   "product_model": "Анемостат\nDEC REGA BLACK DVS-P100",
+   "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS-P100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n140X140"
+    }
+   ],
+   "product_price": "1 400 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK 125\nарт: 227181",
+   "product_model": "Анемостат\nShuft DVK 125",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n167x167"
+    }
+   ],
+   "product_price": "730 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK 200\nарт: 227187",
+   "product_model": "Анемостат\nShuft DVK 200",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n240x240"
+    }
+   ],
+   "product_price": "800 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5АПВП1\nарт: 228268",
+   "product_model": "Анемостат\nERA 12,5АПВП1",
+   "product_model_url": "https://mircli.ru/ERA-125apvp1/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n166x166"
+    }
+   ],
+   "product_price": "1 010 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10DVLR\nарт: 228183",
+   "product_model": "Анемостат\nERA 10DVLR",
+   "product_model_url": "https://mircli.ru/ERA-10DVLR/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n145x145"
+    }
+   ],
+   "product_price": "1 040 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5АВП\nарт: 228287",
+   "product_model": "Анемостат\nERA 12,5АВП",
+   "product_model_url": "https://mircli.ru/ERA-125avp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n197x197"
+    }
+   ],
+   "product_price": "1 010 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16АВП\nарт: 228381",
+   "product_model": "Анемостат\nERA 16АВП",
+   "product_model_url": "https://mircli.ru/ERA-16avp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n234x234"
+    }
+   ],
+   "product_price": "1 080 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E 125\nарт: 227080",
+   "product_model": "Анемостат\nShuft DVS E 125",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 100 руб"
+  },
+  {
+   "name": "Анемостат\nVANVENT DVS 160\nарт: 228463",
+   "product_model": "Анемостат\nVANVENT DVS 160",
+   "product_model_url": "https://mircli.ru/VANVENT-DVS-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n211x211"
+    }
+   ],
+   "product_price": "1 170 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E-P 100\nарт: 227089",
+   "product_model": "Анемостат\nShuft DVS E-P 100",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-P-100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n136x136"
+    }
+   ],
+   "product_price": "1 050 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E-P 160\nарт: 227094",
+   "product_model": "Анемостат\nShuft DVS E-P 160",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-P-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n209x209"
+    }
+   ],
+   "product_price": "1 200 руб"
+  },
+  {
+   "name": "Анемостат\nAirone DVS-P 200\nарт: 228799",
+   "product_model": "Анемостат\nAirone DVS-P 200",
+   "product_model_url": "https://mircli.ru/Airone-DVS-P-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n248x248"
+    }
+   ],
+   "product_price": "1 310 руб"
+  },
+  {
+   "name": "Анемостат\nVANVENT DVS-P 200\nарт: 228469",
+   "product_model": "Анемостат\nVANVENT DVS-P 200",
+   "product_model_url": "https://mircli.ru/VANVENT-DVS-P-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n248х248"
+    }
+   ],
+   "product_price": "1 420 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK 100\nарт: 227178",
+   "product_model": "Анемостат\nShuft DVK 100",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n141x141"
+    }
+   ],
+   "product_price": "730 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10АПВП1\nарт: 228266",
+   "product_model": "Анемостат\nERA 10АПВП1",
+   "product_model_url": "https://mircli.ru/ERA-10apvp1/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n145x145"
+    }
+   ],
+   "product_price": "990 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5АПП\nарт: 228280",
+   "product_model": "Анемостат\nERA 12,5АПП",
+   "product_model_url": "https://mircli.ru/ERA-125app/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n197x197"
+    }
+   ],
+   "product_price": "1 010 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10DUM\nарт: 228232",
+   "product_model": "Анемостат\nERA 10DUM",
+   "product_model_url": "https://mircli.ru/ERA-10DUM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n138x138"
+    }
+   ],
+   "product_price": "1 060 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E 100\nарт: 227069",
+   "product_model": "Анемостат\nShuft DVS E 100",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n136x136"
+    }
+   ],
+   "product_price": "1 050 руб"
+  },
+  {
+   "name": "Анемостат\nAirone DVS-125\nарт: 228769",
+   "product_model": "Анемостат\nAirone DVS-125",
+   "product_model_url": "https://mircli.ru/Airone-DVS-125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 080 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5DVM\nарт: 228219",
+   "product_model": "Анемостат\nERA 12,5DVM",
+   "product_model_url": "https://mircli.ru/ERA-125DVM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 110 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E 160\nарт: 227083",
+   "product_model": "Анемостат\nShuft DVS E 160",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n209x209"
+    }
+   ],
+   "product_price": "1 200 руб"
+  },
+  {
+   "name": "Анемостат\nVANVENT DVS-P 125\nарт: 228467",
+   "product_model": "Анемостат\nVANVENT DVS-P 125",
+   "product_model_url": "https://mircli.ru/VANVENT-DVS-P-125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164х164"
+    }
+   ],
+   "product_price": "1 090 руб"
+  },
+  {
+   "name": "Анемостат\nVANVENT DVS-P 160\nарт: 228468",
+   "product_model": "Анемостат\nVANVENT DVS-P 160",
+   "product_model_url": "https://mircli.ru/VANVENT-DVS-P-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n211х211"
+    }
+   ],
+   "product_price": "1 210 руб"
+  },
+  {
+   "name": "Анемостат\nDEC REGA WHITE DVS-P100\nарт: 228452",
+   "product_model": "Анемостат\nDEC REGA WHITE DVS-P100",
+   "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS-P100/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n140x140"
+    }
+   ],
+   "product_price": "1 320 руб"
+  },
+  {
+   "name": "Анемостат\nDEC REGA WHITE DVS-P125\nарт: 228477",
+   "product_model": "Анемостат\nDEC REGA WHITE DVS-P125",
+   "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS-P125/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nПриточный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n170x170"
+    }
+   ],
+   "product_price": "1 450 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK 160\nарт: 227185",
+   "product_model": "Анемостат\nShuft DVK 160",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n212x212"
+    }
+   ],
+   "product_price": "760 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10АПП\nарт: 228279",
+   "product_model": "Анемостат\nERA 10АПП",
+   "product_model_url": "https://mircli.ru/ERA-10app/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n165x165"
+    }
+   ],
+   "product_price": "990 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10АПВП\nарт: 228208",
+   "product_model": "Анемостат\nERA 10АПВП",
+   "product_model_url": "https://mircli.ru/ERA-10apvp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n145x145"
+    }
+   ],
+   "product_price": "1 020 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15АПВП1\nарт: 228269",
+   "product_model": "Анемостат\nERA 15АПВП1",
+   "product_model_url": "https://mircli.ru/ERA-15apvp1/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 060 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK-S 160\nарт: 227060",
+   "product_model": "Анемостат\nShuft DVK-S 160",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-S-160/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 100 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVK-S 200\nарт: 227062",
+   "product_model": "Анемостат\nShuft DVK-S 200",
+   "product_model_url": "https://mircli.ru/Shuft-DVK-S-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n235x235"
+    }
+   ],
+   "product_price": "1 100 руб"
+  },
+  {
+   "name": "Анемостат\nShuft DVS E 200\nарт: 227085",
+   "product_model": "Анемостат\nShuft DVS E 200",
+   "product_model_url": "https://mircli.ru/Shuft-DVS-E-200/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n248.5x248.5"
+    }
+   ],
+   "product_price": "1 300 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10DW Pine\nарт: 228174",
+   "product_model": "Анемостат\nERA 10DW Pine",
+   "product_model_url": "https://mircli.ru/ERA-10DW-Pine/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nСталь/дерево"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n140x140"
+    }
+   ],
+   "product_price": "1 240 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5DW Pine\nарт: 228175",
+   "product_model": "Анемостат\nERA 12,5DW Pine",
+   "product_model_url": "https://mircli.ru/ERA-125DW-Pine/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nСталь/дерево"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 300 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15DW Pine\nарт: 228176",
+   "product_model": "Анемостат\nERA 15DW Pine",
+   "product_model_url": "https://mircli.ru/ERA-15DW-Pine/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nСталь/дерево"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n190x190"
+    }
+   ],
+   "product_price": "1 340 руб"
+  },
+  {
+   "name": "Анемостат\nERA 10DW Pine MS\nарт: 228177",
+   "product_model": "Анемостат\nERA 10DW Pine MS",
+   "product_model_url": "https://mircli.ru/ERA-10DW-Pine-MS/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nСталь/дерево"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n140x140"
+    }
+   ],
+   "product_price": "1 480 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5DW Pine MS\nарт: 228178",
+   "product_model": "Анемостат\nERA 12,5DW Pine MS",
+   "product_model_url": "https://mircli.ru/ERA-125DW-Pine-MS/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nСталь/дерево"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n165x165"
+    }
+   ],
+   "product_price": "1 500 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5DVLR\nарт: 228190",
+   "product_model": "Анемостат\nERA 12,5DVLR",
+   "product_model_url": "https://mircli.ru/ERA-125DVLR/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n166x166"
+    }
+   ],
+   "product_price": "1 080 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15DVLR\nарт: 228191",
+   "product_model": "Анемостат\nERA 15DVLR",
+   "product_model_url": "https://mircli.ru/ERA-15DVLR/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 120 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16DVLR\nарт: 228192",
+   "product_model": "Анемостат\nERA 16DVLR",
+   "product_model_url": "https://mircli.ru/ERA-16DVLR/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 140 руб"
+  },
+  {
+   "name": "Анемостат\nERA 20DVLR\nарт: 228200",
+   "product_model": "Анемостат\nERA 20DVLR",
+   "product_model_url": "https://mircli.ru/ERA-20DVLR/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n260x260"
+    }
+   ],
+   "product_price": "1 190 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5АПВП\nарт: 228213",
+   "product_model": "Анемостат\nERA 12,5АПВП",
+   "product_model_url": "https://mircli.ru/ERA-125apvp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n166x166"
+    }
+   ],
+   "product_price": "1 050 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15DVM\nарт: 228222",
+   "product_model": "Анемостат\nERA 15DVM",
+   "product_model_url": "https://mircli.ru/ERA-15DVM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 240 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16DVM\nарт: 228224",
+   "product_model": "Анемостат\nERA 16DVM",
+   "product_model_url": "https://mircli.ru/ERA-16DVM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nВытяжной"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n211x211"
+    }
+   ],
+   "product_price": "1 270 руб"
+  },
+  {
+   "name": "Анемостат\nERA 12,5DUM\nарт: 228233",
+   "product_model": "Анемостат\nERA 12,5DUM",
+   "product_model_url": "https://mircli.ru/ERA-125DUM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n164x164"
+    }
+   ],
+   "product_price": "1 110 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15DUM\nарт: 228234",
+   "product_model": "Анемостат\nERA 15DUM",
+   "product_model_url": "https://mircli.ru/ERA-15DUM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 240 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16DUM\nарт: 228236",
+   "product_model": "Анемостат\nERA 16DUM",
+   "product_model_url": "https://mircli.ru/ERA-16DUM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n211x211"
+    }
+   ],
+   "product_price": "1 270 руб"
+  },
+  {
+   "name": "Анемостат\nERA 20DUM\nарт: 228238",
+   "product_model": "Анемостат\nERA 20DUM",
+   "product_model_url": "https://mircli.ru/ERA-20DUM/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nМеталл"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n250x250"
+    }
+   ],
+   "product_price": "1 420 руб"
+  },
+  {
+   "name": "Анемостат\nERA 15АПВП\nарт: 228258",
+   "product_model": "Анемостат\nERA 15АПВП",
+   "product_model_url": "https://mircli.ru/ERA-15apvp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 110 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16АПВП\nарт: 228260",
+   "product_model": "Анемостат\nERA 16АПВП",
+   "product_model_url": "https://mircli.ru/ERA-16apvp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n202x202"
+    }
+   ],
+   "product_price": "1 120 руб"
+  },
+  {
+   "name": "Анемостат\nERA 20АПВП\nарт: 228262",
+   "product_model": "Анемостат\nERA 20АПВП",
+   "product_model_url": "https://mircli.ru/ERA-20apvp/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n260x260"
+    }
+   ],
+   "product_price": "1 210 руб"
+  },
+  {
+   "name": "Анемостат\nERA 16АПВП1\nарт: 228272",
+   "product_model": "Анемостат\nERA 16АПВП1",
+   "product_model_url": "https://mircli.ru/ERA-16apvp1/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n220x220"
+    }
+   ],
+   "product_price": "1 060 руб"
+  },
+  {
+   "name": "Анемостат\nERA 20АПВП1\nарт: 228277",
+   "product_model": "Анемостат\nERA 20АПВП1",
+   "product_model_url": "https://mircli.ru/ERA-20apvp1/",
+   "product_characteristics": [
+    {
+     "name": "Тип\nУниверсальный"
+    },
+    {
+     "name": "Материал\nПластик"
+    },
+    {
+     "name": "Тип установки\nНастенный/потолочный"
+    },
+    {
+     "name": "Габариты (ВхШ), мм\n260x260"
+    }
+   ],
+   "product_price": "1 170 руб"
+  }
+ ],
+ "pagination": [
+  {
+   "name": "2",
+   "url": "https://mircli.ru/anemostaty/?limit=60&page=2",
+   "product_card": [
+    {
+     "name": "Анемостат\nERA 16АПП\nарт: 228282",
+     "product_model": "Анемостат\nERA 16АПП",
+     "product_model_url": "https://mircli.ru/ERA-16app/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n234x234"
+      }
+     ],
+     "product_price": "1 080 руб"
+    },
+    {
+     "name": "Анемостат\nERA 20АПП\nарт: 228283",
+     "product_model": "Анемостат\nERA 20АПП",
+     "product_model_url": "https://mircli.ru/ERA-20app/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n275x275"
+      }
+     ],
+     "product_price": "1 150 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNE100\nарт: 228398",
+     "product_model": "Анемостат\nDEC DNE100",
+     "product_model_url": "https://mircli.ru/DEC-DNE100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n123x123"
+      }
+     ],
+     "product_price": "1 450 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNE125\nарт: 228399",
+     "product_model": "Анемостат\nDEC DNE125",
+     "product_model_url": "https://mircli.ru/DEC-DNE125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n148x148"
+      }
+     ],
+     "product_price": "1 600 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNE160\nарт: 228400",
+     "product_model": "Анемостат\nDEC DNE160",
+     "product_model_url": "https://mircli.ru/DEC-DNE160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n184x184"
+      }
+     ],
+     "product_price": "2 285 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNE200\nарт: 228401",
+     "product_model": "Анемостат\nDEC DNE200",
+     "product_model_url": "https://mircli.ru/DEC-DNE200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n227x227"
+      }
+     ],
+     "product_price": "3 274 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNK100\nарт: 228406",
+     "product_model": "Анемостат\nDEC DNK100",
+     "product_model_url": "https://mircli.ru/DEC-DNK100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n123x123"
+      }
+     ],
+     "product_price": "1 450 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNK125\nарт: 228407",
+     "product_model": "Анемостат\nDEC DNK125",
+     "product_model_url": "https://mircli.ru/DEC-DNK125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n148x148"
+      }
+     ],
+     "product_price": "1 600 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNK160\nарт: 228408",
+     "product_model": "Анемостат\nDEC DNK160",
+     "product_model_url": "https://mircli.ru/DEC-DNK160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n184x184"
+      }
+     ],
+     "product_price": "2 285 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DNK200\nарт: 228409",
+     "product_model": "Анемостат\nDEC DNK200",
+     "product_model_url": "https://mircli.ru/DEC-DNK200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n227x227"
+      }
+     ],
+     "product_price": "3 274 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVIR125\nарт: 228421",
+     "product_model": "Анемостат\nDEC DVIR125",
+     "product_model_url": "https://mircli.ru/DEC-DVIR125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "5 808 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSER100\nарт: 228424",
+     "product_model": "Анемостат\nDEC DVSER100",
+     "product_model_url": "https://mircli.ru/DEC-DVSER100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n135x135"
+      }
+     ],
+     "product_price": "1 640 руб"
+    },
+    {
+     "name": "Анемостат\nDEC i-VALVE RONDO100\nарт: 228425",
+     "product_model": "Анемостат\nDEC i-VALVE RONDO100",
+     "product_model_url": "https://mircli.ru/DEC-i-VALVE-RONDO100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n142x142"
+      }
+     ],
+     "product_price": "1 600 руб"
+    },
+    {
+     "name": "Анемостат\nDEC i-VALVE RONDO125\nарт: 228426",
+     "product_model": "Анемостат\nDEC i-VALVE RONDO125",
+     "product_model_url": "https://mircli.ru/DEC-i-VALVE-RONDO125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n167x167"
+      }
+     ],
+     "product_price": "1 800 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSER125\nарт: 228427",
+     "product_model": "Анемостат\nDEC DVSER125",
+     "product_model_url": "https://mircli.ru/DEC-DVSER125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "1 830 руб"
+    },
+    {
+     "name": "Анемостат\nDEC i-VALVE RONDO160\nарт: 228428",
+     "product_model": "Анемостат\nDEC i-VALVE RONDO160",
+     "product_model_url": "https://mircli.ru/DEC-i-VALVE-RONDO160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n202x202"
+      }
+     ],
+     "product_price": "2 080 руб"
+    },
+    {
+     "name": "Анемостат\nDEC i-VALVE RONDO200\nарт: 228429",
+     "product_model": "Анемостат\nDEC i-VALVE RONDO200",
+     "product_model_url": "https://mircli.ru/DEC-i-VALVE-RONDO200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n242x242"
+      }
+     ],
+     "product_price": "2 420 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSER160\nарт: 228430",
+     "product_model": "Анемостат\nDEC DVSER160",
+     "product_model_url": "https://mircli.ru/DEC-DVSER160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n195x195"
+      }
+     ],
+     "product_price": "2 110 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSER200\nарт: 228431",
+     "product_model": "Анемостат\nDEC DVSER200",
+     "product_model_url": "https://mircli.ru/DEC-DVSER200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n238x238"
+      }
+     ],
+     "product_price": "2 450 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSQ-P100\nарт: 228436",
+     "product_model": "Анемостат\nDEC DVSQ-P100",
+     "product_model_url": "https://mircli.ru/DEC-DVSQ-P100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "2 070 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSQ-P125\nарт: 228437",
+     "product_model": "Анемостат\nDEC DVSQ-P125",
+     "product_model_url": "https://mircli.ru/DEC-DVSQ-P125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n190x190"
+      }
+     ],
+     "product_price": "2 360 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSQ100\nарт: 228438",
+     "product_model": "Анемостат\nDEC DVSQ100",
+     "product_model_url": "https://mircli.ru/DEC-DVSQ100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "1 920 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSQ125\nарт: 228439",
+     "product_model": "Анемостат\nDEC DVSQ125",
+     "product_model_url": "https://mircli.ru/DEC-DVSQ125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n190x190"
+      }
+     ],
+     "product_price": "2 080 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSR100\nарт: 228440",
+     "product_model": "Анемостат\nDEC DVSR100",
+     "product_model_url": "https://mircli.ru/DEC-DVSR100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n135x135"
+      }
+     ],
+     "product_price": "1 720 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSR125\nарт: 228441",
+     "product_model": "Анемостат\nDEC DVSR125",
+     "product_model_url": "https://mircli.ru/DEC-DVSR125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "2 170 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSR160\nарт: 228442",
+     "product_model": "Анемостат\nDEC DVSR160",
+     "product_model_url": "https://mircli.ru/DEC-DVSR160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n195x195"
+      }
+     ],
+     "product_price": "2 567 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVSR200\nарт: 228443",
+     "product_model": "Анемостат\nDEC DVSR200",
+     "product_model_url": "https://mircli.ru/DEC-DVSR200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n238x238"
+      }
+     ],
+     "product_price": "2 815 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS-P125\nарт: 228445",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS-P125",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS-P125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n166x166"
+      }
+     ],
+     "product_price": "1 510 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS-P160\nарт: 228446",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS-P160",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS-P160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n209x209"
+      }
+     ],
+     "product_price": "1 820 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS-P200\nарт: 228447",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS-P200",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS-P200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n248x248"
+      }
+     ],
+     "product_price": "2 727 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS160\nарт: 228450",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS160",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n209x209"
+      }
+     ],
+     "product_price": "1 820 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS200\nарт: 228451",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS200",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n248x248"
+      }
+     ],
+     "product_price": "2 727 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVS 125\nарт: 228462",
+     "product_model": "Анемостат\nVANVENT DVS 125",
+     "product_model_url": "https://mircli.ru/VANVENT-DVS-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n164x164"
+      }
+     ],
+     "product_price": "1 040 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVS 200\nарт: 228464",
+     "product_model": "Анемостат\nVANVENT DVS 200",
+     "product_model_url": "https://mircli.ru/VANVENT-DVS-200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n248x248"
+      }
+     ],
+     "product_price": "1 230 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVS 250\nарт: 228465",
+     "product_model": "Анемостат\nVANVENT DVS 250",
+     "product_model_url": "https://mircli.ru/VANVENT-DVS-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n295x295"
+      }
+     ],
+     "product_price": "1 860 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVS-P 250\nарт: 228470",
+     "product_model": "Анемостат\nVANVENT DVS-P 250",
+     "product_model_url": "https://mircli.ru/VANVENT-DVS-P-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n295х295"
+      }
+     ],
+     "product_price": "1 860 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS-P150\nарт: 228478",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS-P150",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS-P150/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n202х202"
+      }
+     ],
+     "product_price": "1 730 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS-P160\nарт: 228479",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS-P160",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS-P160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n202х202"
+      }
+     ],
+     "product_price": "1 820 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS-P200\nарт: 228480",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS-P200",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS-P200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n254x254"
+      }
+     ],
+     "product_price": "2 230 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS100\nарт: 228481",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS100",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n140x140"
+      }
+     ],
+     "product_price": "1 320 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS125\nарт: 228482",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS125",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n166x166"
+      }
+     ],
+     "product_price": "1 450 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS150\nарт: 228483",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS150",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS150/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n204x204"
+      }
+     ],
+     "product_price": "1 720 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS160\nарт: 228484",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS160",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n209x209"
+      }
+     ],
+     "product_price": "1 820 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA WHITE DVS200\nарт: 228485",
+     "product_model": "Анемостат\nDEC REGA WHITE DVS200",
+     "product_model_url": "https://mircli.ru/DEC-REGA-WHITE-DVS200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n248x248"
+      }
+     ],
+     "product_price": "2 038 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-160\nарт: 228776",
+     "product_model": "Анемостат\nAirone DVS-160",
+     "product_model_url": "https://mircli.ru/Airone-DVS-160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n211x211"
+      }
+     ],
+     "product_price": "1 220 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-200\nарт: 228779",
+     "product_model": "Анемостат\nAirone DVS-200",
+     "product_model_url": "https://mircli.ru/Airone-DVS-200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n248x248"
+      }
+     ],
+     "product_price": "1 310 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-250\nарт: 228785",
+     "product_model": "Анемостат\nAirone DVS-250",
+     "product_model_url": "https://mircli.ru/Airone-DVS-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n295x295"
+      }
+     ],
+     "product_price": "1 680 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 100 мм (круг) белый глянец\nарт: 230010",
+     "product_model": "Анемостат\nFoZa 100 мм (круг) белый глянец",
+     "product_model_url": "https://mircli.ru/FoZa-100-mm-krug-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "5 550 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 125 мм (круг) белый глянец\nарт: 230011",
+     "product_model": "Анемостат\nFoZa 125 мм (круг) белый глянец",
+     "product_model_url": "https://mircli.ru/FoZa-125-mm-krug-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n180x180"
+      }
+     ],
+     "product_price": "5 872 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 160 мм (круг) белый глянец\nарт: 230012",
+     "product_model": "Анемостат\nFoZa 160 мм (круг) белый глянец",
+     "product_model_url": "https://mircli.ru/FoZa-160-mm-krug-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "5 040 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 200 мм (круг) белый глянец\nарт: 230013",
+     "product_model": "Анемостат\nFoZa 200 мм (круг) белый глянец",
+     "product_model_url": "https://mircli.ru/FoZa-200-mm-krug-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 840 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 100 мм (круг) черный глянец\nарт: 230014",
+     "product_model": "Анемостат\nFoZa 100 мм (круг) черный глянец",
+     "product_model_url": "https://mircli.ru/FoZa-100-mm-krug-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "5 550 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 125 мм (круг) черный глянец\nарт: 230015",
+     "product_model": "Анемостат\nFoZa 125 мм (круг) черный глянец",
+     "product_model_url": "https://mircli.ru/FoZa-125-mm-krug-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n180x180"
+      }
+     ],
+     "product_price": "5 872 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 160 мм (круг) черный глянец\nарт: 230016",
+     "product_model": "Анемостат\nFoZa 160 мм (круг) черный глянец",
+     "product_model_url": "https://mircli.ru/FoZa-160-mm-krug-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "5 040 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 200 мм (круг) черный глянец\nарт: 230017",
+     "product_model": "Анемостат\nFoZa 200 мм (круг) черный глянец",
+     "product_model_url": "https://mircli.ru/FoZa-200-mm-krug-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 840 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 круг глянцевый (белый)\nарт: 235472",
+     "product_model": "Анемостат\nAIRGLASS 100 круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "5 400 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 круг матовый (черный)\nарт: 235473",
+     "product_model": "Анемостат\nAIRGLASS 100 круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "5 400 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 круг глянцевый (белый)\nарт: 235474",
+     "product_model": "Анемостат\nAIRGLASS 125 круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "5 880 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 круг матовый (черный)\nарт: 235475",
+     "product_model": "Анемостат\nAIRGLASS 125 круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "5 880 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 160 круг глянцевый (белый)\nарт: 235476",
+     "product_model": "Анемостат\nAIRGLASS 160 круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-160-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "6 600 руб"
+    }
+   ],
+   "pagination": [
+    {
+     "name": "Первая",
+     "url": "https://mircli.ru/anemostaty/?limit=60"
+    }
+   ]
+  },
+  {
+   "name": "3",
+   "url": "https://mircli.ru/anemostaty/?limit=60&page=3",
+   "product_card": [
+    {
+     "name": "Анемостат\nRedvent РЭД-SMK-300/RAL9016\nарт: 236968",
+     "product_model": "Анемостат\nRedvent РЭД-SMK-300/RAL9016",
+     "product_model_url": "https://mircli.ru/Redvent-red-SMK-300-RAL9016/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n372x181"
+      }
+     ],
+     "product_price": "16 320 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-P 250\nарт: 228802",
+     "product_model": "Анемостат\nAirone DVS-P 250",
+     "product_model_url": "https://mircli.ru/Airone-DVS-P-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n295x295"
+      }
+     ],
+     "product_price": "1 680 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-160\nарт: 236951",
+     "product_model": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-160",
+     "product_model_url": "https://mircli.ru/Redvent-DIZ-3.0-D-i-160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n50x246"
+      }
+     ],
+     "product_price": "4 100 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 Hamam круг матовый (черный)\nарт: 235481",
+     "product_model": "Анемостат\nAIRGLASS 100 Hamam круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-Hamam-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "8 496 руб"
+    },
+    {
+     "name": "Анемостат\nShuft DVK-S 100\nарт: 227052",
+     "product_model": "Анемостат\nShuft DVK-S 100",
+     "product_model_url": "https://mircli.ru/Shuft-DVK-S-100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n141x141"
+      }
+     ],
+     "product_price": "990 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVA 160\nарт: 228458",
+     "product_model": "Анемостат\nVANVENT DVA 160",
+     "product_model_url": "https://mircli.ru/VANVENT-DVA-160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n215х215"
+      }
+     ],
+     "product_price": "980 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 160 мм (круг) черный матовый\nарт: 233740",
+     "product_model": "Анемостат\nFoZa 160 мм (круг) черный матовый",
+     "product_model_url": "https://mircli.ru/FoZa-160-mm-krug-chernyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "5 040 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 Hamam круг RAL6018\nарт: 235455",
+     "product_model": "Анемостат\nAIRGLASS 125 Hamam круг RAL6018",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-Hamam-krug-RAL6018/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "9 096 руб"
+    },
+    {
+     "name": "Анемостат\nERA 20DVM\nарт: 228227",
+     "product_model": "Анемостат\nERA 20DVM",
+     "product_model_url": "https://mircli.ru/ERA-20DVM/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n250x250"
+      }
+     ],
+     "product_price": "1 420 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVA d160\nарт: 228740",
+     "product_model": "Анемостат\nAirone DVA d160",
+     "product_model_url": "https://mircli.ru/Airone-DVA-d160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "980 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 круг RAL2005\nарт: 235450",
+     "product_model": "Анемостат\nAIRGLASS 100 круг RAL2005",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-krug-RAL2005/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "6 600 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 200 Hamam круг матовый (черный)\nарт: 235487",
+     "product_model": "Анемостат\nAIRGLASS 200 Hamam круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-200-Hamam-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "10 644 руб"
+    },
+    {
+     "name": "Анемостат\nDEC DVIR100\nарт: 228418",
+     "product_model": "Анемостат\nDEC DVIR100",
+     "product_model_url": "https://mircli.ru/DEC-DVIR100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n135x135"
+      }
+     ],
+     "product_price": "4 593 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-200\nарт: 236952",
+     "product_model": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-200",
+     "product_model_url": "https://mircli.ru/Redvent-DIZ-3.0-D-i-200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n50x246"
+      }
+     ],
+     "product_price": "4 400 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 Hamam круг глянцевый (белый)\nарт: 235482",
+     "product_model": "Анемостат\nAIRGLASS 125 Hamam круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-Hamam-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "9 096 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-P 100\nарт: 228791",
+     "product_model": "Анемостат\nAirone DVS-P 100",
+     "product_model_url": "https://mircli.ru/Airone-DVS-P-100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n138x138"
+      }
+     ],
+     "product_price": "1 080 руб"
+    },
+    {
+     "name": "Анемостат\nShuft DVK-S 125\nарт: 227056",
+     "product_model": "Анемостат\nShuft DVK-S 125",
+     "product_model_url": "https://mircli.ru/Shuft-DVK-S-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n167x167"
+      }
+     ],
+     "product_price": "990 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVA 200\nарт: 228459",
+     "product_model": "Анемостат\nVANVENT DVA 200",
+     "product_model_url": "https://mircli.ru/VANVENT-DVA-200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n258х258"
+      }
+     ],
+     "product_price": "1 040 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 200 мм (круг) белый матовый\nарт: 233741",
+     "product_model": "Анемостат\nFoZa 200 мм (круг) белый матовый",
+     "product_model_url": "https://mircli.ru/FoZa-200-mm-krug-belyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 840 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 160 круг матовый (черный)\nарт: 235477",
+     "product_model": "Анемостат\nAIRGLASS 160 круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-160-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "6 600 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-150\nарт: 228772",
+     "product_model": "Анемостат\nAirone DVS-150",
+     "product_model_url": "https://mircli.ru/Airone-DVS-150/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n202x202"
+      }
+     ],
+     "product_price": "1 170 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVA d200\nарт: 228743",
+     "product_model": "Анемостат\nAirone DVA d200",
+     "product_model_url": "https://mircli.ru/Airone-DVA-d200/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n250x250"
+      }
+     ],
+     "product_price": "1 020 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 100 мм (круг) черный матовый\nарт: 233736",
+     "product_model": "Анемостат\nFoZa 100 мм (круг) черный матовый",
+     "product_model_url": "https://mircli.ru/FoZa-100-mm-krug-chernyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "5 550 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 круг RAL2005\nарт: 235451",
+     "product_model": "Анемостат\nAIRGLASS 125 круг RAL2005",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-krug-RAL2005/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "7 056 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-SMK-400/RAL9016\nарт: 236971",
+     "product_model": "Анемостат\nRedvent РЭД-SMK-400/RAL9016",
+     "product_model_url": "https://mircli.ru/Redvent-red-SMK-400-RAL9016/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n472x210"
+      }
+     ],
+     "product_price": "23 760 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-250\nарт: 236954",
+     "product_model": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-250",
+     "product_model_url": "https://mircli.ru/Redvent-DIZ-3.0-D-i-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n50x300"
+      }
+     ],
+     "product_price": "4 700 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 125 Hamam круг матовый (черный)\nарт: 235483",
+     "product_model": "Анемостат\nAIRGLASS 125 Hamam круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-125-Hamam-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n220x220"
+      }
+     ],
+     "product_price": "9 096 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-P 125\nарт: 228793",
+     "product_model": "Анемостат\nAirone DVS-P 125",
+     "product_model_url": "https://mircli.ru/Airone-DVS-P-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n164x164"
+      }
+     ],
+     "product_price": "1 080 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVA 250\nарт: 228460",
+     "product_model": "Анемостат\nVANVENT DVA 250",
+     "product_model_url": "https://mircli.ru/VANVENT-DVA-250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n308х308"
+      }
+     ],
+     "product_price": "1 210 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 200 мм (круг) черный матовый\nарт: 233742",
+     "product_model": "Анемостат\nFoZa 200 мм (круг) черный матовый",
+     "product_model_url": "https://mircli.ru/FoZa-200-mm-krug-chernyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 840 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 200 круг глянцевый (белый)\nарт: 235478",
+     "product_model": "Анемостат\nAIRGLASS 200 круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-200-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 800 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVS 100\nарт: 228461",
+     "product_model": "Анемостат\nVANVENT DVS 100",
+     "product_model_url": "https://mircli.ru/VANVENT-DVS-100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n138x138"
+      }
+     ],
+     "product_price": "1 000 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVA d250\nарт: 228761",
+     "product_model": "Анемостат\nAirone DVA d250",
+     "product_model_url": "https://mircli.ru/Airone-DVA-d250/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "1 120 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 125 мм (круг) белый матовый\nарт: 233737",
+     "product_model": "Анемостат\nFoZa 125 мм (круг) белый матовый",
+     "product_model_url": "https://mircli.ru/FoZa-125-mm-krug-belyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n180x180"
+      }
+     ],
+     "product_price": "5 872 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 160 круг RAL4006\nарт: 235452",
+     "product_model": "Анемостат\nAIRGLASS 160 круг RAL4006",
+     "product_model_url": "https://mircli.ru/AIRGLASS-160-krug-RAL4006/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "7 920 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-SMK-500/RAL9016\nарт: 236972",
+     "product_model": "Анемостат\nRedvent РЭД-SMK-500/RAL9016",
+     "product_model_url": "https://mircli.ru/Redvent-red-SMK-500-RAL9016/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n575x238"
+      }
+     ],
+     "product_price": "27 240 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 160 Hamam круг глянцевый (белый)\nарт: 235484",
+     "product_model": "Анемостат\nAIRGLASS 160 Hamam круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-160-Hamam-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "10 044 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-P 150\nарт: 228795",
+     "product_model": "Анемостат\nAirone DVS-P 150",
+     "product_model_url": "https://mircli.ru/Airone-DVS-P-150/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n202x202"
+      }
+     ],
+     "product_price": "1 170 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 100 мм (круг) белый матовый\nарт: 233407",
+     "product_model": "Анемостат\nFoZa 100 мм (круг) белый матовый",
+     "product_model_url": "https://mircli.ru/FoZa-100-mm-krug-belyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n160x160"
+      }
+     ],
+     "product_price": "5 550 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-100\nарт: 236948",
+     "product_model": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-100",
+     "product_model_url": "https://mircli.ru/Redvent-DIZ-3.0-D-i-100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n50x160"
+      }
+     ],
+     "product_price": "3 400 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 200 круг матовый (черный)\nарт: 235479",
+     "product_model": "Анемостат\nAIRGLASS 200 круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-200-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "7 800 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS100\nарт: 228448",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS100",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n140x140"
+      }
+     ],
+     "product_price": "1 400 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVA 100\nарт: 228456",
+     "product_model": "Анемостат\nVANVENT DVA 100",
+     "product_model_url": "https://mircli.ru/VANVENT-DVA-100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n150х150"
+      }
+     ],
+     "product_price": "910 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 125 мм (круг) черный матовый\nарт: 233738",
+     "product_model": "Анемостат\nFoZa 125 мм (круг) черный матовый",
+     "product_model_url": "https://mircli.ru/FoZa-125-mm-krug-chernyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n180x180"
+      }
+     ],
+     "product_price": "5 872 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 200 круг RAL4006\nарт: 235453",
+     "product_model": "Анемостат\nAIRGLASS 200 круг RAL4006",
+     "product_model_url": "https://mircli.ru/AIRGLASS-200-krug-RAL4006/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "9 360 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DCG-200,RAL9005Муар\nарт: 236975",
+     "product_model": "Анемостат\nRedvent РЭД-DCG-200,RAL9005Муар",
+     "product_model_url": "https://mircli.ru/Redvent-red-DCG-200RAL9005muar/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n115x416"
+      }
+     ],
+     "product_price": "15 120 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVA d100\nарт: 228736",
+     "product_model": "Анемостат\nAirone DVA d100",
+     "product_model_url": "https://mircli.ru/Airone-DVA-d100/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n100x100"
+      }
+     ],
+     "product_price": "920 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-TSK-100,RAL9016Муар\nарт: 236962",
+     "product_model": "Анемостат\nRedvent РЭД-TSK-100,RAL9016Муар",
+     "product_model_url": "https://mircli.ru/Redvent-red-TSK-100RAL9016muar/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n100x250"
+      }
+     ],
+     "product_price": "5 500 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 160 Hamam круг матовый (черный)\nарт: 235485",
+     "product_model": "Анемостат\nAIRGLASS 160 Hamam круг матовый (черный)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-160-Hamam-krug-matovyj-chernyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "10 044 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVS-P 160\nарт: 228797",
+     "product_model": "Анемостат\nAirone DVS-P 160",
+     "product_model_url": "https://mircli.ru/Airone-DVS-P-160/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n211x211"
+      }
+     ],
+     "product_price": "1 220 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-125\nарт: 236949",
+     "product_model": "Анемостат\nRedvent РЭД-DIZ(3.0)-D-i-125",
+     "product_model_url": "https://mircli.ru/Redvent-DIZ-3.0-D-i-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n50x206"
+      }
+     ],
+     "product_price": "3 800 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 Hamam круг глянцевый (белый)\nарт: 235480",
+     "product_model": "Анемостат\nAIRGLASS 100 Hamam круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-Hamam-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "8 496 руб"
+    },
+    {
+     "name": "Анемостат\nDEC REGA BLACK DVS125\nарт: 228449",
+     "product_model": "Анемостат\nDEC REGA BLACK DVS125",
+     "product_model_url": "https://mircli.ru/DEC-REGA-BLACK-DVS125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nВытяжной"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n166x166"
+      }
+     ],
+     "product_price": "1 510 руб"
+    },
+    {
+     "name": "Анемостат\nVANVENT DVA 125\nарт: 228457",
+     "product_model": "Анемостат\nVANVENT DVA 125",
+     "product_model_url": "https://mircli.ru/VANVENT-DVA-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n170х170"
+      }
+     ],
+     "product_price": "910 руб"
+    },
+    {
+     "name": "Анемостат\nFoZa 160 мм (круг) белый матовый\nарт: 233739",
+     "product_model": "Анемостат\nFoZa 160 мм (круг) белый матовый",
+     "product_model_url": "https://mircli.ru/FoZa-160-mm-krug-belyj-matovyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n260x260"
+      }
+     ],
+     "product_price": "5 040 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 100 Hamam круг RAL6018\nарт: 235454",
+     "product_model": "Анемостат\nAIRGLASS 100 Hamam круг RAL6018",
+     "product_model_url": "https://mircli.ru/AIRGLASS-100-Hamam-krug-RAL6018/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n200x200"
+      }
+     ],
+     "product_price": "8 496 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS KIV-125\nарт: 248790",
+     "product_model": "Анемостат\nAIRGLASS KIV-125",
+     "product_model_url": "https://mircli.ru/AIRGLASS-KIV-125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n185x185"
+      }
+     ],
+     "product_price": "2 520 руб"
+    },
+    {
+     "name": "Анемостат\nAirone DVA d125\nарт: 228739",
+     "product_model": "Анемостат\nAirone DVA d125",
+     "product_model_url": "https://mircli.ru/Airone-DVA-d125/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nПластик"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n125x125"
+      }
+     ],
+     "product_price": "940 руб"
+    },
+    {
+     "name": "Анемостат\nRedvent РЭД-DCG-250,RAL9016Муар\nарт: 236978",
+     "product_model": "Анемостат\nRedvent РЭД-DCG-250,RAL9016Муар",
+     "product_model_url": "https://mircli.ru/Redvent-red-DCG-250RAL9016muar/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nПриточный"
+      },
+      {
+       "name": "Материал\nМеталл"
+      },
+      {
+       "name": "Тип установки\nПотолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n114x500"
+      }
+     ],
+     "product_price": "16 440 руб"
+    },
+    {
+     "name": "Анемостат\nAIRGLASS 200 Hamam круг глянцевый (белый)\nарт: 235486",
+     "product_model": "Анемостат\nAIRGLASS 200 Hamam круг глянцевый (белый)",
+     "product_model_url": "https://mircli.ru/AIRGLASS-200-Hamam-krug-glyancevyj-belyj/",
+     "product_characteristics": [
+      {
+       "name": "Тип\nУниверсальный"
+      },
+      {
+       "name": "Материал\nСтекло"
+      },
+      {
+       "name": "Тип установки\nНастенный/потолочный"
+      },
+      {
+       "name": "Габариты (ВхШ), мм\n300x300"
+      }
+     ],
+     "product_price": "10 644 руб"
+    }
+   ],
+   "pagination": [
+    {
+     "name": "Первая",
+     "url": "https://mircli.ru/anemostaty/?limit=60"
+    }
+   ]
+  }
+ ]
+}
