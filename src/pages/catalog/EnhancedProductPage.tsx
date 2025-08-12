@@ -8,7 +8,7 @@ import Breadcrumbs from '../../components/shared/Breadcrumbs';
 import EnhancedProductCard from '../../components/catalog/EnhancedProductCard';
 import { Star, Heart, ChevronLeft, ChevronRight, Check, X, Download, Printer, ArrowLeft, ArrowRight, BarChart2, Info, Shield, Award, Truck, Clock, Zap } from 'lucide-react';
 import { useComparison } from '../../hooks/useComparison';
-import { getEnhancedProduct, getRelatedProducts, EnhancedProduct } from '../../data/mircliProductData';
+import { getEnhancedProduct, getRelatedProducts, EnhancedProduct, getAllProducts as getAllProductsFromMircli } from '../../data/mircliProductData';
 import ConsultationForm, { ConsultationFormData } from '../../components/catalog/ConsultationForm';
 import OptimizedImage from '../../components/shared/OptimizedImage';
 import { getAllProducts, Product as BasicCatalogProduct } from './Categories';
@@ -90,9 +90,13 @@ const EnhancedProductPage: React.FC = () => {
   }
 
   const primaryProduct = productId ? getEnhancedProduct(productId) : undefined;
+  // Доп. резерв: если по какой-то причине точечный доступ не сработал, попробуем найти в полном списке mircli
+  const fallbackFromMircliList = productId ? getAllProductsFromMircli().find(p => p.id === productId) : undefined;
   const fallbackBasic = productId ? getAllProducts().find(p => p.id === productId) : undefined;
   // Debug logs removed for production
-  const product: EnhancedProduct | undefined = primaryProduct ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
+  const product: EnhancedProduct | undefined = primaryProduct 
+    ?? fallbackFromMircliList 
+    ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
 
   // Формируем путь категории из фактического URL, поддерживая произвольную глубину
   const pathAfterCatalog = location.pathname.replace(/^\/?catalog\/?/, '');
