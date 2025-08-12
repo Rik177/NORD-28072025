@@ -472,9 +472,6 @@ const EnhancedCategoryPage: React.FC = () => {
                       key={subcat.id}
                       to={`/catalog/${subcat.path}`}
                       className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300"
-                      onClick={() => {
-                        
-                      }}
                     >
                       <h3 className="font-semibold text-lg text-primary dark:text-white mb-3">
                         {subcat.name}

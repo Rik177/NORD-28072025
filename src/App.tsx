@@ -13,7 +13,6 @@ import Brands from './pages/Brands';
 
 // Страницы каталога
 import Catalog from './pages/catalog/Catalog';
-import ProductPage from './pages/catalog/ProductPage';
 import EnhancedProductPage from './pages/catalog/EnhancedProductPage';
 import CategoryRouter from './pages/catalog/CategoryRouter';
 

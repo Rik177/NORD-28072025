@@ -4,12 +4,9 @@ import SEOHelmet from "../../components/shared/SEOHelmet";
 import Header from "../../components/home/Header";
 import Footer from "../../components/home/Footer";
 import Breadcrumbs from "../../components/shared/Breadcrumbs";
-import { Search, Filter, Grid, List, ArrowRight } from "lucide-react";
+import { Search, Grid, List, ArrowRight } from "lucide-react";
 import { seoPages } from "../../utils/seo";
-import OptimizedImage, {
-  generateCategoryAlt,
-} from "../../components/shared/OptimizedImage";
-import { categories, getProductsByCategory } from "./Categories";
+import { categories } from "./Categories";
 
 interface Category {
   id: string;
@@ -21,62 +18,11 @@ interface Category {
   subcategories?: Category[];
 }
 
-// const categories: Category[] = [
-//   {
-//     id: "ventilation",
-//     name: "Вентиляционное оборудование",
-//     description:
-//       "Канальные и осевые вентиляторы, приточно-вытяжные установки, воздуховоды",
-//     image:
-//       "https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     productCount: 156,
-//     path: "/catalog/ventilation",
-//   },
-//   {
-//     id: "air-conditioning",
-//     name: "Кондиционеры",
-//     description:
-//       "Настенные, кассетные, канальные кондиционеры, мульти-сплит системы",
-//     image:
-//       "https://images.pexels.com/photos/4270511/pexels-photo-4270511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     productCount: 89,
-//     path: "/catalog/air-conditioning",
-//   },
-//   {
-//     id: "heating",
-//     name: "Отопительное оборудование",
-//     description: "Котлы, радиаторы, теплые полы, насосы и автоматика",
-//     image:
-//       "https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     productCount: 124,
-//     path: "/catalog/heating",
-//   },
-//   {
-//     id: "curtains",
-//     name: "Тепловые завесы",
-//     description: "Электрические и водяные тепловые завесы для входных групп",
-//     image:
-//       "https://images.pexels.com/photos/7109803/pexels-photo-7109803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     productCount: 45,
-//     path: "/catalog/curtains",
-//   },
-//   {
-//     id: "accessories",
-//     name: "Аксессуары и комплектующие",
-//     description: "Решетки, диффузоры, клапаны, фильтры и другие комплектующие",
-//     image:
-//       "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     productCount: 234,
-//     path: "/catalog/accessories",
-//   },
-// ];
 
 const Catalog: React.FC = () => {
   // Debug logs removed for production
   
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [sortBy, setSortBy] = useState("name");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   
