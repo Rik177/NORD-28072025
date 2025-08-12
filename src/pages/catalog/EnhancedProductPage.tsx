@@ -15,6 +15,7 @@ import { getAllProducts, Product as BasicCatalogProduct } from './Categories';
 
 const EnhancedProductPage: React.FC = () => {
   const { productId } = useParams<{ category: string; subcategory?: string; subsubcategory?: string; productId: string }>();
+  console.log('EnhancedProductPage params:', { productId });
   const location = useLocation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'description' | 'specifications' | 'applications' | 'installation' | 'reviews'>('description');
@@ -91,7 +92,7 @@ const EnhancedProductPage: React.FC = () => {
 
   const primaryProduct = productId ? getEnhancedProduct(productId) : undefined;
   const fallbackBasic = productId ? getAllProducts().find(p => p.id === productId) : undefined;
-  // Debug logs removed for production
+  console.log('Product search:', { productId, primaryProduct: !!primaryProduct, fallbackBasic: !!fallbackBasic });
   const product: EnhancedProduct | undefined = primaryProduct ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
 
   // Формируем путь категории из фактического URL, поддерживая произвольную глубину
