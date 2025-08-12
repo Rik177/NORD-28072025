@@ -35,9 +35,12 @@ const EnhancedCategoryPage: React.FC = () => {
   
   // Адаптация товара из mircliProductData к типу Product (каталога)
   const mapMircliToCatalogProduct = (p: MircliEnhancedProduct): Product => {
+    // Формируем полное название товара как в анемостатах: Бренд + Модель
+    const fullName = p.brand && p.model ? `${p.brand} ${p.model}` : p.name;
+    
     return {
       id: p.id,
-      name: p.name,
+      name: fullName,
       brand: p.brand,
       model: p.model,
       category: p.category,
@@ -112,7 +115,8 @@ const EnhancedCategoryPage: React.FC = () => {
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = products.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           product.brand.toLowerCase().includes(searchQuery.toLowerCase());
+                           product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           (product.model && product.model.toLowerCase().includes(searchQuery.toLowerCase()));
       
       // Apply filters
       let matchesFilters = true;
@@ -147,6 +151,8 @@ const EnhancedCategoryPage: React.FC = () => {
           return b.rating - a.rating;
         case 'name':
           return a.name.localeCompare(b.name);
+        case 'brand':
+          return a.brand.localeCompare(b.brand);
         case 'newest':
           return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
         case 'popular':
@@ -259,7 +265,12 @@ const EnhancedCategoryPage: React.FC = () => {
         "item": {
           "@type": "Product",
           "name": product.name,
-          "description": product.name,
+          "description": `${product.brand} ${product.model || ''}`.trim(),
+          "brand": {
+            "@type": "Brand",
+            "name": product.brand
+          },
+          "model": product.model,
           "offers": {
             "@type": "Offer",
             "price": product.price,
@@ -277,11 +288,11 @@ const EnhancedCategoryPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <SEOHelmet
-        title={`${categoryInfo.name} - Каталог оборудования`}
-        description={categoryInfo.description}
-        structuredData={structuredData}
-      />
+              <SEOHelmet
+          title={`${categoryInfo.name} - Каталог оборудования ${categoryData?.name || ''}`}
+          description={`Каталог ${categoryData?.name?.toLowerCase() || 'товаров'} с полным ассортиментом. ${filteredAndSortedProducts.length > 0 ? `Найдено товаров: ${filteredAndSortedProducts.length}` : ''}`}
+          structuredData={structuredData}
+        />
       <Header />
       <main className="pb-12">
         <Breadcrumbs />
@@ -295,7 +306,7 @@ const EnhancedCategoryPage: React.FC = () => {
                   {categoryInfo.name}
                 </h1>
                 <p className="text-white/90 text-lg mb-8">
-                  {categoryInfo.description}
+                  {categoryInfo.description} Все товары отображаются с полными названиями, включающими бренд и модель.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {categoryInfo.benefits.map((benefit, index) => (
@@ -326,7 +337,7 @@ const EnhancedCategoryPage: React.FC = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <input
                   type="text"
-                  placeholder="Поиск по товарам..."
+                  placeholder="Поиск по названию, бренду или модели..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-secondary focus:border-transparent"
@@ -372,6 +383,9 @@ const EnhancedCategoryPage: React.FC = () => {
                   {/* Brand Filter */}
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Бренд</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                      Выберите производителей для фильтрации товаров
+                    </p>
                     <div className="space-y-2">
                       {getBrands().map(brand => (
                         <label key={brand} className="flex items-center">
@@ -432,6 +446,7 @@ const EnhancedCategoryPage: React.FC = () => {
                       <option value="price-asc">По цене (возрастание)</option>
                       <option value="price-desc">По цене (убывание)</option>
                       <option value="name">По названию</option>
+                      <option value="brand">По бренду</option>
                       <option value="rating">По рейтингу</option>
                       <option value="newest">По новизне</option>
                     </select>
@@ -467,6 +482,9 @@ const EnhancedCategoryPage: React.FC = () => {
                       <p className="text-gray-600 dark:text-gray-400 text-sm">
                         {subcat.subcategories?.length || 0} подкатегорий
                       </p>
+                      <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">
+                        Перейти к товарам
+                      </p>
                     </Link>
                   );
                 })}
@@ -483,7 +501,7 @@ const EnhancedCategoryPage: React.FC = () => {
                 <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white">
                   {categoryData?.subcategories && categoryData.subcategories.length > 0
                     ? `Товары в категории "${categoryData.name}" (${filteredAndSortedProducts.length})`
-                    : `Найдено товаров: ${filteredAndSortedProducts.length}`}
+                    : `Каталог товаров: ${filteredAndSortedProducts.length} позиций`}
                 </h2>
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-600 dark:text-gray-400">Показывать:</span>
@@ -504,27 +522,32 @@ const EnhancedCategoryPage: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   {categoryData?.subcategories && categoryData.subcategories.length > 0
                     ? `В данной категории пока нет товаров. Перейдите в подкатегории для просмотра товаров.`
-                    : `По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска.`}
+                    : `По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска или просмотрите подкатегории.`}
+                </p>
+                <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">
+                  Совет: используйте поиск по бренду или модели для более точных результатов
                 </p>
               </div>
             ) : (
               <div
-                className={`grid gap-6 ${
+                className={`gap-6 ${
                   viewMode === "grid"
-                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-                    : "grid-cols-1"
+                    ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    : "flex flex-col"
                 }`}
               >
                 {paginatedProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
+                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300 ${
+                      viewMode === "list" ? "flex" : ""
+                    }`}
                   >
-                    <div className="relative">
+                    <div className={`relative ${viewMode === "list" ? "w-1/3 flex-shrink-0" : ""}`}>
                       <img
                         src={product.image || 'https://via.placeholder.com/300x200?text=Нет+изображения'}
                         alt={product.name}
-                        className="w-full h-48 object-cover"
+                        className={`${viewMode === "list" ? "h-full" : "w-full h-48"} object-cover`}
                       />
                       {product.isNew && (
                         <span className="absolute top-2 left-2 bg-secondary text-white text-xs font-semibold px-2 py-1 rounded">
@@ -537,13 +560,15 @@ const EnhancedCategoryPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    <div className="p-6">
+                    <div className={`p-6 ${viewMode === "list" ? "flex-1 flex flex-col justify-center" : ""}`}>
                       <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
                         {product.name}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                        {product.brand}
-                      </p>
+                      {product.model && product.model !== product.name && (
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                          Модель: {product.model}
+                        </p>
+                      )}
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-1">
                           {Array.from({ length: 5 }, (_, i) => (
@@ -582,7 +607,7 @@ const EnhancedCategoryPage: React.FC = () => {
             {totalPages > 1 && (
               <div className="mt-10 flex items-center justify-between">
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Показаны {startIndex + 1}-{Math.min(startIndex + pageSize, totalItems)} из {totalItems}
+                  Показаны {startIndex + 1}-{Math.min(startIndex + pageSize, totalItems)} из {totalItems} товаров
                 </div>
                 {renderPageNumbers()}
               </div>

@@ -91,7 +91,9 @@ const EnhancedProductPage: React.FC = () => {
 
   const primaryProduct = productId ? getEnhancedProduct(productId) : undefined;
   const fallbackBasic = productId ? getAllProducts().find(p => p.id === productId) : undefined;
+  
   // Debug logs removed for production
+  
   const product: EnhancedProduct | undefined = primaryProduct ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
 
   // Формируем путь категории из фактического URL, поддерживая произвольную глубину
@@ -115,10 +117,14 @@ const EnhancedProductPage: React.FC = () => {
     return <Navigate to="/catalog" replace />;
   }
 
+  const fullName = (product.brand && product.model)
+    ? `${product.brand} ${product.model}`
+    : product.name;
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": product.name,
+    "name": fullName,
     "description": product.fullDescription,
     "image": product.images.map(img => img.url),
     "brand": {
@@ -217,11 +223,11 @@ const EnhancedProductPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <SEOHelmet
-        title={product.seoTitle || `${product.name} - ${product.brand} | НОРДИНЖИНИРИНГ`}
+        title={product.seoTitle || `${fullName} | НОРДИНЖИНИРИНГ`}
         description={product.seoDescription || `${product.shortDescription} Цена: ${product.price.toLocaleString()} ₽. Профессиональная установка и гарантия. Заказать в НОРДИНЖИНИРИНГ.`}
         keywords={product.keywords.join(', ')}
         canonical={`https://nordengineering.ru/catalog/${currentCategoryPath}/product/${product.id}`}
-        ogTitle={`${product.name} - Купить с установкой`}
+        ogTitle={`${fullName} - Купить с установкой`}
         ogDescription={`${product.shortDescription} Цена: ${product.price.toLocaleString()} ₽. Профессиональная установка и гарантия.`}
         ogImage={product.images[0]?.url}
         structuredData={structuredData}
@@ -239,7 +245,7 @@ const EnhancedProductPage: React.FC = () => {
                 <div className="relative mb-4 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
                   <OptimizedImage
                     src={product.images[currentImageIndex]?.url || ''}
-                    alt={product.images[currentImageIndex]?.alt || product.name}
+                    alt={product.images[currentImageIndex]?.alt || fullName}
                     className="w-full h-96 object-contain"
                     priority={true}
                   />
@@ -348,8 +354,13 @@ const EnhancedProductPage: React.FC = () => {
                   </div>
                   
                   <h1 className="font-heading font-bold text-h1-mobile md:text-h1-desktop text-primary dark:text-white mt-2">
-                    {product.name}
+                    {fullName}
                   </h1>
+                  {product.model && (
+                    <div className="mt-1 text-gray-600 dark:text-gray-300">
+                      Модель: <span className="font-semibold text-gray-900 dark:text-white">{product.model}</span>
+                    </div>
+                  )}
                   
                   <p className="text-gray-600 dark:text-gray-300 mt-3">
                     {product.shortDescription}
@@ -472,11 +483,11 @@ const EnhancedProductPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Shield className="h-4 w-4 text-green-600 mr-2" />
-                      <span>Гарантия: {product.installation.warranty.split(', ')[0]}</span>
+                      <span>Гарантия: {product.installation.warranty ? product.installation.warranty.split(', ')[0] : 'По запросу'}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Clock className="h-4 w-4 text-blue-600 mr-2" />
-                      <span>Установка: {product.installation.time}</span>
+                      <span>Установка: {product.installation.timeRequired || product.installation.time || 'По запросу'}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Zap className="h-4 w-4 text-yellow-600 mr-2" />
@@ -827,9 +838,9 @@ const EnhancedProductPage: React.FC = () => {
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Сложность</h4>
                         <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                          product.installation.complexity === 'Простая' 
+                          product.installation.complexity === 'простая' 
                             ? 'text-green-600 bg-green-100 dark:bg-green-900/20' 
-                            : product.installation.complexity === 'Средняя'
+                            : product.installation.complexity === 'средняя'
                               ? 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'
                               : 'text-red-600 bg-red-100 dark:bg-red-900/20'
                         }`}>
@@ -841,14 +852,14 @@ const EnhancedProductPage: React.FC = () => {
                           <Clock className="h-8 w-8 text-primary" />
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Время установки</h4>
-                        <p className="text-gray-600 dark:text-gray-300">{product.installation.time}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{product.installation.timeRequired || product.installation.time || 'По запросу'}</p>
                       </div>
                       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center shadow-sm">
                         <div className="bg-primary/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                           <Shield className="h-8 w-8 text-primary" />
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Гарантия</h4>
-                        <p className="text-gray-600 dark:text-gray-300">{product.installation.warranty}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{product.installation.warranty || 'По запросу'}</p>
                       </div>
                     </div>
 
@@ -860,12 +871,17 @@ const EnhancedProductPage: React.FC = () => {
                         </h4>
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                           <ul className="space-y-3">
-                            {product.installation.requirements.map((req, index) => (
+                            {product.installation.requirements ? product.installation.requirements.map((req, index) => (
                               <li key={index} className="flex items-start">
                                 <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5" />
                                 <span className="text-gray-600 dark:text-gray-300">{req}</span>
                               </li>
-                            ))}
+                            )) : (
+                              <li className="flex items-start">
+                                <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5" />
+                                <span className="text-gray-600 dark:text-gray-300">Стандартные требования к монтажу</span>
+                              </li>
+                            )}
                           </ul>
                         </div>
                       </div>
@@ -928,7 +944,7 @@ const EnhancedProductPage: React.FC = () => {
                     {/* CTA for Installation */}
                     <div className="bg-primary rounded-lg p-6 text-center">
                       <h4 className="font-heading font-bold text-white mb-3">
-                        Профессиональная установка {product.name}
+                        Профессиональная установка {fullName}
                       </h4>
                       <p className="text-white/90 mb-6">
                         Наши сертифицированные специалисты выполнят монтаж с соблюдением всех технических требований 
@@ -1156,8 +1172,8 @@ const EnhancedProductPage: React.FC = () => {
                     <h3 className="font-heading font-bold text-h3-mobile md:text-h3-desktop text-primary dark:text-white">
                       Заказать установку
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mt-1">
-                      {product.name}
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">
+                        {fullName}
                     </p>
                   </div>
                   <button 
