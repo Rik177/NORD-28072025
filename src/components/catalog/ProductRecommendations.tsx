@@ -171,7 +171,7 @@ const ProductRecommendations: React.FC<ProductRecommendationsProps> = ({
           {filteredRecommendations.map((product) => (
             <div 
               key={product.id}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-card overflow-hidden group hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
+              className="bg-white dark:bg-gray-900 rounded-lg shadow-card overflow-hidden group hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
             >
               {/* Recommendation Badge */}
               <div className="relative">
@@ -195,7 +195,7 @@ const ProductRecommendations: React.FC<ProductRecommendationsProps> = ({
                 )}
               </div>
 
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-500 dark:text-gray-400">{product.brand}</span>
                   <div className="flex items-center">
@@ -210,7 +210,7 @@ const ProductRecommendations: React.FC<ProductRecommendationsProps> = ({
                   {product.name}
                 </h3>
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-auto">
                   <div>
                     <span className="text-lg font-bold text-primary dark:text-white">
                       {product.price.toLocaleString()} ₽

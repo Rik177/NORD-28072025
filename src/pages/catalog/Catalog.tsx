@@ -183,10 +183,10 @@ const Catalog: React.FC = () => {
                   <Link
                     key={category.id}
                     to={category.path}
-                    className="group bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300"
+                    className="group bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300 flex flex-col h-full"
                   >
                     <div
-                      className={`flex ${viewMode === "list" ? "flex-row" : "flex-col"}`}
+                      className={`flex flex-col flex-1 ${viewMode === "list" ? "flex-row" : ""}`}
                     >
                       <div
                         className={`relative ${viewMode === "list" ? "w-1/3" : "aspect-w-16 aspect-h-9"}`}
@@ -210,7 +210,7 @@ const Catalog: React.FC = () => {
                         </div>
                       </div>
                       <div
-                        className={`p-6 ${viewMode === "list" ? "flex-1 flex flex-col justify-center" : ""}`}
+                        className={`p-6 flex flex-col flex-1 ${viewMode === "list" ? "justify-center" : ""}`}
                       >
                         <h2 className="font-heading font-bold text-h3-mobile md:text-h3-desktop text-primary dark:text-white mb-3">
                           {category.name}
@@ -218,7 +218,7 @@ const Catalog: React.FC = () => {
                         <p className="text-gray-600 dark:text-gray-300 mb-4">
                           Каталог {category.name.toLowerCase()} с полным ассортиментом товаров
                         </p>
-                        <div className="flex items-center text-secondary group-hover:text-primary dark:group-hover:text-white transition-colors">
+                        <div className="flex items-center text-secondary group-hover:text-primary dark:group-hover:text-white transition-colors mt-auto">
                           <span className="mr-2">Смотреть товары</span>
                           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </div>

@@ -464,25 +464,25 @@ const EnhancedCategoryPage: React.FC = () => {
               <h2 className="font-heading font-bold text-h2-mobile md:text-h2-desktop text-primary dark:text-white mb-6">
                 Подкатегории
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {categoryData.subcategories.map((subcat) => {
                   
                   return (
                     <Link
                       key={subcat.id}
                       to={`/catalog/${subcat.path}`}
-                      className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-card hover:shadow-card-hover transition-all duration-300"
+                      className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300"
                       onClick={() => {
                         
                       }}
                     >
-                      <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
+                      <h3 className="font-semibold text-lg text-primary dark:text-white mb-3">
                         {subcat.name}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                         {subcat.subcategories?.length || 0} подкатегорий
                       </p>
-                      <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">
+                      <p className="text-gray-500 dark:text-gray-500 text-xs">
                         Перейти к товарам
                       </p>
                     </Link>
@@ -539,8 +539,8 @@ const EnhancedCategoryPage: React.FC = () => {
                 {paginatedProducts.map((product) => (
                   <div
                     key={product.id}
-                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300 ${
-                      viewMode === "list" ? "flex" : ""
+                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300 flex flex-col ${
+                      viewMode === "list" ? "flex-row" : ""
                     }`}
                   >
                     <div className={`relative ${viewMode === "list" ? "w-1/3 flex-shrink-0" : ""}`}>
@@ -560,7 +560,7 @@ const EnhancedCategoryPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    <div className={`p-6 ${viewMode === "list" ? "flex-1 flex flex-col justify-center" : ""}`}>
+                    <div className={`p-6 flex flex-col flex-1 ${viewMode === "list" ? "justify-center" : ""}`}>
                       <h3 className="font-semibold text-lg text-primary dark:text-white mb-2">
                         {product.name}
                       </h3>
@@ -587,7 +587,7 @@ const EnhancedCategoryPage: React.FC = () => {
                           {product.price.toLocaleString()} ₽
                         </span>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 mt-auto">
                         <Link 
                           to={`/catalog/${categoryPath}/product/${product.id}`}
                           className="flex-1 bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-dark transition-colors text-center"
