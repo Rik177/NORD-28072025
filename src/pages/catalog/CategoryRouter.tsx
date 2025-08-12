@@ -8,7 +8,7 @@ const CategoryRouter: React.FC = () => {
   const location = useLocation();
   const params = useParams();
   
-  console.log('CategoryRouter:', { pathname: location.pathname, params });
+  // Debug logs removed for production
   
   // Извлекаем путь после /catalog/
   const pathAfterCatalog = location.pathname.replace('/catalog', '').replace(/^\/+/, '');

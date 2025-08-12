@@ -219,7 +219,11 @@ export const categories = typedMircliData.categories;
 
 // Функции для работы с данными
 export const getEnhancedProduct = (id: string): EnhancedProduct | undefined => {
-  return enhancedProductDatabase[id];
+  const product = enhancedProductDatabase[id];
+  
+  // Debug logs removed for production
+  
+  return product;
 };
 
 export const getProductsByCategory = (category: string): EnhancedProduct[] => {

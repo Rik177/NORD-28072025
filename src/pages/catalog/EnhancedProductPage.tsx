@@ -15,7 +15,6 @@ import { getAllProducts, Product as BasicCatalogProduct } from './Categories';
 
 const EnhancedProductPage: React.FC = () => {
   const { productId } = useParams<{ category: string; subcategory?: string; subsubcategory?: string; productId: string }>();
-  console.log('EnhancedProductPage params:', { productId });
   const location = useLocation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'description' | 'specifications' | 'applications' | 'installation' | 'reviews'>('description');
@@ -92,7 +91,9 @@ const EnhancedProductPage: React.FC = () => {
 
   const primaryProduct = productId ? getEnhancedProduct(productId) : undefined;
   const fallbackBasic = productId ? getAllProducts().find(p => p.id === productId) : undefined;
-  console.log('Product search:', { productId, primaryProduct: !!primaryProduct, fallbackBasic: !!fallbackBasic });
+  
+  // Debug logs removed for production
+  
   const product: EnhancedProduct | undefined = primaryProduct ?? (fallbackBasic ? mapBasicProductToEnhanced(fallbackBasic) : undefined);
 
   // Формируем путь категории из фактического URL, поддерживая произвольную глубину
@@ -473,11 +474,11 @@ const EnhancedProductPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Shield className="h-4 w-4 text-green-600 mr-2" />
-                      <span>Гарантия: {product.installation.warranty.split(', ')[0]}</span>
+                      <span>Гарантия: {product.installation.warranty ? product.installation.warranty.split(', ')[0] : 'По запросу'}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Clock className="h-4 w-4 text-blue-600 mr-2" />
-                      <span>Установка: {product.installation.time}</span>
+                      <span>Установка: {product.installation.timeRequired || product.installation.time || 'По запросу'}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-400">
                       <Zap className="h-4 w-4 text-yellow-600 mr-2" />
@@ -828,9 +829,9 @@ const EnhancedProductPage: React.FC = () => {
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Сложность</h4>
                         <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                          product.installation.complexity === 'Простая' 
+                          product.installation.complexity === 'простая' 
                             ? 'text-green-600 bg-green-100 dark:bg-green-900/20' 
-                            : product.installation.complexity === 'Средняя'
+                            : product.installation.complexity === 'средняя'
                               ? 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'
                               : 'text-red-600 bg-red-100 dark:bg-red-900/20'
                         }`}>
@@ -842,14 +843,14 @@ const EnhancedProductPage: React.FC = () => {
                           <Clock className="h-8 w-8 text-primary" />
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Время установки</h4>
-                        <p className="text-gray-600 dark:text-gray-300">{product.installation.time}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{product.installation.timeRequired || product.installation.time || 'По запросу'}</p>
                       </div>
                       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center shadow-sm">
                         <div className="bg-primary/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                           <Shield className="h-8 w-8 text-primary" />
                         </div>
                         <h4 className="font-semibold text-primary dark:text-white mb-2">Гарантия</h4>
-                        <p className="text-gray-600 dark:text-gray-300">{product.installation.warranty}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{product.installation.warranty || 'По запросу'}</p>
                       </div>
                     </div>
 
@@ -861,12 +862,17 @@ const EnhancedProductPage: React.FC = () => {
                         </h4>
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                           <ul className="space-y-3">
-                            {product.installation.requirements.map((req, index) => (
+                            {product.installation.requirements ? product.installation.requirements.map((req, index) => (
                               <li key={index} className="flex items-start">
                                 <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5" />
                                 <span className="text-gray-600 dark:text-gray-300">{req}</span>
                               </li>
-                            ))}
+                            )) : (
+                              <li className="flex items-start">
+                                <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5" />
+                                <span className="text-gray-600 dark:text-gray-300">Стандартные требования к монтажу</span>
+                              </li>
+                            )}
                           </ul>
                         </div>
                       </div>
