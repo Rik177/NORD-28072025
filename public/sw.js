@@ -1,4 +1,4 @@
-const CACHE_NAME = "nordengineering-v4";
+const CACHE_NAME = "nordengineering-v3";
 const STATIC_CACHE_URLS = [
   "/",
   "/index.html",
@@ -9,10 +9,10 @@ const STATIC_CACHE_URLS = [
 ];
 
 // Separate caches for different types of resources
-const RUNTIME_CACHE = "runtime-cache-v4";
-const IMAGE_CACHE = "image-cache-v4";
-const FONT_CACHE = "font-cache-v4";
-const STATIC_ASSETS_CACHE = "static-assets-v4";
+const RUNTIME_CACHE = "runtime-cache-v3";
+const IMAGE_CACHE = "image-cache-v3";
+const FONT_CACHE = "font-cache-v3";
+const STATIC_ASSETS_CACHE = "static-assets-v3";
 
 // Install Service Worker
 self.addEventListener("install", (event) => {
@@ -105,9 +105,7 @@ self.addEventListener("fetch", (event) => {
     'fonts.googleapis.com',
     'fonts.gstatic.com',
     'images.pexels.com',
-    'upload.wikimedia.org',
-    'mircli.ru',
-    'www.mircli.ru'
+    'upload.wikimedia.org'
   ];
   
   const isAllowedDomain = allowedDomains.some(domain => 

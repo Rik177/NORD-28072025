@@ -100261,23 +100261,6 @@ function slugify(input: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-function toAscii(input: string): string {
-  // Remove non-ASCII to avoid router issues with Cyrillic ids in URLs
-  return input.replace(/[^\x00-\x7F]+/g, '');
-}
-
-function idFromUrlOrModel(card: AnemostatCard, fallbackBrand: string, fallbackModel: string): string {
-  const url = card.product_model_url || '';
-  try {
-    const parsed = new URL(url);
-    const parts = parsed.pathname.split('/').filter(Boolean);
-    const last = parts[parts.length - 1] || '';
-    if (last) return `anemostat-${toAscii(slugify(last))}`;
-  } catch {}
-  const base = slugify(`${fallbackBrand}-${fallbackModel}`);
-  return `anemostat-${toAscii(base)}`;
-}
-
 function parseBrandAndModel(card: AnemostatCard): { brand: string; model: string; displayName: string } {
   const pm = (card.product_model || '').split('\n');
   const second = (pm[1] || '').trim();
@@ -100304,7 +100287,7 @@ function getAnemostatyProducts(): Product[] {
     const categoryPath = deriveAnemostatCategory(specs);
     const priceStr = (card.product_price || '').replace(/[^0-9]/g, '');
     const price = Number(priceStr || 0);
-    const id = idFromUrlOrModel(card, brand, model);
+    const id = `anemostat-${slugify(`${brand}-${model}`)}`;
     return {
       id,
       name: displayName || `${brand} ${model}`.trim(),
