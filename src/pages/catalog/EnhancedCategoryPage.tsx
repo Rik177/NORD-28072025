@@ -362,15 +362,15 @@ const EnhancedCategoryPage: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                    className={`p-2 rounded flex justify-center ${viewMode === "grid" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
                   >
-                    <Grid className="h-5 w-5" />
+                    <Grid className="h-5 w-5 self-center" />
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
-                    className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"}`}
+                    className={`p-2 rounded ${viewMode === "list" ? "bg-secondary text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 flex justify-center"}`}
                   >
-                    <List className="h-5 w-5" />
+                    <List className="h-5 w-5 self-center" />
                   </button>
                 </div>
               </div>
@@ -471,16 +471,13 @@ const EnhancedCategoryPage: React.FC = () => {
                     <Link
                       key={subcat.id}
                       to={`/catalog/${subcat.path}`}
-                      className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300"
+                      className="bg-white dark:bg-gray-800 rounded-lg p-6 pb-2 pt-4 shadow-card hover:shadow-card-hover transition-all duration-300 flex gap-4 justify-between"
                     >
-                      <h3 className="font-semibold text-lg text-primary dark:text-white mb-3">
+                      <h3 className="font-semibold text-primary dark:text-white mb-3 text-sm xl:text-lg ml-4">
                         {subcat.name}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 mr-4">
                         {subcat.subcategories?.length || 0} подкатегорий
-                      </p>
-                      <p className="text-gray-500 dark:text-gray-500 text-xs">
-                        Перейти к товарам
                       </p>
                     </Link>
                   );
