@@ -3,6 +3,8 @@ import { Home, Building, Factory, Store, Hotel, Guitar as Hospital, School, Shop
 
 // Импортируем данные из JSON файла
 import mircliData from './mircli-catalog-data.json';
+import ventilationData from './ventilation-data.json';
+import mircliImageMap from './mircli-image-map.json';
 import { categories as enhancedCategories } from './enhanced-categories';
 
 type RawMircliProduct = {
@@ -217,6 +219,85 @@ typedMircliData.products.forEach((product) => {
   const key = `${brand}|${(product.model || product.name || '').toLowerCase()}`;
   existingNameKeys.add(key);
 });
+
+// Добавляем товары из ventilation-data.json (сгенерировано из enhanced-catalog-data.json)
+try {
+  const vData: any = ventilationData as any;
+  const vProducts: any[] = Array.isArray(vData?.products) ? vData.products : [];
+
+  const toEnhanced = (p: any): EnhancedProduct => {
+    const specsObj: Record<string, string> = p.specifications && typeof p.specifications === 'object' ? p.specifications : {};
+    const specsList: ProductSpecification[] = Object.keys(specsObj).length > 0
+      ? [{ category: 'Характеристики', specifications: specsObj }]
+      : [];
+    const model = (p.name || '').toString();
+    const category: string = (p.category || '').toString();
+    const imagesFromMap = (() => {
+      // Попробуем подобрать по хвосту URL товара
+      const tail = String((p.url || '').toString().replace(/https?:\/\/[^/]+\//, '')).replace(/\/$/, '');
+      const key = tail || String((p.name || '').toString().replace(/\s+/g, '-'));
+      const arr = (mircliImageMap as any)[key];
+      return Array.isArray(arr) && arr.length > 0 ? arr : (p.image ? [String(p.image)] : []);
+    })();
+
+    return {
+      id: String(p.id || model).toLowerCase(),
+      name: String(p.name || ''),
+      brand: String(p.brand || ''),
+      model,
+      category,
+      subcategory: category.split('/').slice(-1)[0] || category,
+      shortDescription: model,
+      fullDescription: model,
+      technicalDescription: 'Импортировано из ventilation-data.json',
+      price: Number(p.price || 0),
+      oldPrice: undefined,
+      currency: String(p.currency || 'RUB'),
+      availability: (p.availability || 'В наличии') as any,
+      deliveryTime: 'Уточняйте у менеджера',
+      images: imagesFromMap.length > 0
+        ? imagesFromMap.map((u: string, idx: number) => ({ url: u, alt: String(p.name || ''), type: idx === 0 ? 'main' : 'gallery' as const }))
+        : [{ url: String(p.image || ''), alt: String(p.name || ''), type: 'main' }],
+      rating: 0,
+      reviewCount: 0,
+      specifications: specsList,
+      features: [],
+      applications: [],
+      installation: {
+        complexity: 'Средняя',
+        time: 'Уточняйте у менеджера',
+        team: 'Сертифицированные специалисты',
+        requirements: [],
+        steps: [],
+        warranty: 'Гарантия по условиям производителя',
+        maintenance: 'Сервисное обслуживание по договору',
+        tools: [],
+        materials: [],
+      },
+      seoTitle: undefined,
+      seoDescription: undefined,
+      keywords: [String(p.brand || ''), model, category].filter(Boolean),
+      certifications: [],
+      energyClass: undefined,
+      noiseLevel: undefined,
+      dimensions: { length: 0, width: 0, height: 0, weight: 0 },
+      relatedProducts: [],
+      accessories: [],
+      isNew: false,
+      isSale: false,
+      isPopular: false,
+      isBestseller: false,
+    };
+  };
+
+  vProducts.forEach((vp) => {
+    const ep = toEnhanced(vp);
+    if (!enhancedProductDatabase[ep.id]) {
+      enhancedProductDatabase[ep.id] = ep;
+      existingNameKeys.add(`${ep.brand}|${(ep.model || ep.name).toLowerCase()}`);
+    }
+  });
+} catch {}
 
 // Дополняем базу из everything_mircli.json (dev-only, динамически, чтобы не раздувать бандл)
 type EverythingNode = any;

@@ -6,6 +6,7 @@ import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
 import { Search, Filter, Grid, List, Shield, Heart } from 'lucide-react';
 import { getCategoryByPath, getAllProducts, Product } from './Categories';
+import mircliImageMap from '../../data/mircli-image-map.json';
 import { getAllProducts as getAllProductsFromMircli, EnhancedProduct as MircliEnhancedProduct } from '../../data/mircliProductData';
 
 const EnhancedCategoryPage: React.FC = () => {
@@ -59,11 +60,21 @@ const EnhancedCategoryPage: React.FC = () => {
     };
   };
 
-  const mergeById = (primary: Product[], secondary: Product[]): Product[] => {
+  const mergePreferMircliByKey = (baseProducts: Product[], mircliProducts: Product[]): Product[] => {
+    // Нормализованный ключ для дедупликации: бренд + модель (или имя)
+    const makeKey = (p: Product): string => {
+      const brand = (p.brand || '').toLowerCase().trim();
+      const model = (p.model || p.name || '').toLowerCase().trim();
+      return `${brand}|${model}`;
+    };
     const map = new Map<string, Product>();
-    primary.forEach(p => map.set(p.id, p));
-    secondary.forEach(p => {
-      if (!map.has(p.id)) map.set(p.id, p);
+    // Сначала кладем базовые
+    baseProducts.forEach(p => {
+      map.set(makeKey(p), p);
+    });
+    // Затем перекрываем mircli (у них корректные изображения)
+    mircliProducts.forEach(p => {
+      map.set(makeKey(p), p);
     });
     return Array.from(map.values());
   };
@@ -72,7 +83,18 @@ const EnhancedCategoryPage: React.FC = () => {
   const getProductsForCategory = (categoryPath: string): Product[] => {
     const baseProducts = getAllProducts();
     const mircliProductsMapped = getAllProductsFromMircli().map(mapMircliToCatalogProduct);
-    const allProducts = mergeById(baseProducts, mircliProductsMapped);
+    const merged = mergePreferMircliByKey(baseProducts, mircliProductsMapped);
+    // Корректируем изображения: если ссылка указывает на страницу, подменяем по карте изображений
+    const looksLikePage = (u: string) => /^https?:\/\/[^/]+\/[\w\-()]+\/?$/i.test(u || '');
+    const allProducts = merged.map((p) => {
+      if (!p.image || !looksLikePage(p.image)) return p;
+      const tail = (p.url || p.image).replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '');
+      const images = (mircliImageMap as any)[tail];
+      if (Array.isArray(images) && images.length > 0) {
+        return { ...p, image: images[0] };
+      }
+      return p;
+    });
     
     
     const categoryProducts = allProducts.filter((product: Product) => {
