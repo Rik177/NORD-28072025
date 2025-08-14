@@ -471,12 +471,12 @@ const EnhancedCategoryPage: React.FC = () => {
                     <Link
                       key={subcat.id}
                       to={`/catalog/${subcat.path}`}
-                      className="bg-white dark:bg-gray-800 rounded-lg p-6 pb-2 pt-4 shadow-card hover:shadow-card-hover transition-all duration-300 flex gap-4 justify-between"
+                      className="bg-white dark:bg-gray-800 rounded-lg p-6 pb-2 pt-4 shadow-card hover:shadow-card-hover transition-all duration-300 flex gap-4 justify-between items-center"
                     >
-                      <h3 className="font-semibold text-primary dark:text-white mb-3 text-sm xl:text-lg ml-4">
+                      <h3 className="font-semibold text-primary dark:text-white text-sm xl:text-lg ml-4">
                         {subcat.name}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 mr-4">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-0 mr-4">
                         {subcat.subcategories?.length || 0} подкатегорий
                       </p>
                     </Link>
@@ -584,7 +584,7 @@ const EnhancedCategoryPage: React.FC = () => {
                       <div className="flex gap-2 mt-auto">
                         <Link 
                           to={`/catalog/${categoryPath}/product/${product.id}`}
-                          className="flex-1 bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-dark transition-colors text-center"
+                          className="flex-1 bg-secondary text-white py-2 px-4 rounded-lg hover:bg-secondary-dark transition-colors text-center flex justify-center"
                         >
                           Подробнее
                         </Link>
