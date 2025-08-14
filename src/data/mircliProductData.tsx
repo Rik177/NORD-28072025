@@ -237,7 +237,10 @@ try {
       const tail = String((p.url || '').toString().replace(/https?:\/\/[^/]+\//, '')).replace(/\/$/, '');
       const key = tail || String((p.name || '').toString().replace(/\s+/g, '-'));
       const arr = (mircliImageMap as any)[key];
-      return Array.isArray(arr) && arr.length > 0 ? arr : (p.image ? [String(p.image)] : []);
+      const filtered = Array.isArray(arr)
+        ? arr.filter((u: string) => !/sertifikat|\/cert\//i.test(String(u)))
+        : [];
+      return filtered.length > 0 ? filtered : (p.image ? [String(p.image)] : []);
     })();
 
     return {
