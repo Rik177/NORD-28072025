@@ -3,6 +3,13 @@ import { Home, Building, Factory, Store, Hotel, Guitar as Hospital, School, Shop
 
 // Импортируем данные из JSON файла
 import mircliData from './mircli-catalog-data.json';
+// Дополнительный парсинг: полная выгрузка с сайта
+// Файл лежит в корне репозитория и может быть большим
+// Используем для дозаполнения недостающих товаров без дублей
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import everythingMircli from '../../everything_mircli.json';
+import { categories as enhancedCategories } from './enhanced-categories';
 
 type RawMircliProduct = {
   id: string;
@@ -180,6 +187,7 @@ function getIconByName(iconName: string): React.ReactNode {
 
 // Преобразуем данные из JSON в формат EnhancedProduct
 export const enhancedProductDatabase: Record<string, EnhancedProduct> = {};
+const existingNameKeys: Set<string> = new Set();
 
 // Нормализуем бренд: если в исходных данных он "Неизвестный бренд" или пустой,
 // пытаемся извлечь бренд из краткого описания до первого " - "
@@ -212,7 +220,160 @@ typedMircliData.products.forEach((product) => {
       icon: getIconByName(app.icon)
     }))
   };
+  const key = `${brand}|${(product.model || product.name || '').toLowerCase()}`;
+  existingNameKeys.add(key);
 });
+
+// Дополняем базу из everything_mircli.json
+type EverythingNode = any;
+
+function safeParsePrice(price: string | number | undefined): number {
+  if (typeof price === 'number') return price;
+  if (!price) return 0;
+  const digits = String(price).replace(/[^0-9]/g, '');
+  return digits ? Number(digits) : 0;
+}
+
+function extractBrandAndName(model: string): { brand: string; name: string } {
+  // Пример: "Напольный вентилятор\nSoler & Palau Turbo-405N"
+  const lines = (model || '').split('\n').map(s => s.trim()).filter(Boolean);
+  const second = lines[1] || lines[0] || '';
+  // Разбиваем брендовую часть и модель: берем первое слово как бренд (может содержать & и дефисы)
+  // Попробуем по последнему пробелу отделить модель
+  const lastSpace = second.lastIndexOf(' ');
+  if (lastSpace > 0) {
+    return { brand: second.slice(0, lastSpace).trim(), name: second.slice(lastSpace + 1).trim() };
+  }
+  return { brand: second, name: second };
+}
+
+function mapEverythingProduct(node: any, parentCategoryPath: string): EnhancedProduct | null {
+  const model: string = node.model || '';
+  const url: string = node.model_url || node.url || '';
+  const price = safeParsePrice(node.price);
+  if (!model && !url) return null;
+  const { brand, name } = extractBrandAndName(model);
+  // Формируем id из URL
+  const id = url ? url.replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '').toLowerCase().replace(/[^a-z0-9\-_/]/g, '-'): `${brand}-${name}`.toLowerCase();
+  const category = parentCategoryPath || 'misc';
+  const images = [{ url: '', alt: name, type: 'main' as const }];
+  const specList: { category: string; specifications: Record<string, string> }[] = [];
+  const characteristics: any[] = Array.isArray(node.characteristics) ? node.characteristics : [];
+  if (characteristics.length > 0) {
+    const specs: Record<string, string> = {};
+    characteristics.forEach((ch) => {
+      if (ch && typeof ch.name === 'string') {
+        const [k, v] = ch.name.split('\n');
+        if (k && v) specs[k.trim()] = v.trim();
+      }
+    });
+    specList.push({ category: 'Характеристики', specifications: specs });
+  }
+  return {
+    id,
+    name: `${brand} ${name}`.trim(),
+    brand,
+    model: name,
+    category,
+    subcategory: category.split('/').slice(-1)[0] || category,
+    shortDescription: model || `${brand} ${name}`,
+    fullDescription: model || `${brand} ${name}`,
+    technicalDescription: 'Данные импортированы автоматически из everything_mircli.json',
+    price,
+    currency: 'RUB',
+    availability: 'В наличии',
+    deliveryTime: 'Уточняйте у менеджера',
+    images,
+    rating: 0,
+    reviewCount: 0,
+    specifications: specList,
+    features: [],
+    applications: [],
+    installation: {
+      complexity: 'Средняя',
+      time: 'Уточняйте у менеджера',
+      team: 'Сертифицированные специалисты',
+      requirements: [],
+      steps: [],
+      warranty: 'Гарантия по условиям производителя',
+      maintenance: 'Сервисное обслуживание по договору',
+      tools: [],
+      materials: [],
+    },
+    keywords: [brand, name, category].filter(Boolean),
+    certifications: [],
+    dimensions: { length: 0, width: 0, height: 0, weight: 0 },
+    relatedProducts: [],
+    accessories: [],
+    isNew: false,
+    isSale: false,
+    isPopular: false,
+    isBestseller: false,
+  };
+}
+
+// Карта соответствий хвоста URL mircli -> нашего пути категории
+const urlTailToPath: Map<string, string> = new Map();
+
+function normalizeCategoryPath(url: string): string {
+  // Преобразуем URL mircli в наш путь категории из enhanced-categories, если возможно
+  // Берем хвост URL после домена, убираем слэш в конце
+  const tail = (url || '').replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '');
+  const mapped = urlTailToPath.get(tail);
+  return mapped || tail;
+}
+
+function walkEverything(node: EverythingNode, parentCategoryPath: string = ''): void {
+  if (!node) return;
+  if (Array.isArray(node.products)) {
+    node.products.forEach((p: any) => {
+      const product = mapEverythingProduct(p, parentCategoryPath);
+      if (product) {
+        const key = `${product.brand}|${(product.model || product.name).toLowerCase()}`;
+        if (!enhancedProductDatabase[product.id] && !existingNameKeys.has(key)) {
+          enhancedProductDatabase[product.id] = product;
+          existingNameKeys.add(key);
+        }
+      }
+    });
+  }
+  if (Array.isArray(node.subcategories)) {
+    node.subcategories.forEach((sub: any) => {
+      const subPath = normalizeCategoryPath(sub.url || '') || parentCategoryPath;
+      walkEverything(sub, subPath);
+    });
+  }
+  if (Array.isArray(node.sub_categories)) {
+    node.sub_categories.forEach((sub: any) => {
+      const subPath = normalizeCategoryPath(sub.url || '') || parentCategoryPath;
+      walkEverything(sub, subPath);
+    });
+  }
+}
+
+try {
+  // Построим карту соответствий хвоста URL -> нашего пути категории
+  const addCategoryToMap = (cat: any) => {
+    if (!cat) return;
+    const tail = (cat.url || '').replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '');
+    if (tail && cat.path && !urlTailToPath.has(tail)) {
+      urlTailToPath.set(tail, String(cat.path));
+    }
+    if (Array.isArray(cat.subcategories)) {
+      cat.subcategories.forEach(addCategoryToMap);
+    }
+  };
+  if (Array.isArray(enhancedCategories)) {
+    enhancedCategories.forEach(addCategoryToMap);
+  }
+
+  if ((everythingMircli as any)?.categories && Array.isArray((everythingMircli as any).categories)) {
+    (everythingMircli as any).categories.forEach((cat: any) => {
+      const catPath = normalizeCategoryPath(cat.url || '');
+      walkEverything(cat, catPath);
+    });
+  }
+} catch {}
 
 // Экспортируем категории
 export const categories = typedMircliData.categories;
