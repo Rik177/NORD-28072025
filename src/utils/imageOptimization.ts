@@ -11,14 +11,8 @@ export const generateOptimizedUrl = (src: string, width?: number, quality: numbe
   // Handle empty
   if (!src) return src;
 
-  // MirCli images: upsize 120 → 600 to avoid blur/stretch
-  try {
-    const urlObj = new URL(src);
-    if (urlObj.hostname.includes('mircli.ru')) {
-      urlObj.pathname = urlObj.pathname.replace(/\/themes\/mircli\/images\/120\//, '/themes/mircli/images/600/');
-      return urlObj.toString();
-    }
-  } catch {}
+  // Do not rewrite external hosts unless a provider supports transformation
+  // MirCli and most hosts don't provide on-the-fly format/size variants
 
   // Only process URLs from supported domains
   if (!isExternalImage(src)) {
@@ -59,12 +53,11 @@ export const generateOptimizedUrl = (src: string, width?: number, quality: numbe
 export const generateSrcSet = (src: string): string => {
   if (!src) return '';
 
-  // MirCli: return single 600w variant
+  // Avoid generating srcset for hosts without transformable URLs
   try {
     const urlObj = new URL(src);
     if (urlObj.hostname.includes('mircli.ru')) {
-      const upgraded = generateOptimizedUrl(src);
-      return `${upgraded} 600w`;
+      return '';
     }
   } catch {}
 
