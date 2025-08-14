@@ -6,6 +6,7 @@ import Footer from '../../components/home/Footer';
 import Breadcrumbs from '../../components/shared/Breadcrumbs';
 import { Search, Filter, Grid, List, Shield, Heart } from 'lucide-react';
 import { getCategoryByPath, getAllProducts, Product } from './Categories';
+import OptimizedImage from '../../components/shared/OptimizedImage';
 import mircliImageMap from '../../data/mircli-image-map.json';
 import { getAllProducts as getAllProductsFromMircli, EnhancedProduct as MircliEnhancedProduct } from '../../data/mircliProductData';
 
@@ -89,9 +90,8 @@ const EnhancedCategoryPage: React.FC = () => {
     const allProducts = merged.map((p) => {
       if (!p.image || !looksLikePage(p.image)) return p;
       const tail = (p.url || p.image).replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '');
-      const imagesRaw = (mircliImageMap as any)[tail];
-      const images = Array.isArray(imagesRaw) ? imagesRaw.filter((u: string) => !/sertifikat|\/cert\//i.test(String(u))) : [];
-      if (images.length > 0) {
+      const images = (mircliImageMap as any)[tail];
+      if (Array.isArray(images) && images.length > 0) {
         return { ...p, image: images[0] };
       }
       return p;
@@ -561,7 +561,7 @@ const EnhancedCategoryPage: React.FC = () => {
                     }`}
                   >
                     <div className={`relative ${viewMode === "list" ? "w-1/3 flex-shrink-0" : ""}`}>
-                      <img
+                      <OptimizedImage
                         src={product.image || 'https://via.placeholder.com/300x200?text=Нет+изображения'}
                         alt={product.name}
                         className={`${viewMode === "list" ? "h-full" : "w-full h-48"} object-cover`}

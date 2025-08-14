@@ -8,22 +8,22 @@
  * @returns Optimized image URL
  */
 export const generateOptimizedUrl = (src: string, width?: number, quality: number = 80): string => {
-  // Only process URLs from supported domains
-  if (!src || !isExternalImage(src)) {
-    return src;
-  }
+  // Handle empty
+  if (!src) return src;
 
-  // MirCli images have size folders like /images/120/, /images/300/, /images/600/
+  // MirCli images: upsize 120 → 600 to avoid blur/stretch
   try {
     const urlObj = new URL(src);
-    if (urlObj.hostname.includes('mircli.ru') && /\/themes\/mircli\/images\//.test(urlObj.pathname)) {
-      const targetWidth = width || 600;
-      const bucket = targetWidth <= 200 ? '120' : targetWidth <= 480 ? '300' : '600';
-      const replaced = urlObj.pathname.replace(/\/images\/(120|300|600)\//, `/images/${bucket}/`);
-      urlObj.pathname = replaced;
+    if (urlObj.hostname.includes('mircli.ru')) {
+      urlObj.pathname = urlObj.pathname.replace(/\/themes\/mircli\/images\/120\//, '/themes/mircli/images/600/');
       return urlObj.toString();
     }
   } catch {}
+
+  // Only process URLs from supported domains
+  if (!isExternalImage(src)) {
+    return src;
+  }
 
   // For Pexels images, use their API parameters
   if (src.includes('pexels.com')) {
@@ -57,20 +57,21 @@ export const generateOptimizedUrl = (src: string, width?: number, quality: numbe
  * @returns srcSet string with multiple resolutions
  */
 export const generateSrcSet = (src: string): string => {
-  if (!src || !isExternalImage(src)) {
-    return '';
-  }
+  if (!src) return '';
 
-  // Define widths for responsive images
-  let widths = [320, 640, 768, 1024, 1280, 1536, 1920];
-
-  // For MirCli images stick to available buckets
+  // MirCli: return single 600w variant
   try {
     const urlObj = new URL(src);
-    if (urlObj.hostname.includes('mircli.ru') && /\/themes\/mircli\/images\//.test(urlObj.pathname)) {
-      widths = [300, 600];
+    if (urlObj.hostname.includes('mircli.ru')) {
+      const upgraded = generateOptimizedUrl(src);
+      return `${upgraded} 600w`;
     }
   } catch {}
+
+  if (!isExternalImage(src)) return '';
+
+  // Define widths for responsive images
+  const widths = [320, 640, 768, 1024, 1280, 1536, 1920];
   
   // Generate srcSet entries
   return widths
