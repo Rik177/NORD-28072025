@@ -3,12 +3,6 @@ import { Home, Building, Factory, Store, Hotel, Guitar as Hospital, School, Shop
 
 // Импортируем данные из JSON файла
 import mircliData from './mircli-catalog-data.json';
-// Дополнительный парсинг: полная выгрузка с сайта
-// Файл лежит в корне репозитория и может быть большим
-// Используем для дозаполнения недостающих товаров без дублей
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import everythingMircli from '../../everything_mircli.json';
 import { categories as enhancedCategories } from './enhanced-categories';
 
 type RawMircliProduct = {
@@ -224,7 +218,7 @@ typedMircliData.products.forEach((product) => {
   existingNameKeys.add(key);
 });
 
-// Дополняем базу из everything_mircli.json
+// Дополняем базу из everything_mircli.json (dev-only, динамически, чтобы не раздувать бандл)
 type EverythingNode = any;
 
 function safeParsePrice(price: string | number | undefined): number {
@@ -367,11 +361,19 @@ try {
     enhancedCategories.forEach(addCategoryToMap);
   }
 
-  if ((everythingMircli as any)?.categories && Array.isArray((everythingMircli as any).categories)) {
-    (everythingMircli as any).categories.forEach((cat: any) => {
-      const catPath = normalizeCategoryPath(cat.url || '');
-      walkEverything(cat, catPath);
-    });
+  if (import.meta && (import.meta as any).env && (import.meta as any).env.DEV) {
+    // Динамически подгружаем только в dev-режиме
+    import('../../everything_mircli.json')
+      .then((mod: any) => {
+        const everythingMircli = mod.default || mod;
+        if (everythingMircli?.categories && Array.isArray(everythingMircli.categories)) {
+          everythingMircli.categories.forEach((cat: any) => {
+            const catPath = normalizeCategoryPath(cat.url || '');
+            walkEverything(cat, catPath);
+          });
+        }
+      })
+      .catch(() => {});
   }
 } catch {}
 

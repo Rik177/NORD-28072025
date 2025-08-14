@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+everything_mircli.json
+MIRCLI_CATALOGUE_results.json
+anemostaty_results.json
