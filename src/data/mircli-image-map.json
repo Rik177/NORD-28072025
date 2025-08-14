@@ -1,19 +1,4 @@
 {
-  "Centek-CT-5031": [
-    "/mircli-images/Centek-CT-5031/img-1.png"
-  ],
-  "ProfiCare-PC-VL-3065-WM-inox": [
-    "/mircli-images/ProfiCare-PC-VL-3065-WM-inox/img-1.png"
-  ],
-  "ProfiCare-PC-TVL-3090-inox": [
-    "/mircli-images/ProfiCare-PC-TVL-3090-inox/img-1.png"
-  ],
-  "ProfiCare-PC-VL-3064-MS-inox": [
-    "/mircli-images/ProfiCare-PC-VL-3064-MS-inox/img-1.png"
-  ],
-  "ProfiCare-PC-VL-3066-WM-inox": [
-    "/mircli-images/ProfiCare-PC-VL-3066-WM-inox/img-1.png"
-  ],
   "Soler-Palau-Turbo-3000-230V50HZ": [
     "/mircli-images/Soler-Palau-Turbo-3000-230V50HZ/img-1.jpg"
   ],
@@ -37,9 +22,6 @@
   ],
   "BRAYER-BR4957": [
     "/mircli-images/BRAYER-BR4957/img-1.jpg"
-  ],
-  "Soler-Palau-Turbo-405N": [
-    "/mircli-images/Soler-Palau-Turbo-405N/img-1.png"
   ],
   "Ballu-BFF-806": [
     "/mircli-images/Ballu-BFF-806/img-1.jpg"
@@ -74,9 +56,6 @@
   "SONNEN-TF-45W-40-520": [
     "/mircli-images/SONNEN-TF-45W-40-520/img-1.jpg"
   ],
-  "Electrolux-EFF-1006": [
-    "/mircli-images/Electrolux-EFF-1006/img-1.png"
-  ],
   "Electrolux-EFF-901N": [
     "/mircli-images/Electrolux-EFF-901N/img-1.jpg"
   ],
@@ -86,8 +65,8 @@
   "Ballu-BFF-840": [
     "/mircli-images/Ballu-BFF-840/img-1.jpg"
   ],
-  "Ballu-BFT-110R": [
-    "/mircli-images/Ballu-BFT-110R/img-1.png"
+  "Centek-CT-5031": [
+    "/mircli-images/Centek-CT-5031/img-1.png"
   ],
   "Stadler-Form-P-012": [
     "/mircli-images/Stadler-Form-P-012/img-1.jpg"
@@ -98,17 +77,17 @@
   "Rix-RSF-4500L": [
     "/mircli-images/Rix-RSF-4500L/img-1.jpg"
   ],
-  "SONNEN-FS40-A999": [
-    "/mircli-images/SONNEN-FS40-A999/img-1.png"
+  "ProfiCare-PC-VL-3065-WM-inox": [
+    "/mircli-images/ProfiCare-PC-VL-3065-WM-inox/img-1.png"
   ],
-  "HIPER-IoT-Purifier-SX02": [
-    "/mircli-images/HIPER-IoT-Purifier-SX02/img-1.jpeg"
+  "ProfiCare-PC-TVL-3090-inox": [
+    "/mircli-images/ProfiCare-PC-TVL-3090-inox/img-1.png"
   ],
   "Xiaomi-Mi-Smart-standing-Fan-2-Lite-JLLDS01XY": [
     "/mircli-images/Xiaomi-Mi-Smart-standing-Fan-2-Lite-JLLDS01XY/img-1.jpg"
   ],
-  "Stadler-Form-Finn-F-021": [
-    "/mircli-images/Stadler-Form-Finn-F-021/img-1.png"
+  "ProfiCare-PC-VL-3064-MS-inox": [
+    "/mircli-images/ProfiCare-PC-VL-3064-MS-inox/img-1.png"
   ],
   "Electrolux-EFF-1030W": [
     "/mircli-images/Electrolux-EFF-1030W/img-1.jpg"
@@ -119,41 +98,41 @@
   "Libhof-AF-140": [
     "/mircli-images/Libhof-AF-140/img-1.jpg"
   ],
-  "Stadler-Form-Finn-mobile-F-023": [
-    "/mircli-images/Stadler-Form-Finn-mobile-F-023/img-1.png"
+  "ProfiCare-PC-VL-3066-WM-inox": [
+    "/mircli-images/ProfiCare-PC-VL-3066-WM-inox/img-1.png"
   ],
   "Xiaomi-Mi-Smart-Standing-Fan-Pro-EU": [
     "/mircli-images/Xiaomi-Mi-Smart-Standing-Fan-Pro-EU/img-1.jpg"
   ],
-  "Electrolux-EFB-1210W": [
-    "/mircli-images/Electrolux-EFB-1210W/img-1.png"
+  "Soler-Palau-Turbo-405N": [
+    "/mircli-images/Soler-Palau-Turbo-405N/img-1.png"
   ],
   "Stadler-Form-Simon-white": [
     "/mircli-images/Stadler-Form-Simon-white/img-1.jpg"
   ],
-  "Electrolux-EFB-1220W": [
-    "/mircli-images/Electrolux-EFB-1220W/img-1.png"
+  "Electrolux-EFF-1006": [
+    "/mircli-images/Electrolux-EFF-1006/img-1.png"
   ],
-  "Electrolux-EFF-1020i": [
-    "/mircli-images/Electrolux-EFF-1020i/img-1.png"
+  "Ballu-BFT-110R": [
+    "/mircli-images/Ballu-BFT-110R/img-1.png"
   ],
   "Steba-VT-3": [
     "/mircli-images/Steba-VT-3/img-1.jpg"
   ],
-  "Deerma-DEM-FD110W": [
-    "/mircli-images/Deerma-DEM-FD110W/img-1.png"
+  "SONNEN-FS40-A999": [
+    "/mircli-images/SONNEN-FS40-A999/img-1.png"
   ],
   "Xiaomi-Smartmi-dc-inverter-floor-fan-2": [
     "/mircli-images/Xiaomi-Smartmi-dc-inverter-floor-fan-2/img-1.jpg"
   ],
-  "Electrolux-EFF-1007i": [
-    "/mircli-images/Electrolux-EFF-1007i/img-1.png"
+  "HIPER-IoT-Purifier-SX02": [
+    "/mircli-images/HIPER-IoT-Purifier-SX02/img-1.jpeg"
   ],
   "Xiaomi-Smartmi-Standing-Fan-2S-belyj": [
     "/mircli-images/Xiaomi-Smartmi-Standing-Fan-2S-belyj/img-1.jpg"
   ],
-  "Electrolux-EFC-77W": [
-    "/mircli-images/Electrolux-EFC-77W/img-1.png"
+  "Stadler-Form-Finn-F-021": [
+    "/mircli-images/Stadler-Form-Finn-F-021/img-1.png"
   ],
   "Stadler-Form-Simon-Original-white-S-053OR-belyj": [
     "/mircli-images/Stadler-Form-Simon-Original-white-S-053OR-belyj/img-1.jpg"
@@ -161,14 +140,14 @@
   "Steba-VT-5": [
     "/mircli-images/Steba-VT-5/img-1.jpg"
   ],
-  "Electrolux-EFT-1100": [
-    "/mircli-images/Electrolux-EFT-1100/img-1.png"
+  "Stadler-Form-Finn-mobile-F-023": [
+    "/mircli-images/Stadler-Form-Finn-mobile-F-023/img-1.png"
   ],
-  "Dux-DX-1611T": [
-    "/mircli-images/Dux-DX-1611T/img-1.png"
+  "Electrolux-EFB-1210W": [
+    "/mircli-images/Electrolux-EFB-1210W/img-1.png"
   ],
-  "Electrolux-EFF-1025W": [
-    "/mircli-images/Electrolux-EFF-1025W/img-1.png"
+  "Electrolux-EFB-1220W": [
+    "/mircli-images/Electrolux-EFB-1220W/img-1.png"
   ],
   "Ballu-BFF-815W": [
     "/mircli-images/Ballu-BFF-815W/img-1.jpg"
@@ -182,14 +161,14 @@
   "Clatronic-Tower-tvl-3770-belyj": [
     "/mircli-images/Clatronic-Tower-tvl-3770-belyj/img-1.jpg"
   ],
-  "Stadler-Form-Peter-white-P-017-belyj": [
-    "/mircli-images/Stadler-Form-Peter-white-P-017-belyj/img-1.png"
+  "Electrolux-EFF-1020i": [
+    "/mircli-images/Electrolux-EFF-1020i/img-1.png"
   ],
   "Xiaomi-Smartmi-Standing-Fan-3-belyj": [
     "/mircli-images/Xiaomi-Smartmi-Standing-Fan-3-belyj/img-1.jpg"
   ],
-  "Rix-NPSF-8000W-belyj": [
-    "/mircli-images/Rix-NPSF-8000W-belyj/img-1.png"
+  "Deerma-DEM-FD110W": [
+    "/mircli-images/Deerma-DEM-FD110W/img-1.png"
   ],
   "Rix-RSF-4000W": [
     "/mircli-images/Rix-RSF-4000W/img-1.jpg"
@@ -203,8 +182,8 @@
   "SONNEN-FS40-A55": [
     "/mircli-images/SONNEN-FS40-A55/img-1.jpg"
   ],
-  "Electrolux-EFB-1200W": [
-    "/mircli-images/Electrolux-EFB-1200W/img-1.png"
+  "Electrolux-EFF-1007i": [
+    "/mircli-images/Electrolux-EFF-1007i/img-1.png"
   ],
   "BRAYER-BR4952BK": [
     "/mircli-images/BRAYER-BR4952BK/img-1.jpg"
@@ -215,14 +194,14 @@
   "Stadler-Form-P-012OR-Peter-ORIGINAL-white": [
     "/mircli-images/Stadler-Form-P-012OR-Peter-ORIGINAL-white/img-1.jpg"
   ],
-  "Xiaomi-Smart-Standing-Fan-2-Pro-EU": [
-    "/mircli-images/Xiaomi-Smart-Standing-Fan-2-Pro-EU/img-1.png"
+  "Electrolux-EFC-77W": [
+    "/mircli-images/Electrolux-EFC-77W/img-1.png"
   ],
   "Ballu-BFF-815": [
     "/mircli-images/Ballu-BFF-815/img-1.jpg"
   ],
-  "Electrolux-EFB-1215W": [
-    "/mircli-images/Electrolux-EFB-1215W/img-1.png"
+  "Electrolux-EFT-1100": [
+    "/mircli-images/Electrolux-EFT-1100/img-1.png"
   ],
   "Ballu-BIF-10SB": [
     "/mircli-images/Ballu-BIF-10SB/img-1.jpg"
@@ -233,8 +212,8 @@
   "BRAYER-BR4977": [
     "/mircli-images/BRAYER-BR4977/img-1.jpg"
   ],
-  "Rix-RSF-3000B-chernyj": [
-    "/mircli-images/Rix-RSF-3000B-chernyj/img-1.png"
+  "Dux-DX-1611T": [
+    "/mircli-images/Dux-DX-1611T/img-1.png"
   ],
   "Stadler-Form-P-013": [
     "/mircli-images/Stadler-Form-P-013/img-1.jpg"
@@ -242,8 +221,8 @@
   "Ballu-BIF-20DB": [
     "/mircli-images/Ballu-BIF-20DB/img-1.jpg"
   ],
-  "SONNEN-TF-50W-45-a304": [
-    "/mircli-images/SONNEN-TF-50W-45-a304/img-1.png"
+  "Electrolux-EFF-1025W": [
+    "/mircli-images/Electrolux-EFF-1025W/img-1.png"
   ],
   "BRAYER-BR4975": [
     "/mircli-images/BRAYER-BR4975/img-1.jpg"
@@ -266,17 +245,17 @@
   "Ballu-BFF-907": [
     "/mircli-images/Ballu-BFF-907/img-1.jpg"
   ],
-  "Ballu-BIF-15W": [
-    "/mircli-images/Ballu-BIF-15W/img-1.png"
+  "Stadler-Form-Peter-white-P-017-belyj": [
+    "/mircli-images/Stadler-Form-Peter-white-P-017-belyj/img-1.png"
   ],
-  "ProfiCare-PC-TVL-3068-inox": [
-    "/mircli-images/ProfiCare-PC-TVL-3068-inox/img-1.png"
+  "Rix-NPSF-8000W-belyj": [
+    "/mircli-images/Rix-NPSF-8000W-belyj/img-1.png"
   ],
   "Clatronic-Tower-tvl-3770-chernyj": [
     "/mircli-images/Clatronic-Tower-tvl-3770-chernyj/img-1.jpg"
   ],
-  "Electrolux-EFB-1220B": [
-    "/mircli-images/Electrolux-EFB-1220B/img-1.png"
+  "Electrolux-EFB-1200W": [
+    "/mircli-images/Electrolux-EFB-1200W/img-1.png"
   ],
   "Centek-CT-5004-Black": [
     "/mircli-images/Centek-CT-5004-Black/img-1.jpg"
@@ -284,11 +263,11 @@
   "biokondicioner-DL-23H": [
     "/mircli-images/biokondicioner-DL-23H/img-1.jpg"
   ],
-  "Electrolux-EFB-1215B": [
-    "/mircli-images/Electrolux-EFB-1215B/img-1.png"
+  "Xiaomi-Smart-Standing-Fan-2-Pro-EU": [
+    "/mircli-images/Xiaomi-Smart-Standing-Fan-2-Pro-EU/img-1.png"
   ],
-  "Electrolux-EFF-1015": [
-    "/mircli-images/Electrolux-EFF-1015/img-1.png"
+  "Electrolux-EFB-1215W": [
+    "/mircli-images/Electrolux-EFB-1215W/img-1.png"
   ],
   "SENCOR-SFT-4207-BK": [
     "/mircli-images/SENCOR-SFT-4207-BK/img-1.jpg"
@@ -299,8 +278,8 @@
   "Taurus-New-Babel": [
     "/mircli-images/Taurus-New-Babel/img-1.jpg"
   ],
-  "Electrolux-EFB-1210B": [
-    "/mircli-images/Electrolux-EFB-1210B/img-1.png"
+  "Rix-RSF-3000B-chernyj": [
+    "/mircli-images/Rix-RSF-3000B-chernyj/img-1.png"
   ],
   "Rix-NPSF-8000B-chernyj": [
     "/mircli-images/Rix-NPSF-8000B-chernyj/img-1.jpg"
@@ -320,8 +299,8 @@
   "Taurus-BABEL-II-RCH": [
     "/mircli-images/Taurus-BABEL-II-RCH/img-1.jpg"
   ],
-  "Rix-RSF-4500R-Black": [
-    "/mircli-images/Rix-RSF-4500R-Black/img-1.png"
+  "SONNEN-TF-50W-45-a304": [
+    "/mircli-images/SONNEN-TF-50W-45-a304/img-1.png"
   ],
   "Polaris-PSF-40RC-Digital": [
     "/mircli-images/Polaris-PSF-40RC-Digital/img-1.jpg"
@@ -329,14 +308,14 @@
   "Rix-RSF-4000B": [
     "/mircli-images/Rix-RSF-4000B/img-1.jpg"
   ],
-  "Electrolux-EFF-1025B": [
-    "/mircli-images/Electrolux-EFF-1025B/img-1.png"
+  "Ballu-BIF-15W": [
+    "/mircli-images/Ballu-BIF-15W/img-1.png"
   ],
-  "Electrolux-EFF-1014i": [
-    "/mircli-images/Electrolux-EFF-1014i/img-1.png"
+  "ProfiCare-PC-TVL-3068-inox": [
+    "/mircli-images/ProfiCare-PC-TVL-3068-inox/img-1.png"
   ],
-  "Master-DF-30-P": [
-    "/mircli-images/Master-DF-30-P/img-1.png"
+  "Electrolux-EFB-1220B": [
+    "/mircli-images/Electrolux-EFB-1220B/img-1.png"
   ],
   "Stadler-Form-P-013OR-Peter-ORIGINAL-black": [
     "/mircli-images/Stadler-Form-P-013OR-Peter-ORIGINAL-black/img-1.jpg"
@@ -359,8 +338,8 @@
   "ProfiCare-PC-VL-3089-LB": [
     "/mircli-images/ProfiCare-PC-VL-3089-LB/img-1.jpg"
   ],
-  "Master-MF-30": [
-    "/mircli-images/Master-MF-30/img-1.png"
+  "Electrolux-EFB-1215B": [
+    "/mircli-images/Electrolux-EFB-1215B/img-1.png"
   ],
   "BlackDecker-BXEFT50E": [
     "/mircli-images/BlackDecker-BXEFT50E/img-1.jpg"
@@ -368,8 +347,8 @@
   "Master-DF-48-P": [
     "/mircli-images/Master-DF-48-P/img-1.jpg"
   ],
-  "Deerma-DEM-FD120W": [
-    "/mircli-images/Deerma-DEM-FD120W/img-1.png"
+  "Electrolux-EFF-1015": [
+    "/mircli-images/Electrolux-EFF-1015/img-1.png"
   ],
   "BRAYER-BR4950": [
     "/mircli-images/BRAYER-BR4950/img-1.jpg"
@@ -383,8 +362,8 @@
   "Ballu-BFF-705": [
     "/mircli-images/Ballu-BFF-705/img-1.jpg"
   ],
-  "Electrolux-EFT-1110i": [
-    "/mircli-images/Electrolux-EFT-1110i/img-1.png"
+  "Electrolux-EFB-1210B": [
+    "/mircli-images/Electrolux-EFB-1210B/img-1.png"
   ],
   "Stadler-Form-P-014OR": [
     "/mircli-images/Stadler-Form-P-014OR/img-1.jpg"
@@ -395,8 +374,8 @@
   "BlackDecker-BXEFT47E": [
     "/mircli-images/BlackDecker-BXEFT47E/img-1.jpg"
   ],
-  "SONNEN-FE-45A": [
-    "/mircli-images/SONNEN-FE-45A/img-1.png"
+  "Rix-RSF-4500R-Black": [
+    "/mircli-images/Rix-RSF-4500R-Black/img-1.png"
   ],
   "Stadler-Form-P-019-Peter-leatherette": [
     "/mircli-images/Stadler-Form-P-019-Peter-leatherette/img-1.jpg"
@@ -410,8 +389,8 @@
   "BlackDecker-BXEFT49E": [
     "/mircli-images/BlackDecker-BXEFT49E/img-1.jpg"
   ],
-  "Stadler-Form-Peter-black-P-018-chernyj": [
-    "/mircli-images/Stadler-Form-Peter-black-P-018-chernyj/img-1.png"
+  "Electrolux-EFF-1025B": [
+    "/mircli-images/Electrolux-EFF-1025B/img-1.png"
   ],
   "Centek-CT-5015-Blue": [
     "/mircli-images/Centek-CT-5015-Blue/img-1.jpg"
@@ -419,11 +398,11 @@
   "Stadler-Form-C-060": [
     "/mircli-images/Stadler-Form-C-060/img-1.jpg"
   ],
-  "Stadler-Form-P-014-Peter-leatherette": [
-    "/mircli-images/Stadler-Form-P-014-Peter-leatherette/img-1.png"
+  "Electrolux-EFF-1014i": [
+    "/mircli-images/Electrolux-EFF-1014i/img-1.png"
   ],
-  "Centek-CT-5020-Blue": [
-    "/mircli-images/Centek-CT-5020-Blue/img-1.png"
+  "Master-DF-30-P": [
+    "/mircli-images/Master-DF-30-P/img-1.png"
   ],
   "Polaris-PSF-0940-belyj-sinij": [
     "/mircli-images/Polaris-PSF-0940-belyj-sinij/img-1.jpg"
@@ -443,11 +422,11 @@
   "Stadler-Form-C-060OR-Charly-fan-stand-ORIGINAL": [
     "/mircli-images/Stadler-Form-C-060OR-Charly-fan-stand-ORIGINAL/img-1.jpg"
   ],
-  "Dux-DX-1603": [
-    "/mircli-images/Dux-DX-1603/img-1.png"
+  "Master-MF-30": [
+    "/mircli-images/Master-MF-30/img-1.png"
   ],
-  "Centek-CT-5004-Gray": [
-    "/mircli-images/Centek-CT-5004-Gray/img-1.png"
+  "Deerma-DEM-FD120W": [
+    "/mircli-images/Deerma-DEM-FD120W/img-1.png"
   ],
   "Polaris-PSF-0940": [
     "/mircli-images/Polaris-PSF-0940/img-1.jpg"
@@ -455,8 +434,8 @@
   "Soler-Palau-TURBO-455CN-PLUS": [
     "/mircli-images/Soler-Palau-TURBO-455CN-PLUS/img-1.jpg"
   ],
-  "Centek-CT-5021-Gray": [
-    "/mircli-images/Centek-CT-5021-Gray/img-1.png"
+  "Electrolux-EFT-1110i": [
+    "/mircli-images/Electrolux-EFT-1110i/img-1.png"
   ],
   "Polaris-PSF-2240-RC-belyj-seryj": [
     "/mircli-images/Polaris-PSF-2240-RC-belyj-seryj/img-1.jpg"
@@ -479,8 +458,8 @@
   "Stadler-Form-C-040": [
     "/mircli-images/Stadler-Form-C-040/img-1.jpg"
   ],
-  "Soler-Palau-Artic-405N": [
-    "/mircli-images/Soler-Palau-Artic-405N/img-1.jpeg"
+  "SONNEN-FE-45A": [
+    "/mircli-images/SONNEN-FE-45A/img-1.png"
   ],
   "Polaris-PSF-1640-belyj-sirenevyj": [
     "/mircli-images/Polaris-PSF-1640-belyj-sirenevyj/img-1.jpg"
@@ -497,14 +476,14 @@
   "Dux-DX-614": [
     "/mircli-images/Dux-DX-614/img-1.jpg"
   ],
-  "Stadler-Form-P-015-Peter-little-white": [
-    "/mircli-images/Stadler-Form-P-015-Peter-little-white/img-1.png"
+  "Stadler-Form-Peter-black-P-018-chernyj": [
+    "/mircli-images/Stadler-Form-Peter-black-P-018-chernyj/img-1.png"
   ],
   "Ballu-BFT-135W": [
     "/mircli-images/Ballu-BFT-135W/img-1.jpg"
   ],
-  "Stadler-Form-L-035-Leo": [
-    "/mircli-images/Stadler-Form-L-035-Leo/img-1.png"
+  "Stadler-Form-P-014-Peter-leatherette": [
+    "/mircli-images/Stadler-Form-P-014-Peter-leatherette/img-1.png"
   ],
   "Centek-CT-5003-White": [
     "/mircli-images/Centek-CT-5003-White/img-1.jpg"
@@ -521,14 +500,14 @@
   "Centek-CT-5007-White": [
     "/mircli-images/Centek-CT-5007-White/img-1.jpg"
   ],
-  "Electrolux-ETF-17W-1": [
-    "/mircli-images/Electrolux-ETF-17W-1/img-1.png"
+  "Centek-CT-5020-Blue": [
+    "/mircli-images/Centek-CT-5020-Blue/img-1.png"
   ],
   "Electrolux-ETF-108W": [
     "/mircli-images/Electrolux-ETF-108W/img-1.jpg"
   ],
-  "Soler-Palau-Artic-405CN-GR": [
-    "/mircli-images/Soler-Palau-Artic-405CN-GR/img-1.png"
+  "Dux-DX-1603": [
+    "/mircli-images/Dux-DX-1603/img-1.png"
   ],
   "Stadler-Form-C-050": [
     "/mircli-images/Stadler-Form-C-050/img-1.jpg"
@@ -539,8 +518,8 @@
   "Centek-CT-5003-GRAY": [
     "/mircli-images/Centek-CT-5003-GRAY/img-1.jpg"
   ],
-  "Oasis-VT-30W3": [
-    "/mircli-images/Oasis-VT-30W3/img-1.png"
+  "Centek-CT-5004-Gray": [
+    "/mircli-images/Centek-CT-5004-Gray/img-1.png"
   ],
   "Stadler-Form-Q-002": [
     "/mircli-images/Stadler-Form-Q-002/img-1.jpg"
@@ -590,8 +569,8 @@
   "Ballu-BIF-X12": [
     "/mircli-images/Ballu-BIF-X12/img-1.jpg"
   ],
-  "Electrolux-ETF-112W": [
-    "/mircli-images/Electrolux-ETF-112W/img-1.png"
+  "Centek-CT-5021-Gray": [
+    "/mircli-images/Centek-CT-5021-Gray/img-1.png"
   ],
   "Electrolux-ETF-115W": [
     "/mircli-images/Electrolux-ETF-115W/img-1.jpg"
@@ -602,8 +581,8 @@
   "Rix-RDF-2200B": [
     "/mircli-images/Rix-RDF-2200B/img-1.jpg"
   ],
-  "ProfiCare-PC-VL-3067-WM-inox": [
-    "/mircli-images/ProfiCare-PC-VL-3067-WM-inox/img-1.png"
+  "Soler-Palau-Artic-405N": [
+    "/mircli-images/Soler-Palau-Artic-405N/img-1.jpeg"
   ],
   "Electrolux-ETF-109W": [
     "/mircli-images/Electrolux-ETF-109W/img-1.jpg"
@@ -623,14 +602,14 @@
   "Stadler-Form-C-040OR-Charly-fan-little-ORIGINAL": [
     "/mircli-images/Stadler-Form-C-040OR-Charly-fan-little-ORIGINAL/img-1.jpg"
   ],
-  "VANVENT-SRL20B": [
-    "/mircli-images/VANVENT-SRL20B/img-1.png"
+  "Stadler-Form-P-015-Peter-little-white": [
+    "/mircli-images/Stadler-Form-P-015-Peter-little-white/img-1.png"
   ],
   "TecnoCooling-d45": [
     "/mircli-images/TecnoCooling-d45/img-1.jpg"
   ],
-  "VANVENT-SRL15B": [
-    "/mircli-images/VANVENT-SRL15B/img-1.png"
+  "Stadler-Form-L-035-Leo": [
+    "/mircli-images/Stadler-Form-L-035-Leo/img-1.png"
   ],
   "biokondicioner-95C": [
     "/mircli-images/biokondicioner-95C/img-1.jpg"
@@ -638,11 +617,11 @@
   "Dreamfan-Vegas-White-105": [
     "/mircli-images/Dreamfan-Vegas-White-105/img-1.jpg"
   ],
-  "VANVENT-BPP-30": [
-    "/mircli-images/VANVENT-BPP-30/img-1.png"
+  "Electrolux-ETF-17W-1": [
+    "/mircli-images/Electrolux-ETF-17W-1/img-1.png"
   ],
-  "VANVENT-BPP-15": [
-    "/mircli-images/VANVENT-BPP-15/img-1.png"
+  "Soler-Palau-Artic-405CN-GR": [
+    "/mircli-images/Soler-Palau-Artic-405CN-GR/img-1.png"
   ],
   "Ballu-BIF-8RSO": [
     "/mircli-images/Ballu-BIF-8RSO/img-1.jpg"
@@ -656,11 +635,11 @@
   "Dreamfan-Fusion-Black-Chrome-REG-132": [
     "/mircli-images/Dreamfan-Fusion-Black-Chrome-REG-132/img-1.jpg"
   ],
-  "VANVENT-SRL30B": [
-    "/mircli-images/VANVENT-SRL30B/img-1.png"
+  "Oasis-VT-30W3": [
+    "/mircli-images/Oasis-VT-30W3/img-1.png"
   ],
-  "VANVENT-SRL25B": [
-    "/mircli-images/VANVENT-SRL25B/img-1.png"
+  "Electrolux-ETF-112W": [
+    "/mircli-images/Electrolux-ETF-112W/img-1.png"
   ],
   "Soler-Palau-HTB-90RC": [
     "/mircli-images/Soler-Palau-HTB-90RC/img-1.jpg"
@@ -677,17 +656,17 @@
   "EGLO-AZAR-60-chernyj-35019": [
     "/mircli-images/EGLO-AZAR-60-chernyj-35019/img-1.jpg"
   ],
-  "VANVENT-BPP-25": [
-    "/mircli-images/VANVENT-BPP-25/img-1.png"
+  "ProfiCare-PC-VL-3067-WM-inox": [
+    "/mircli-images/ProfiCare-PC-VL-3067-WM-inox/img-1.png"
   ],
   "EGLO-MARINELLA-chernyj-35193-": [
     "/mircli-images/EGLO-MARINELLA-chernyj-35193-/img-1.jpg"
   ],
-  "EGLO-LAS-PALMAS-opal-35076-": [
-    "/mircli-images/EGLO-LAS-PALMAS-opal-35076-/img-1.png"
+  "VANVENT-SRL20B": [
+    "/mircli-images/VANVENT-SRL20B/img-1.png"
   ],
-  "Dreamfan-Turbo-76": [
-    "/mircli-images/Dreamfan-Turbo-76/img-1.png"
+  "VANVENT-SRL15B": [
+    "/mircli-images/VANVENT-SRL15B/img-1.png"
   ],
   "Dreamfan-Smart-76": [
     "/mircli-images/Dreamfan-Smart-76/img-1.jpg"
@@ -716,6 +695,27 @@
   "vetromaster-718": [
     "/mircli-images/vetromaster-718/img-1.jpg"
   ],
+  "VANVENT-BPP-30": [
+    "/mircli-images/VANVENT-BPP-30/img-1.png"
+  ],
+  "VANVENT-BPP-15": [
+    "/mircli-images/VANVENT-BPP-15/img-1.png"
+  ],
+  "VANVENT-SRL30B": [
+    "/mircli-images/VANVENT-SRL30B/img-1.png"
+  ],
+  "VANVENT-SRL25B": [
+    "/mircli-images/VANVENT-SRL25B/img-1.png"
+  ],
+  "VANVENT-BPP-25": [
+    "/mircli-images/VANVENT-BPP-25/img-1.png"
+  ],
+  "EGLO-LAS-PALMAS-opal-35076-": [
+    "/mircli-images/EGLO-LAS-PALMAS-opal-35076-/img-1.png"
+  ],
+  "Dreamfan-Turbo-76": [
+    "/mircli-images/Dreamfan-Turbo-76/img-1.png"
+  ],
   "Dreamfan-Fusion-Black-Chrome-132": [
     "/mircli-images/Dreamfan-Fusion-Black-Chrome-132/img-1.png"
   ],
@@ -727,6 +727,12 @@
   ],
   "vetromaster-720": [
     "/mircli-images/vetromaster-720/img-1.png"
+  ],
+  "Dreamfan-Princess-White-105": [
+    "/mircli-images/Dreamfan-Princess-White-105/img-1.jpg"
+  ],
+  "vetromaster-724": [
+    "/mircli-images/vetromaster-724/img-1.jpg"
   ],
   "EGLO-TRINIDAD-chernyj-35118-": [
     "/mircli-images/EGLO-TRINIDAD-chernyj-35118-/img-1.png"
@@ -740,6 +746,9 @@
   "EGLO-CADIZ-belyj-35074-": [
     "/mircli-images/EGLO-CADIZ-belyj-35074-/img-1.png"
   ],
+  "Faro-PALAO-NIQUEL": [
+    "/mircli-images/Faro-PALAO-NIQUEL/img-1.jpg"
+  ],
   "EGLO-PORTSEA-chernyj-35109-": [
     "/mircli-images/EGLO-PORTSEA-chernyj-35109-/img-1.png"
   ],
@@ -749,17 +758,20 @@
   "Faro-PUNT-Black-dark": [
     "/mircli-images/Faro-PUNT-Black-dark/img-1.png"
   ],
-  "Dreamfan-Princess-White-105": [
-    "/mircli-images/Dreamfan-Princess-White-105/img-1.jpg"
-  ],
-  "vetromaster-724": [
-    "/mircli-images/vetromaster-724/img-1.jpg"
+  "Faro-Panay-Blanco": [
+    "/mircli-images/Faro-Panay-Blanco/img-1.jpg"
   ],
   "EGLO-IGELDO-chernyj-35133-": [
     "/mircli-images/EGLO-IGELDO-chernyj-35133-/img-1.png"
   ],
+  "Faro-Nu": [
+    "/mircli-images/Faro-Nu/img-1.jpg"
+  ],
   "Dreamfan-Jet-White-RC-105": [
     "/mircli-images/Dreamfan-Jet-White-RC-105/img-1.png"
+  ],
+  "Faro-MINI-UFO-MATT-NICKEL": [
+    "/mircli-images/Faro-MINI-UFO-MATT-NICKEL/img-1.jpg"
   ],
   "EGLO-CADIZ-belyj-35075-": [
     "/mircli-images/EGLO-CADIZ-belyj-35075-/img-1.png"
@@ -767,8 +779,8 @@
   "Faro-PALAO-BLANCO": [
     "/mircli-images/Faro-PALAO-BLANCO/img-1.png"
   ],
-  "Faro-PALAO-NIQUEL": [
-    "/mircli-images/Faro-PALAO-NIQUEL/img-1.jpg"
+  "EGLO-CIRALI-52-belyj-35006": [
+    "/mircli-images/EGLO-CIRALI-52-belyj-35006/img-1.jpg"
   ],
   "EGLO-PORTSEA-chernyj-35114-": [
     "/mircli-images/EGLO-PORTSEA-chernyj-35114-/img-1.png"
@@ -779,29 +791,23 @@
   "Faro-VEDRA": [
     "/mircli-images/Faro-VEDRA/img-1.png"
   ],
-  "Faro-Panay-Blanco": [
-    "/mircli-images/Faro-Panay-Blanco/img-1.jpg"
+  "Dreamfan-Smart-REG-76": [
+    "/mircli-images/Dreamfan-Smart-REG-76/img-1.jpg"
   ],
   "Faro-Indus-140-Blanco": [
     "/mircli-images/Faro-Indus-140-Blanco/img-1.png"
   ],
-  "Faro-Nu": [
-    "/mircli-images/Faro-Nu/img-1.jpg"
-  ],
   "Faro-Indus-140-Cromo": [
     "/mircli-images/Faro-Indus-140-Cromo/img-1.png"
   ],
-  "Faro-MINI-UFO-MATT-NICKEL": [
-    "/mircli-images/Faro-MINI-UFO-MATT-NICKEL/img-1.jpg"
+  "Dreamfan-Turbo-REG-76": [
+    "/mircli-images/Dreamfan-Turbo-REG-76/img-1.jpg"
   ],
   "Faro-BARTH-Black": [
     "/mircli-images/Faro-BARTH-Black/img-1.png"
   ],
   "Dreamfan-Classic-132": [
     "/mircli-images/Dreamfan-Classic-132/img-1.png"
-  ],
-  "EGLO-CIRALI-52-belyj-35006": [
-    "/mircli-images/EGLO-CIRALI-52-belyj-35006/img-1.jpg"
   ],
   "EGLO-CIRALI-52-chernyj-35008": [
     "/mircli-images/EGLO-CIRALI-52-chernyj-35008/img-1.png"
@@ -812,17 +818,11 @@
   "EGLO-PORTSEA-chernyj-35113-": [
     "/mircli-images/EGLO-PORTSEA-chernyj-35113-/img-1.png"
   ],
-  "Dreamfan-Smart-REG-76": [
-    "/mircli-images/Dreamfan-Smart-REG-76/img-1.jpg"
-  ],
   "Faro-KEIKI": [
     "/mircli-images/Faro-KEIKI/img-1.png"
   ],
   "Faro-PUNT-LED-Black-dark": [
     "/mircli-images/Faro-PUNT-LED-Black-dark/img-1.png"
-  ],
-  "Dreamfan-Turbo-REG-76": [
-    "/mircli-images/Dreamfan-Turbo-REG-76/img-1.jpg"
   ],
   "Dreamfan-Smart-White-REG-76": [
     "/mircli-images/Dreamfan-Smart-White-REG-76/img-1.png"

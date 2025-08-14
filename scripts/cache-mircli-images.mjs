@@ -30,12 +30,11 @@ function safeKey(key) {
   return String(key).replace(/[^a-z0-9\-_/]/gi, '-');
 }
 
-async function downloadImage(url, destFile) {
+async function fetchWithReferer(url, referer) {
   const headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36',
     'accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
-    // Set referer to mircli.ru to avoid hotlink/WAF placeholder
-    'referer': 'https://mircli.ru/',
+    'referer': referer,
   };
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -46,6 +45,17 @@ async function downloadImage(url, destFile) {
   const buf = Buffer.from(await res.arrayBuffer());
   if (buf.length < 200) {
     throw new Error('Suspiciously small image');
+  }
+  return buf;
+}
+
+async function downloadImage(url, destFile, productKey) {
+  const productUrl = `https://mircli.ru/${productKey}`;
+  let buf;
+  try {
+    buf = await fetchWithReferer(url, productUrl);
+  } catch {
+    buf = await fetchWithReferer(url, 'https://mircli.ru/');
   }
   ensureDirSync(path.dirname(destFile));
   fs.writeFileSync(destFile, buf);
@@ -79,7 +89,7 @@ async function main() {
         const destPublic = `/mircli-images/${cleanKey}/img-${i + 1}.${ext}`;
         try {
           if (!fs.existsSync(destFile)) {
-            await downloadImage(u, destFile);
+            await downloadImage(u, destFile, cleanKey);
             saved++;
           }
           localUrls.push(destPublic);
