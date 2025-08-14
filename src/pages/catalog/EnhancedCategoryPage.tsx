@@ -89,8 +89,9 @@ const EnhancedCategoryPage: React.FC = () => {
     const allProducts = merged.map((p) => {
       if (!p.image || !looksLikePage(p.image)) return p;
       const tail = (p.url || p.image).replace(/https?:\/\/[^/]+\//, '').replace(/\/$/, '');
-      const images = (mircliImageMap as any)[tail];
-      if (Array.isArray(images) && images.length > 0) {
+      const imagesRaw = (mircliImageMap as any)[tail];
+      const images = Array.isArray(imagesRaw) ? imagesRaw.filter((u: string) => !/sertifikat|\/cert\//i.test(String(u))) : [];
+      if (images.length > 0) {
         return { ...p, image: images[0] };
       }
       return p;

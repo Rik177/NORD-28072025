@@ -243,6 +243,11 @@ try {
       return filtered.length > 0 ? filtered : (p.image ? [String(p.image)] : []);
     })();
 
+    const upgradeImageUrl = (u: string): string => {
+      // Повышаем размер превью с 120 до 600, если возможно
+      return String(u).replace(/\/images\/120\//, '/images/600/');
+    };
+
     return {
       id: String(p.id || model).toLowerCase(),
       name: String(p.name || ''),
@@ -259,8 +264,8 @@ try {
       availability: (p.availability || 'В наличии') as any,
       deliveryTime: 'Уточняйте у менеджера',
       images: imagesFromMap.length > 0
-        ? imagesFromMap.map((u: string, idx: number) => ({ url: u, alt: String(p.name || ''), type: idx === 0 ? 'main' : 'gallery' as const }))
-        : [{ url: String(p.image || ''), alt: String(p.name || ''), type: 'main' }],
+        ? imagesFromMap.map((u: string, idx: number) => ({ url: upgradeImageUrl(u), alt: String(p.name || ''), type: idx === 0 ? 'main' : 'gallery' as const }))
+        : [{ url: upgradeImageUrl(String(p.image || '')), alt: String(p.name || ''), type: 'main' }],
       rating: 0,
       reviewCount: 0,
       specifications: specsList,

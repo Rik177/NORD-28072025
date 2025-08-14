@@ -13,6 +13,18 @@ export const generateOptimizedUrl = (src: string, width?: number, quality: numbe
     return src;
   }
 
+  // MirCli images have size folders like /images/120/, /images/300/, /images/600/
+  try {
+    const urlObj = new URL(src);
+    if (urlObj.hostname.includes('mircli.ru') && /\/themes\/mircli\/images\//.test(urlObj.pathname)) {
+      const targetWidth = width || 600;
+      const bucket = targetWidth <= 200 ? '120' : targetWidth <= 480 ? '300' : '600';
+      const replaced = urlObj.pathname.replace(/\/images\/(120|300|600)\//, `/images/${bucket}/`);
+      urlObj.pathname = replaced;
+      return urlObj.toString();
+    }
+  } catch {}
+
   // For Pexels images, use their API parameters
   if (src.includes('pexels.com')) {
     const url = new URL(src);
@@ -50,7 +62,15 @@ export const generateSrcSet = (src: string): string => {
   }
 
   // Define widths for responsive images
-  const widths = [320, 640, 768, 1024, 1280, 1536, 1920];
+  let widths = [320, 640, 768, 1024, 1280, 1536, 1920];
+
+  // For MirCli images stick to available buckets
+  try {
+    const urlObj = new URL(src);
+    if (urlObj.hostname.includes('mircli.ru') && /\/themes\/mircli\/images\//.test(urlObj.pathname)) {
+      widths = [300, 600];
+    }
+  } catch {}
   
   // Generate srcSet entries
   return widths
@@ -93,6 +113,7 @@ export const isExternalImage = (url: string): boolean => {
   if (!url) return false;
   
   const supportedDomains = [
+    'mircli.ru',
     'pexels.com',
     'images.pexels.com',
     'unsplash.com',
